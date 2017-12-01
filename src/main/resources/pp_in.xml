@@ -1,0 +1,614 @@
+<Pricer>
+	<Header>
+		<Output>
+			<Parameter name="Verbose" value="No" />
+			<Parameter name="Greeks" value="Yes" />
+			<Parameter name="VaR" value="Yes" />
+			<Parameter name="Cashflow" value="Yes" />
+			<Parameter name="Version" value="No" />
+		</Output>
+		<AsOfDate>10/07/2012</AsOfDate>
+	</Header>
+	<Deal ccy="EUR">
+		<PricingDirection />
+		<AssetCode>FX</AssetCode>
+		<NbAssets>1</NbAssets>
+		<Version>2.0</Version>
+		<Id>5585</Id>
+		<DealDate>11/07/2012</DealDate>
+		<MarketDataGroup>1</MarketDataGroup>
+		<ParameterList>
+			<Parameter name="TestFx" type="string" value="FxSpot(USDEUR)" />
+			<Parameter name="Strike" type="string" value="0.75" />
+		</ParameterList>
+		<Description rows="" cols="">
+			<![CDATA[Schedule type	Schedule description	Option
+OnSchedule PeriodEnd	DateTable(24/06/2012,24/06/2016,SA)	Max(0,Strike-TestFx)*1000000]]>
+		</Description>
+		<AssetModelList>
+			<AssetModel>
+				<Asset name="USDEUR" type="FX" mnemonic="USDEUR" ccy="EUR" foreignCcy="USD" />
+				<Model assetType="FX" name="BS">
+					<ParameterList>
+						<Parameter type="double" name="Volatility" value="0.2" />
+						<Parameter type="list" name="Calibrate" value="TRUE" source="" />
+						<Parameter type="double" name="BSStrike" value="100%" />
+					</ParameterList>
+				</Model>
+			</AssetModel>
+		</AssetModelList>
+		<NumericalMethod name="MonteCarlo">
+			<ParameterList />
+		</NumericalMethod>
+		<GreekList computationType="ByAsset">
+			<Greek>Delta</Greek>
+			<Greek>Vega</Greek>
+			<Greek>Cega</Greek>
+		</GreekList>
+		<CutOffZone>LSE_CLOSE</CutOffZone>
+		<MultiAsset>
+			<Model assetType="MA" name="MultiAsset">
+				<ParameterList>
+					<Parameter type="string" name="ReferenceCoeff" value="-100%" />
+					<Parameter type="string" name="CorrelMultiplier" value="0.995" />
+					<Parameter type="string" name="FundingSpread" value="" />
+					<Parameter type="string" name="FundingSpreadMethod" value="CDSSpread" />
+					<Parameter type="string" name="UseBasisSwap" value="FALSE" />
+				</ParameterList>
+				<MarketDataTypeList />
+			</Model>
+		</MultiAsset>
+		<Pricer path="C:\Inetpub\wwwroot\PriceItWebservice\App_Data\pio_pil.exe" version="2012.6.36.15775" default="true" />ï»¿<AssetClassGreek>
+			<AssetClass name="MA">
+				<Greek assetType="MA" name="Cega">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="0.01" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+			<AssetClass name="IR">
+				<Greek assetType="IR" name="Delta">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="1" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+			<AssetClass name="IR">
+				<Greek assetType="IR" name="Vega">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="1" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+			<AssetClass name="IR">
+				<Greek assetType="IR" name="Gamma">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="1" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+			<AssetClass name="EQ">
+				<Greek assetType="EQ" name="Delta">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="0.01" />
+						<Parameter type="string" name="ShiftOperation" value="Multiplicative" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+				<Greek assetType="EQ" name="Vega">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="1" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+				<Greek assetType="EQ" name="Gamma">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="0.01" />
+						<Parameter type="string" name="ShiftOperation" value="Multiplicative" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+			<AssetClass name="FX">
+				<Greek assetType="FX" name="Delta">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="0.01" />
+						<Parameter type="string" name="ShiftOperation" value="Multiplicative" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+				<Greek assetType="FX" name="Vega">
+					<ParameterList>
+						<Parameter type="string" name="ShiftSize" value="1" />
+						<Parameter type="string" name="ShiftOperation" value="Additive" />
+						<Parameter type="string" name="FiniteDifferenceDirection" value="Right" />
+						<Parameter type="string" name="PerturbativeStyle" value="Parallel" />
+					</ParameterList>
+				</Greek>
+			</AssetClass>
+		</AssetClassGreek>
+	</Deal>
+	<MarketDataList>
+		<MarketData type="YLD">
+			<AssetList>
+				<Asset type="IR" mnemonic="EUR" ccy="EUR" foreignCcy="" />
+			</AssetList>
+			<ParameterList>
+				<Parameter name="basis" value="100" type="string" />
+				<Parameter name="interpolation" value="LINEAR" type="string" />
+				<Parameter name="interpolation_data" value="FWD_RATE" type="string" />
+				<Parameter name="mm_fut" value="MMOvFut" type="string" />
+				<Parameter name="fut_swap" value="FutOvSwap" type="string" />
+				<Parameter name="bootstrap" value="Std" type="string" />
+				<Parameter name="daycount" value="actual/365" type="string" />
+				<Parameter name="calendar" value="Target" type="string" />
+				<Parameter name="end_of_year" value="FALSE" type="string" />
+				<Parameter name="bump" value="0.0" type="string" />
+				<Parameter name="end_of_year_enddate" value="" type="string" />
+				<Parameter name="end_of_year_startdate" value="ABSOLUTE_STRIKE_VOL" type="string" />
+				<Parameter name="df" value="FALSE" type="string" />
+			</ParameterList>
+			<DataList>
+				<Data type="DSC" tenor="6M" dimension="TypedCurve" name="DSC Yield Curve ">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.3
+DEPOSIT	TN	0.095
+DEPOSIT	1W	0.165
+DEPOSIT	2W	0.115
+DEPOSIT	1M	0.25
+DEPOSIT	2M	0.32
+DEPOSIT	3M	0.445
+DEPOSIT	4M	0.665
+DEPOSIT	5M	0.49
+DEPOSIT	6M	0.59
+FRA	6X12  	0.712
+FRA	12X18 	0.7035
+SWAP	1Y	0.7595
+SWAP	2Y	0.7595
+SWAP	3Y	0.832
+SWAP	4Y	0.9675
+SWAP	5Y	1.137
+SWAP	6Y	1.3125
+SWAP	7Y	1.4665
+SWAP	8Y	1.6
+SWAP	9Y	1.7145
+SWAP	10Y	1.82
+SWAP	12Y	1.991
+SWAP	15Y	2.15
+SWAP	20Y	2.193
+SWAP	25Y	2.21
+SWAP	30Y	2.226
+SWAP	40Y	2.324
+SWAP	50Y	2.395]]>
+					</Value>
+				</Data>
+				<Data type="YC" tenor="3M" dimension="TypedCurve" name="Yield Curve 3M">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.3
+DEPOSIT	TN	0.095
+DEPOSIT	1W	0.165
+DEPOSIT	2W	0.115
+DEPOSIT	1M	0.25
+DEPOSIT	2M	0.32
+DEPOSIT	3M	0.445
+FRA	3X6	0.44
+FRA	6X9	0.42
+FRA	9X12	0.433
+FRA	12X15	0.447
+SWAP	1Y	0.4602
+SWAP	2Y	0.4873
+SWAP	3Y	0.582
+SWAP	4Y	0.732
+SWAP	5Y	0.9192
+SWAP	6Y	1.1094
+SWAP	7Y	1.278
+SWAP	8Y	1.424
+SWAP	9Y	1.551
+SWAP	10Y	1.664
+SWAP	12Y	1.856
+SWAP	15Y	2.032
+SWAP	20Y	2.097
+SWAP	25Y	2.124
+SWAP	30Y	2.148
+SWAP	40Y	2.254
+SWAP	50Y	2.33]]>
+					</Value>
+				</Data>
+				<Data type="EON" tenor="" dimension="TypedCurve" name="Yield Curve OIS">
+					<Value>
+						<![CDATA[EONIA	ON	0.325
+EONIA	1W	0.137
+EONIA	2W	0.134
+EONIA	1M	0.132
+EONIA	3M	0.127
+EONIA	4M	0.124
+EONIA	5M	0.121
+EONIA	7M	0.122
+EONIA	8M	0.122
+EONIA	9M	0.123
+EONIA	10M	0.125
+EONIA	11M	0.126
+EONIA	1Y	0.13
+EONIA	2Y	0.182
+EONIA	3Y	0.28
+EONIA	4Y	0.431
+EONIA	5Y	0.623
+EONIA	6Y	0.818
+EONIA	7Y	0.993
+EONIA	8Y	1.147
+EONIA	9Y	1.282
+EONIA	10Y	1.403
+EONIA	12Y	1.61
+EONIA	15Y	1.799
+EONIA	20Y	1.883
+EONIA	25Y	1.922
+EONIA	30Y	1.953]]>
+					</Value>
+				</Data>
+				<Data type="BSW" tenor="" dimension="Curve" name="BasisSwap">
+					<Value>
+						<![CDATA[1Y	-55.5
+2Y	-55.75
+3Y	-55.5
+4Y	-55.25
+5Y	-53.25
+6Y	-50.5
+7Y	-47.5
+8Y	-44.25
+9Y	-41.25
+10Y	-38.25
+12Y	-33.75
+15Y	-29
+20Y	-24.5
+25Y	-22.5
+30Y	-20]]>
+					</Value>
+				</Data>
+				<Data type="YC" tenor="6M" dimension="TypedCurve" name="Yield Curve 6M">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.3
+DEPOSIT	TN	0.095
+DEPOSIT	1W	0.165
+DEPOSIT	2W	0.115
+DEPOSIT	1M	0.25
+DEPOSIT	2M	0.32
+DEPOSIT	3M	0.445
+DEPOSIT	4M	0.665
+DEPOSIT	5M	0.49
+DEPOSIT	6M	0.59
+FRA	6X12  	0.712
+FRA	12X18 	0.7035
+SWAP	1Y	0.7595
+SWAP	2Y	0.7595
+SWAP	3Y	0.832
+SWAP	4Y	0.9675
+SWAP	5Y	1.137
+SWAP	6Y	1.3125
+SWAP	7Y	1.4665
+SWAP	8Y	1.6
+SWAP	9Y	1.7145
+SWAP	10Y	1.82
+SWAP	12Y	1.991
+SWAP	15Y	2.15
+SWAP	20Y	2.193
+SWAP	25Y	2.21
+SWAP	30Y	2.226
+SWAP	40Y	2.324
+SWAP	50Y	2.395]]>
+					</Value>
+				</Data>
+			</DataList>
+		</MarketData>
+		<MarketData type="YLD">
+			<AssetList>
+				<Asset type="IR" mnemonic="USD" ccy="USD" foreignCcy="" />
+			</AssetList>
+			<ParameterList>
+				<Parameter name="basis" value="100" type="string" />
+				<Parameter name="interpolation" value="LINEAR" type="string" />
+				<Parameter name="interpolation_data" value="FWD_RATE" type="string" />
+				<Parameter name="mm_fut" value="MMOvFut" type="string" />
+				<Parameter name="fut_swap" value="FutOvSwap" type="string" />
+				<Parameter name="bootstrap" value="Std" type="string" />
+				<Parameter name="daycount" value="actual/365" type="string" />
+				<Parameter name="calendar" value="Target" type="string" />
+				<Parameter name="end_of_year" value="FALSE" type="string" />
+				<Parameter name="bump" value="0.0" type="string" />
+				<Parameter name="end_of_year_enddate" value="" type="string" />
+				<Parameter name="end_of_year_startdate" value="ABSOLUTE_STRIKE_VOL" type="string" />
+				<Parameter name="df" value="FALSE" type="string" />
+			</ParameterList>
+			<DataList>
+				<Data type="DSC" tenor="3M" dimension="TypedCurve" name="DSC Yield Curve ">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.17
+DEPOSIT	TN	0.2
+DEPOSIT	1W	0.3
+DEPOSIT	2W	0.25
+DEPOSIT	1M	0.335
+DEPOSIT	2M	0.435
+DEPOSIT	3M	0.555
+FUTURE	SEP2	99.55
+FUTURE	DEC2	99.515
+FUTURE	MAR3	99.485
+FUTURE	JUN3	99.47
+FUTURE	SEP3	99.46
+FUTURE	DEC3	99.44
+FUTURE	MAR4	99.425
+FUTURE	JUN4	99.4
+FUTURE	SEP4	99.36
+FUTURE	DEC4	99.29
+FUTURE	MAR5	99.225
+FUTURE	JUN5	99.13
+FUTURE	SEP5	99.025
+FUTURE	DEC5	98.895
+FUTURE	MAR6	98.78
+FUTURE	JUN6	98.645
+FUTURE	SEP6	98.51
+SWAP	1Y	0.484
+SWAP	2Y	0.521
+SWAP	3Y	0.579
+SWAP	4Y	0.6985
+SWAP	5Y	0.859
+SWAP	6Y	1.045
+SWAP	7Y	1.222
+SWAP	8Y	1.3755
+SWAP	9Y	1.514
+SWAP	10Y	1.636
+SWAP	12Y	1.8425
+SWAP	15Y	2.048
+SWAP	20Y	2.219
+SWAP	25Y	2.304
+SWAP	30Y	2.357]]>
+					</Value>
+				</Data>
+				<Data type="YC" tenor="6M" dimension="TypedCurve" name="Yield Curve 6M">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.17
+DEPOSIT	TN	0.2
+DEPOSIT	1W	0.3
+DEPOSIT	2W	0.25
+DEPOSIT	1M	0.335
+DEPOSIT	2M	0.435
+DEPOSIT	3M	0.555
+DEPOSIT	4M	0.64
+DEPOSIT	5M	0.48
+DEPOSIT	6M	0.635
+FUTURE	SEP2	99.55
+FUTURE	DEC2	99.515
+FUTURE	MAR3	99.485
+FUTURE	JUN3	99.47
+FUTURE	SEP3	99.46
+FUTURE	DEC3	99.44
+FUTURE	MAR4	99.425
+FUTURE	JUN4	99.4
+FUTURE	SEP4	99.36
+FUTURE	DEC4	99.29
+FUTURE	MAR5	99.225
+FUTURE	JUN5	99.13
+FUTURE	SEP5	99.025
+FUTURE	DEC5	98.895
+FUTURE	MAR6	98.78
+FUTURE	JUN6	98.645
+FUTURE	SEP6	98.51
+SWAP	1Y	0.7295
+SWAP	2Y	0.7275
+SWAP	3Y	0.7575
+SWAP	4Y	0.8595
+SWAP	5Y	1.0165
+SWAP	6Y	1.1945
+SWAP	7Y	1.3665
+SWAP	8Y	1.5205
+SWAP	9Y	1.6555
+SWAP	10Y	1.7755
+SWAP	12Y	1.9825
+SWAP	15Y	2.1875
+SWAP	20Y	2.3545
+SWAP	25Y	2.4375
+SWAP	30Y	2.4875
+SWAP	40Y	2.5065]]>
+					</Value>
+				</Data>
+				<Data type="EON" tenor="" dimension="TypedCurve" name="Yield Curve OIS">
+					<Value>
+						<![CDATA[EONIA	SW	0.168
+EONIA	2W	0.168
+EONIA	1M	0.165
+EONIA	2M	0.165
+EONIA	3M	0.166
+EONIA	4M	0.167
+EONIA	5M	0.167
+EONIA	6M	0.165
+EONIA	7M	0.166
+EONIA	8M	0.165
+EONIA	9M	0.165
+EONIA	10M	0.166
+EONIA	11M	0.166
+EONIA	1Y	0.1675
+EONIA	2Y	0.176]]>
+					</Value>
+				</Data>
+				<Data type="YC" tenor="3M" dimension="TypedCurve" name="Yield Curve 3M">
+					<Value>
+						<![CDATA[DEPOSIT	ON	0.17
+DEPOSIT	TN	0.2
+DEPOSIT	1W	0.3
+DEPOSIT	2W	0.25
+DEPOSIT	1M	0.335
+DEPOSIT	2M	0.435
+DEPOSIT	3M	0.555
+FUTURE	SEP2	99.55
+FUTURE	DEC2	99.515
+FUTURE	MAR3	99.485
+FUTURE	JUN3	99.47
+FUTURE	SEP3	99.46
+FUTURE	DEC3	99.44
+FUTURE	MAR4	99.425
+FUTURE	JUN4	99.4
+FUTURE	SEP4	99.36
+FUTURE	DEC4	99.29
+FUTURE	MAR5	99.225
+FUTURE	JUN5	99.13
+FUTURE	SEP5	99.025
+FUTURE	DEC5	98.895
+FUTURE	MAR6	98.78
+FUTURE	JUN6	98.645
+FUTURE	SEP6	98.51
+SWAP	1Y	0.484
+SWAP	2Y	0.521
+SWAP	3Y	0.579
+SWAP	4Y	0.6985
+SWAP	5Y	0.859
+SWAP	6Y	1.045
+SWAP	7Y	1.222
+SWAP	8Y	1.3755
+SWAP	9Y	1.514
+SWAP	10Y	1.636
+SWAP	12Y	1.8425
+SWAP	15Y	2.048
+SWAP	20Y	2.219
+SWAP	25Y	2.304
+SWAP	30Y	2.357]]>
+					</Value>
+				</Data>
+			</DataList>
+		</MarketData>
+		<MarketData type="FXV">
+			<AssetList>
+				<Asset type="FX" mnemonic="EURUSD" ccy="USD" foreignCcy="EUR" />
+			</AssetList>
+			<ParameterList>
+				<Parameter name="vol_type" value="Put/Call" type="string" />
+				<Parameter name="strike_type" value="DeltaStrike" type="string" />
+				<Parameter name="interpolation" value="LINEAR" type="string" />
+				<Parameter name="interpolation_space" value="Strike" type="string" />
+				<Parameter name="vol_basis" value="100" type="string" />
+				<Parameter name="strike_basis" value="100" type="string" />
+			</ParameterList>
+			<DataList>
+				<Data type="SPT" tenor="" dimension="Scalar" name="Spot">
+					<Value>
+						<![CDATA[1.2313]]>
+					</Value>
+				</Data>
+				<Data type="SML" tenor="" dimension="Surface" name="Smile FX Volatility">
+					<Value>
+						<![CDATA[Smile	90	85	80	75	70	65	60	55	50	45	40	35	30	25	20	15	10
+2W	11.316	11.085	10.866	10.666	10.496	10.353	10.234	10.134	10.05	9.978	9.919	9.875	9.846	9.835	9.842	9.861	9.886
+3W	11.566	11.326	11.095	10.886	10.706	10.552	10.423	10.313	10.218	10.136	10.067	10.012	9.973	9.951	9.947	9.956	9.971
+1M	11.725	11.478	11.241	11.025	10.838	10.679	10.543	10.426	10.325	10.236	10.16	10.099	10.053	10.025	10.014	10.017	10.025
+6W	12.123	11.821	11.533	11.271	11.046	10.855	10.693	10.554	10.434	10.327	10.234	10.156	10.095	10.052	10.028	10.016	10.011
+2M	12.45	12.104	11.774	11.475	11.218	11.002	10.818	10.661	10.525	10.403	10.296	10.204	10.13	10.075	10.039	10.016	10
+3M	13.075	12.629	12.205	11.825	11.505	11.24	11.02	10.835	10.675	10.531	10.4	10.287	10.195	10.125	10.078	10.047	10.025
+4M	13.788	13.246	12.733	12.276	11.897	11.587	11.333	11.119	10.936	10.767	10.609	10.471	10.358	10.274	10.22	10.188	10.167
+5M	14.191	13.596	13.033	12.534	12.121	11.787	11.513	11.284	11.087	10.905	10.731	10.578	10.453	10.36	10.302	10.27	10.25
+6M	14.488	13.854	13.256	12.725	12.288	11.935	11.648	11.406	11.2	11.007	10.821	10.658	10.524	10.425	10.364	10.331	10.313
+9M	15.669	14.904	14.183	13.549	13.033	12.622	12.293	12.021	11.804	11.601	11.396	11.218	11.076	10.978	10.929	10.914	10.917
+1Y	16.237	15.412	14.634	13.95	13.396	12.958	12.609	12.323	12.1	11.892	11.677	11.493	11.347	11.25	11.206	11.199	11.212
+18M	16.538	15.65	14.823	14.117	13.572	13.164	12.852	12.601	12.404	12.202	11.969	11.756	11.58	11.458	11.402	11.396	11.415
+2Y	16.683	15.765	14.915	14.198	13.658	13.263	12.971	12.735	12.55	12.352	12.11	11.883	11.692	11.558	11.497	11.491	11.512
+3Y	16.699	15.748	14.871	14.14	13.597	13.206	12.919	12.688	12.525	12.352	12.108	11.875	11.678	11.539	11.476	11.472	11.499
+4Y	16.541	15.562	14.674	13.957	13.441	13.075	12.805	12.574	12.5	12.422	12.166	11.912	11.687	11.518	11.428	11.407	11.424
+5Y	16.538	15.567	14.685	13.968	13.451	13.088	12.821	12.597	12.5	12.396	12.14	11.885	11.658	11.487	11.393	11.366	11.374
+6Y	16.214	15.342	14.549	13.902	13.422	13.07	12.801	12.573	12.529	12.484	12.247	12.016	11.805	11.63	11.502	11.416	11.352
+7Y	15.98	15.18	14.452	13.855	13.401	13.057	12.787	12.555	12.55	12.545	12.322	12.108	11.909	11.73	11.578	11.451	11.336
+8Y	15.859	15.032	14.293	13.709	13.28	12.965	12.72	12.503	12.55	12.597	12.385	12.176	11.974	11.787	11.621	11.476	11.343
+9Y	15.765	14.916	14.169	13.595	13.186	12.894	12.669	12.462	12.55	12.636	12.433	12.227	12.024	11.831	11.654	11.496	11.348
+10Y	15.689	14.822	14.069	13.503	13.11	12.837	12.627	12.429	12.55	12.668	12.472	12.269	12.064	11.866	11.681	11.512	11.352]]>
+					</Value>
+				</Data>
+				<Data type="FWD" tenor="" dimension="Curve" name="Forward">
+					<Value>
+						<![CDATA[O/N	1.231285
+T/N	1.231292
+2W	1.231496
+3W	1.231594
+1M	1.231808
+2M	1.232269
+3M	1.232806
+4M	1.233358
+5M	1.233883
+6M	1.234573
+7M	1.235173
+8M	1.235713
+9M	1.236333
+10M	1.236932
+11M	1.237597
+15M	1.239971
+21M	1.24367
+1Y	1.238277
+2Y	1.245793
+3Y	1.251962
+4Y	1.257046
+5Y	1.263087
+6Y	1.2617
+7Y	1.27221
+8Y	1.2712
+9Y	1.27565
+10Y	1.2682
+12Y	1.2773
+15Y	1.29269
+20Y	1.33672]]>
+					</Value>
+				</Data>
+				<Data type="ATM" tenor="50D" dimension="Curve" name="ATM Volatility">
+					<Value>
+						<![CDATA[2W	10.05
+3W	10.218
+1M	10.325
+6W	10.434
+2M	10.525
+3M	10.675
+4M	10.936
+5M	11.087
+6M	11.2
+9M	11.804
+1Y	12.1
+18M	12.404
+2Y	12.55
+3Y	12.525
+4Y	12.5
+5Y	12.5
+6Y	12.529
+7Y	12.55
+8Y	12.55
+9Y	12.55
+10Y	12.55]]>
+					</Value>
+				</Data>
+			</DataList>
+		</MarketData>
+		<MarketData type="SPT">
+			<AssetList>
+				<Asset type="FX" mnemonic="USDEUR" ccy="EUR" foreignCcy="USD" />
+			</AssetList>
+			<ParameterList />
+			<DataList>
+				<Data type="SPT" tenor="" dimension="Spot" name="Spot">
+					<Value>
+						<![CDATA[0.8117]]>
+					</Value>
+				</Data>
+			</DataList>
+		</MarketData>
+	</MarketDataList>
+	<CorrelationList />
+	<FixingList />
+</Pricer>

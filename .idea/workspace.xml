@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/libs/oracleaq/ojdbc8.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="corejava.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512097148379" ignored="false" />
-    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512383601874" ignored="false" />
+    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512383878167" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/mvc/HelloController.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512354346792" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/pom.xml" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512365400223" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/config/CacheConfig.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512360301633" ignored="false" />
@@ -986,7 +985,11 @@
       <created>1512383608641</created>
       <updated>1512383608641</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="code update">
+      <created>1512383882400</created>
+      <updated>1512383882400</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">

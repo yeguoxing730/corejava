@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" />
-      <change type="DELETED" beforePath="C:\IDEA\ideaWorkspaces\corejava\.idea\libraries\Maven__org_apache_commons_commons_pool2_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\IDEA\ideaWorkspaces\corejava\.idea\libraries\Maven__redis_clients_jedis_2_6_1.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corejava.iml" afterPath="$PROJECT_DIR$/corejava.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/AbstractLock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/IDGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/IDGeneratorTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/Lock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/RedisBasedDistributedLock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/Releasable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClientException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" afterPath="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="corejava.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512097148379" ignored="false" />
-    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512459867243" ignored="false" />
+    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512461874941" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/mvc/HelloController.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512354346792" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/pom.xml" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512365400223" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/config/CacheConfig.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512360301633" ignored="false" />
@@ -40,6 +45,8 @@
     <file path="/UserMapper.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512365469878" ignored="false" />
     <file path="/pom.xml" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512459155394" ignored="false" />
     <file path="/fragment.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512459592765" ignored="false" />
+    <file path="/Lock.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512520244695" ignored="false" />
+    <file path="/AbstractLock.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512520449921" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +98,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" line="32" class="java.redis.TestRedisLock" package="java.redis">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -100,92 +124,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="96" selection-start="3627" selection-end="3627" vertical-scroll-proportion="0.36884156">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FTPMakeNestedDirectoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPMakeNestedDirectoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="19" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FTPRemoveNonEmptyDir.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPRemoveNonEmptyDir.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DownloadDirectoryStructureTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/download/DownloadDirectoryStructureTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="26" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FTPDownloadDirectoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/download/FTPDownloadDirectoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="27" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FTPUploadDirectoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/upload/FTPUploadDirectoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="12" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadDirectoryStructureTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/upload/UploadDirectoryStructureTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="49" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisLockThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RedisLockUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="1" selection-start="5059" selection-end="5059" vertical-scroll-proportion="0.0">
+            <state line="57" column="50" selection-start="1417" selection-end="1423" vertical-scroll-proportion="-0.7647059">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,15 +135,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestRedisLock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java">
+      <file leaf-file-name="Lock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/Lock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="67" selection-start="2904" selection-end="2914" vertical-scroll-proportion="0.0">
+            <state line="37" column="39" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Releasable.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/Releasable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="19" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractLock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/AbstractLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="37" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisBasedDistributedLock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/RedisBasedDistributedLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="22" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2673#3152#0" expanded="true" />
-                <element signature="e#3141#3142#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/IDGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="17" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/IDGeneratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="21" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#286#294#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="379" selection-end="379" vertical-scroll-proportion="0.4229765">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="33" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeClientException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClientException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="30" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -224,22 +243,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/xml/UserDemo/pp/Header/Header.java" />
-        <option value="$PROJECT_DIR$/src/main/java/xml/UserDemo/pp/DomDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/config/CacheConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/disruptor/LongEventFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/ojdbc" />
-        <option value="$PROJECT_DIR$/src/main/java/java/mail/Mail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPMakeNestedDirectoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPRemoveNonEmptyDir.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/ftp/download/DownloadDirectoryStructureTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/ftp/download/FTPDownloadDirectoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/ftp/upload/FTPUploadDirectoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/ftp/upload/UploadDirectoryStructureTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClientException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/Releasable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/AbstractLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/IDGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/IDGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/RedisBasedDistributedLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/Lock.java" />
       </list>
     </option>
   </component>
@@ -251,10 +270,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
-    <option name="y" value="98" />
-    <option name="width" value="1788" />
-    <option name="height" value="1242" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -521,7 +540,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ftp" />
+              <option name="myItemId" value="redis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lock" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,7 +574,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="disruptor" />
+              <option name="myItemId" value="redis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ftp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -876,16 +937,21 @@
       <created>1512459875864</created>
       <updated>1512459875864</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="code update">
+      <created>1512461880596</created>
+      <updated>1512461880596</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="98" width="1788" height="1242" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20552996" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3709293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46998867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -901,12 +967,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21494785" sideWeight="0.7944701" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14757359" sideWeight="0.6290707" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996207" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -980,121 +1045,37 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/disruptor/LongEventFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="31" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ojdbc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="137" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/oracleaq/QUEUE_MESSAGE_TYPE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="49" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPCheckFileExists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/mail/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/util/FTPUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPMakeNestedDirectoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="19" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/directory/FTPRemoveNonEmptyDir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="914" selection-end="914" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/download/DownloadDirectoryStructureTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="26" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/download/FTPDownloadDirectoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="27" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/upload/FTPUploadDirectoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="12" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/java/ftp/upload/UploadDirectoryStructureTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="49" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="1" selection-start="5059" selection-end="5059" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
+        <state line="100" column="42" selection-start="3887" selection-end="3887" vertical-scroll-proportion="-40.235294">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="67" selection-start="2904" selection-end="2914" vertical-scroll-proportion="0.0">
+        <state line="101" column="31" selection-start="3500" selection-end="3511" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2673#3152#0" expanded="true" />
@@ -1103,10 +1084,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="96" selection-start="3627" selection-end="3627" vertical-scroll-proportion="0.36884156">
+        <state line="21" column="19" selection-start="490" selection-end="495" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="50" selection-start="1417" selection-end="1423" vertical-scroll-proportion="-0.7647059">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClientException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="30" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/Releasable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/AbstractLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="37" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/IDGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#286#294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/RedisBasedDistributedLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="22" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/IDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="17" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/Lock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="39" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="379" selection-end="379" vertical-scroll-proportion="0.4229765">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -38,15 +38,15 @@ public class TestRedisLock {
                 config.setMaxWaitMillis(1000);
                 //在borrow一个jedis实例时，是否提前进行validate操作；如果为true，则得到的jedis实例均是可用的；
                 config.setTestOnBorrow(true);
-                pool = new JedisPool(config, "127.0.0.1", 2189);
+                pool = new JedisPool(config, "127.0.0.1", 6379);
 
                 jedis = pool.getResource();
                 JedisConnectionFactory jcf = new JedisConnectionFactory(config);
-                JedisShardInfo shardInfo = new JedisShardInfo("127.0.0.1", 2189);
+                JedisShardInfo shardInfo = new JedisShardInfo("127.0.0.1", 6379);
                 jcf.setShardInfo(shardInfo);
                 jcf.setUsePool(true);
                 jcf.setHostName("127.0.0.1");
-                jcf.setPort(2189);
+                jcf.setPort(6379);
                 connection = jcf.getConnection();
             } catch (Exception e) {
                 e.printStackTrace();

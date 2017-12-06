@@ -17,7 +17,11 @@ public class IDGenerator implements Releasable{
             try {
                 // TODO 这里获取到锁, 访问临界区资源
                 System.out.println(Thread.currentThread().getName() + " get lock");
-                return getAndIncrement0();
+                String rs =     getAndIncrement0();
+                DBUtil.insert(Long.valueOf(rs),Thread.currentThread().getName(),33,22);
+                return rs;
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             } finally {
                 lock.unlock();
             }

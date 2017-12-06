@@ -2,37 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\clone\TestCase.java" afterPath="$PROJECT_DIR$/src/main/java/com/clone/TestCase.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\clone\User.java" afterPath="$PROJECT_DIR$/src/main/java/com/clone/User.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\collection\TreeMapTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/collection/TreeMapTest.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\ftp\upload\UploadDirectoryStructureTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/ftp/upload/UploadDirectoryStructureTest.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\bio\Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/bio/Test.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\netty\TimeCLientHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/netty/TimeCLientHandler.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\netty\TimeClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/netty/TimeClient.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\netty\TimeServer.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/netty/TimeServer.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\netty\TimeServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/netty/TimeServerHandler.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\nio\demo\Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/nio/demo/Test.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\io\zip.java" afterPath="$PROJECT_DIR$/src/main/java/com/io/zip.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\kafka\UserKafkaConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/com/kafka/UserKafkaConsumer.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\kafka\UserKafkaProducer.java" afterPath="$PROJECT_DIR$/src/main/java/com/kafka/UserKafkaProducer.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\kafka\UserKafkaTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/kafka/UserKafkaTest.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\rabbitmq\Worker.java" afterPath="$PROJECT_DIR$/src/main/java/com/rabbitmq/Worker.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\redis\TestRedisLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/TestRedisLock.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\redis\lock\time\TimeClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeClient.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\redis\lock\time\TimeClientException.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeClientException.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\redis\lock\time\TimeServer.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeServer.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\swig\cp\test.java" afterPath="$PROJECT_DIR$/src/main/java/com/swig/cp/test.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\swig\cp\testJNI.java" afterPath="$PROJECT_DIR$/src/main/java/com/swig/cp/testJNI.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\thread\procedureconsumer\Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/thread/procedureconsumer/Test.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\xml\UserDemo\User.java" afterPath="$PROJECT_DIR$/src/main/java/com/xml/UserDemo/User.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\xml\UserDemo\UserPaserXMLHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/xml/UserDemo/UserPaserXMLHandler.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\java\xml\UserHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/xml/UserHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/DBUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/corejava.iml" afterPath="$PROJECT_DIR$/corejava.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="corejava.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512097148379" ignored="false" />
-    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512526672705" ignored="false" />
+    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512526977003" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/mvc/HelloController.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512354346792" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/pom.xml" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512365400223" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/config/CacheConfig.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512360301633" ignored="false" />
@@ -61,6 +42,9 @@
     <file path="/Lock.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512520244695" ignored="false" />
     <file path="/AbstractLock.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512520449921" ignored="false" />
     <file path="/TimeServer.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512525985404" ignored="false" />
+    <file path="/DBUtil.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512540349925" ignored="false" />
+    <file path="/IDGenerator.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512540292016" ignored="false" />
+    <file path="/IDGeneratorTest.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512539410714" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +91,21 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeServer.java" line="182" class="com.redis.lock.time.TimeServer" package="com.redis.lock.time">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java" line="21" class="com.redis.lock.IDGeneratorTest" package="com.redis.lock">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -168,22 +167,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RedisBasedDistributedLock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/RedisBasedDistributedLock.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="50" selection-start="688" selection-end="702" vertical-scroll-proportion="-7.3137255">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="60" column="21" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/Lock.java">
+      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="15" selection-start="1063" selection-end="1069" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RedisBasedDistributedLock.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/RedisBasedDistributedLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="22" selection-start="751" selection-end="751" vertical-scroll-proportion="20.313726">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +199,7 @@
       <file leaf-file-name="IDGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="49" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
+            <state line="35" column="56" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#285#293#0" expanded="true" />
               </folding>
@@ -199,44 +207,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractLock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/AbstractLock.java">
+      <file leaf-file-name="Maven__mysql_mysql_connector_java_6_0_4.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_4.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="16" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeServer.java">
+      <file leaf-file-name="Connection.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Connection.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#handleWrite#0;class#TimeServer#0" expanded="false" />
-                <element signature="method#handleRead#0;class#TimeServer#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisLockThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/RedisLockThread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="490" selection-end="495" vertical-scroll-proportion="0.0">
+            <state line="99" column="0" selection-start="3870" selection-end="3870" vertical-scroll-proportion="-25.24">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestRedisLock.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/TestRedisLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="11" selection-start="3269" selection-end="3269" vertical-scroll-proportion="1.255814">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -244,7 +228,7 @@
       <file leaf-file-name="IDGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="24" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
+            <state line="19" column="51" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -252,19 +236,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassLoader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/ClassLoader.java">
+      <file leaf-file-name="DBUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/DBUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="661" column="0" selection-start="25553" selection-end="25553" vertical-scroll-proportion="0.0">
+            <state line="40" column="27" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeClient.java">
+      <file leaf-file-name="SimpleSolr.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/solr/SimpleSolr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="35" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
+            <state line="36" column="40" selection-start="1262" selection-end="1262" vertical-scroll-proportion="-5.9182825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="URLClassLoader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/URLClassLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="380" column="0" selection-start="14212" selection-end="14212" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -288,11 +281,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/java/ftp/upload/FTPUploadDirectoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/ftp/upload/UploadDirectoryStructureTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/java/redis/RedisLockThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/RedisLockUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/TestRedisLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClientException.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/Releasable.java" />
@@ -304,6 +293,10 @@
         <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/java/redis/lock/time/TimeClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeServer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/DBUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java" />
       </list>
     </option>
   </component>
@@ -315,10 +308,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+    <option name="width" value="2560" />
+    <option name="height" value="1400" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -501,6 +492,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -525,6 +520,172 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thread" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swig" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -618,15 +779,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="redis" />
+              <option name="myItemId" value="rabbitmq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lock" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="time" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oracleaq" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corejava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -770,6 +979,64 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
+    <configuration default="false" name="IDGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.redis.lock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="corejava" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.redis.lock" />
+      <option name="MAIN_CLASS_NAME" value="com.redis.lock.IDGeneratorTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DBUtil" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.redis.lock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.redis.lock.DBUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="corejava" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -883,19 +1150,21 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8ForStorage" />
       <item index="1" class="java.lang.String" itemvalue="Application.TimeServer" />
       <item index="2" class="java.lang.String" itemvalue="Application.TimeClient" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.IDGeneratorTest.testV1_0" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IDGeneratorTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.DBUtil" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.IDGeneratorTest.testV1_0" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TimeClient" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TimeServer" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TimeServer" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.IDGeneratorTest.testV1_0" />
+        <item index="1" class="java.lang.String" itemvalue="Application.DBUtil" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IDGeneratorTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TimeClient" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TimeServer" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -991,33 +1260,37 @@
       <created>1512526686568</created>
       <updated>1512526686568</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="code refactor">
+      <created>1512526980348</created>
+      <updated>1512526980348</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1400" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39872915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39823008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24384432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30659252" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.310539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803813" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38602066" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.385358" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14757359" sideWeight="0.60127085" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14851882" sideWeight="0.6017699" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1096,127 +1369,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/concurrent/TimeUnit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/AbstractLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="4" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.3326338">
+        <state line="79" column="35" selection-start="1978" selection-end="1982" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/Releasable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/Lock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="254" selection-end="261" vertical-scroll-proportion="0.0">
+        <state line="37" column="19" selection-start="698" selection-end="705" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeClientException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oracleaq/JmsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+        <state line="9" column="13" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oracleaq/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="5884" selection-end="5884" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/misc/Launcher.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oracleaq/QUEUE_MESSAGE_TYPE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3122" selection-end="3122" vertical-scroll-proportion="0.0">
+        <state line="19" column="47" selection-start="533" selection-end="544" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/oracle/ojdbc7/12.1.0.1/ojdbc7-12.1.0.1.jar!/oracle/sql/CustomDatum.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="165" selection-start="138" selection-end="138" vertical-scroll-proportion="-3.24">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="360" column="0" selection-start="13265" selection-end="13265" vertical-scroll-proportion="0.0">
+        <state line="380" column="0" selection-start="14212" selection-end="14212" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="661" column="0" selection-start="25553" selection-end="25553" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="35" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/time/TimeServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#handleWrite#0;class#TimeServer#0" expanded="false" />
-            <element signature="method#handleRead#0;class#TimeServer#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/RedisBasedDistributedLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="50" selection-start="688" selection-end="702" vertical-scroll-proportion="-7.3137255">
+        <state line="30" column="22" selection-start="751" selection-end="751" vertical-scroll-proportion="20.313726">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/Lock.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/Connection.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="15" selection-start="1063" selection-end="1069" vertical-scroll-proportion="0.0">
+        <state line="99" column="0" selection-start="3870" selection-end="3870" vertical-scroll-proportion="-25.24">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/AbstractLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="16" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="19" column="51" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="49" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
+        <state line="35" column="56" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#285#293#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/IDGenerator.java">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_4.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/RedisLockThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="490" selection-end="495" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/TestRedisLock.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="11" selection-start="3269" selection-end="3269" vertical-scroll-proportion="1.255814">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="60" column="21" selection-start="2404" selection-end="2404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/DBUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="27" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/solr/SimpleSolr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="40" selection-start="1262" selection-end="1262" vertical-scroll-proportion="-5.9182825">
+          <folding />
         </state>
       </provider>
     </entry>

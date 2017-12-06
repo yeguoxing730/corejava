@@ -79,6 +79,7 @@
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.17.Final" level="project" />
     <orderEntry type="library" name="Maven: org.apache.yetus:audience-annotations:0.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.0.0" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.4" level="project" />
     <orderEntry type="library" name="Maven: com.oracle:ojdbc7:12.1.0.1" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:3.6" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.7" level="project" />

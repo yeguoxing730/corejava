@@ -1,8 +1,8 @@
-package java.ftp.download;
+package com.ftp.download;
 
+import com.ftp.util.FTPDownloadUtil;
 import org.apache.commons.net.ftp.FTPClient;
 
-import java.ftp.util.FTPDownloadUtil;
 import java.io.IOException;
 
 /**

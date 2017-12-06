@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package java.swig.c;
+package com.swig.c;
 
 public class exampleJNI {
   public final static native void My_variable_set(double jarg1);

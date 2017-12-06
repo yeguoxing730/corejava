@@ -1,4 +1,4 @@
-package java.ftp.other;
+package com.ftp.other;
 
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;

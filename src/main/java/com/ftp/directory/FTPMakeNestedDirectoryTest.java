@@ -1,8 +1,8 @@
-package java.ftp.directory;
+package com.ftp.directory;
 
 import org.apache.commons.net.ftp.FTPClient;
 
-import java.ftp.util.FTPUtil;
+import com.ftp.util.FTPUtil;
 import java.io.IOException;
 
 /**

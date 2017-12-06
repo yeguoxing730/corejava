@@ -1,4 +1,4 @@
-package java.ftp.directory;
+package com.ftp.directory;
 
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;

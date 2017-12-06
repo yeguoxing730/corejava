@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package java.swig.c;
+package com.swig.c;
 
 public class example {
   public static void setMy_variable(double value) {

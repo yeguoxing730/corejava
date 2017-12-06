@@ -1,4 +1,4 @@
-package java.thread.procedureconsumer;
+package com.thread.procedureconsumer;
 
 /**
  * Created with IntelliJ IDEA.

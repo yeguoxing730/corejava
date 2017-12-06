@@ -1,4 +1,4 @@
-package java.disruptor;
+package com.disruptor;
 
 
 import com.lmax.disruptor.EventHandler;
@@ -10,9 +10,9 @@ import com.lmax.disruptor.EventHandler;
  * Time: 3:42 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LongEventHandler5 implements EventHandler<LongEvent> {
+public class LongEventHandler1 implements EventHandler<LongEvent> {
 
     @Override
     public void onEvent(LongEvent longEvent, long l, boolean b) throws Exception {
-        System.out.println("long handler 5--------:"+longEvent.getValue());    }
+        System.out.println("long handler 1--------:"+longEvent.getValue());    }
 }

@@ -1,4 +1,4 @@
-package java.oracleaq;
+package com.oracleaq;
 
 /**
  * Created with IntelliJ IDEA.

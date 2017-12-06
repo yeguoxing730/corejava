@@ -1,6 +1,6 @@
-package java.xml.UserDemo.pp.Deal;
+package com.xml.UserDemo.pp.Deal;
 
-import java.xml.UserDemo.pp.Header.Parameter;
+import com.xml.UserDemo.pp.Header.Parameter;
 
 import java.util.ArrayList;
 import java.util.List;

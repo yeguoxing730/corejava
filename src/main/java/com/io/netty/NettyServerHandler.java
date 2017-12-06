@@ -1,4 +1,4 @@
-package java.io.netty;
+package com.io.netty;
 
 /**
  * Created with IntelliJ IDEA.

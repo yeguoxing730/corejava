@@ -1,4 +1,4 @@
-package java.disruptor;
+package com.disruptor;
 
 import com.lmax.disruptor.*;
 import com.lmax.disruptor.dsl.ProducerType;

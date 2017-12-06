@@ -1,4 +1,4 @@
-package java.mail;
+package com.mail;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;

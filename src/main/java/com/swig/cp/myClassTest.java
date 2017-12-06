@@ -1,4 +1,4 @@
-package java.swig.cp;
+package com.swig.cp;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,7 +1,7 @@
-package java.java8.test;
+package com.java8.test;
 
-import java.java8.Hint;
-import java.java8.Hints;
+import com.java8.Hint;
+import com.java8.Hints;
 
 /**
  * Created with IntelliJ IDEA.

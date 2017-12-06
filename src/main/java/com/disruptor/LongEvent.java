@@ -1,4 +1,4 @@
-package java.disruptor;
+package com.disruptor;
 
 /**
  * Created with IntelliJ IDEA.

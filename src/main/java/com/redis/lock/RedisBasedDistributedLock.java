@@ -7,6 +7,7 @@ import redis.clients.jedis.Jedis;
 import java.io.IOException;
 import java.net.SocketAddress;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
 
 public class RedisBasedDistributedLock extends AbstractLock {
 
@@ -99,6 +100,11 @@ public class RedisBasedDistributedLock extends AbstractLock {
         }
 
         return false;
+    }
+
+    @Override
+    public Condition newCondition() {
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     /**

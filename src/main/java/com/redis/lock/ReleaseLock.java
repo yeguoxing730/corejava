@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 8:30 AM
  * To change this template use File | Settings | File Templates.
  */
-public interface Lock extends Releasable{
+public interface ReleaseLock extends Releasable{
     /**
      * 阻塞性的获取锁, 不响应中断
      */

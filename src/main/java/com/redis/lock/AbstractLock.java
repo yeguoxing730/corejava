@@ -1,5 +1,8 @@
 package com.redis.lock;
+
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+
 /**
  * Created with IntelliJ IDEA.
  * User: uc203808
@@ -7,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * Time: 8:34 AM
  * To change this template use File | Settings | File Templates.
  */
-public abstract class AbstractLock implements Lock {
+public abstract class AbstractLock implements ReleaseLock,Lock {
     /**
      * <pre>
      * 这里需不需要保证可见性值得讨论, 因为是分布式的锁,

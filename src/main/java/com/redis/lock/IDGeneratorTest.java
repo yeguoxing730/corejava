@@ -20,12 +20,12 @@ public class IDGeneratorTest {
         SocketAddress addr = new InetSocketAddress("localhost", 9999);
 
         Jedis jedis1 = new Jedis("127.0.0.1", 6379);
-        Lock lock1 = new RedisBasedDistributedLock(jedis1, LOCK_KEY, LOCK_EXPIRE, addr);
+        ReleaseLock lock1 = new RedisBasedDistributedLock(jedis1, LOCK_KEY, LOCK_EXPIRE, addr);
         IDGenerator g1 = new IDGenerator(lock1);
         IDConsumeTask consume1 = new IDConsumeTask(g1, "consume1");
         IDConsumeTask consume3 = new IDConsumeTask(g1, "consume3");
         Jedis jedis2 = new Jedis("127.0.0.1", 6379);
-        Lock lock2 = new RedisBasedDistributedLock(jedis2, LOCK_KEY, LOCK_EXPIRE, addr);
+        ReleaseLock lock2 = new RedisBasedDistributedLock(jedis2, LOCK_KEY, LOCK_EXPIRE, addr);
         IDGenerator g2 = new IDGenerator(lock2);
         IDConsumeTask consume2 = new IDConsumeTask(g2, "consume2");
 

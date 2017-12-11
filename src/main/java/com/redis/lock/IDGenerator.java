@@ -4,11 +4,11 @@ import java.util.concurrent.TimeUnit;
 public class IDGenerator implements Releasable{
     private static BigInteger id = BigInteger.valueOf(0);
 
-    private final Lock lock;
+    private final ReleaseLock lock;
 
     private static final BigInteger INCREMENT = BigInteger.valueOf(1);
 
-    public IDGenerator(Lock lock) {
+    public IDGenerator(ReleaseLock lock) {
         this.lock = lock;
     }
 

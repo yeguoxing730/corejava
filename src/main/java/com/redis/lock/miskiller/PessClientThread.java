@@ -1,6 +1,7 @@
 package com.redis.lock.miskiller;
 
-import com.redis.lock.RedisBasedDistributedLock;
+import com.redis.lock.intf.impl.RedisBasedDistributedLock;
+import com.redis.lock.util.RedisUtil;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;

@@ -1,6 +1,7 @@
-package com.redis.lock;
+package com.redis.lock.intf.impl;
 
 
+import com.redis.lock.intf.abstact.AbstractLock;
 import com.redis.lock.time.TimeClient;
 import redis.clients.jedis.Jedis;
 

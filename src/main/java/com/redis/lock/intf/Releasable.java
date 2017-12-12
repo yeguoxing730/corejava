@@ -1,4 +1,4 @@
-package com.redis.lock;
+package com.redis.lock.intf;
 
 /**
  * Created with IntelliJ IDEA.

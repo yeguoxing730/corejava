@@ -2,29 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/ojdbc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/lock/PlatformTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/util/PlatformUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/ReadWriteLock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/util/ReadWriteLockInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantLock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantReadWriteLock.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/util/RedisUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/lock/ReentrantTest.java" />
-      <change type="DELETED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\com\redis\lock\ReleaseLock.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\com\redis\lock\miskiller\RedisUtil.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\com\redis\lock\RedisBasedDistributedLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisBasedDistributedLock.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\com\redis\lock\Releasable.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/Releasable.java" />
-      <change type="MOVED" beforePath="C:\IDEA\ideaWorkspaces\corejava\src\main\java\com\redis\lock\ReleaseLock.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/ReleaseLock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redis/lock/miskiller/PessClientThread.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/miskiller/PessClientThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/redis/lock/miskiller/PessimisticLockTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/redis/lock/miskiller/PessimisticLockTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/git" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="corejava.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.dummy" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512097148379" ignored="false" />
-    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1513042188289" ignored="false" />
+    <file path="/Dummy.txt" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1513064266726" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/mvc/HelloController.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512354346792" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/pom.xml" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512365400223" ignored="false" />
     <file path="$PROJECT_DIR$/../mvc/src/main/java/com/springapp/config/CacheConfig.java" changelist="ac74319a-d717-4c4d-b058-129255526910" time="1512360301633" ignored="false" />
@@ -196,9 +180,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="29" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -206,11 +188,8 @@
       <file leaf-file-name="ReentrantTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lock/ReentrantTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="24" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1037#1045#0" expanded="true" />
-              </folding>
+            <state line="27" column="9" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -218,12 +197,8 @@
       <file leaf-file-name="IDGeneratorTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lock/IDGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="19" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#670#678#0" expanded="true" />
-                <element signature="e#1311#1319#0" expanded="true" />
-              </folding>
+            <state line="81" column="9" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -231,10 +206,8 @@
       <file leaf-file-name="LockInfoTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lock/LockInfoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="12" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="24" column="5" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -242,23 +215,30 @@
       <file leaf-file-name="PlatformTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lock/PlatformTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="30" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FastJsonTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FastJsonTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/lock/FastJsonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="14" selection-start="579" selection-end="579" vertical-scroll-proportion="1.4770241">
+            <state line="25" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#657#667#0" expanded="true" />
                 <element signature="e#1492#1502#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="git" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/git">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="64" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -276,17 +256,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantReadWriteLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="17" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractLock.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/abstact/AbstractLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="51" selection-start="360" selection-end="371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -310,7 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/util/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/util/RedisUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisBasedDistributedLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/redis/lock/util/LockInfo.java" />
@@ -326,6 +294,7 @@
         <option value="$PROJECT_DIR$/src/test/java/lock/LockInfoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/lock/PlatformTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/lock/FastJsonTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/git" />
       </list>
     </option>
   </component>
@@ -337,10 +306,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+    <option name="x" value="759" />
+    <option name="y" value="71" />
+    <option name="width" value="1485" />
+    <option name="height" value="1334" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -488,8 +457,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -645,12 +614,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -824,6 +793,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -850,19 +832,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1049,17 +1018,20 @@
       <created>1513042193652</created>
       <updated>1513042193652</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="reentrant lock">
+      <created>1513042236389</created>
+      <updated>1513042236389</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="759" y="71" width="1485" height="1334" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.60603654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6480068" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342664" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5229284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1068,18 +1040,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32654792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38522637" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24947295" sideWeight="0.60899067" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18337311" sideWeight="0.39396346" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32396346" sideWeight="0.3519932" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24342664" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38522637" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1126,7 +1099,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="seckill" />
+    <option name="LAST_COMMIT_MESSAGE" value="reentrant lock" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1146,6 +1119,7 @@
     <MESSAGE value="code update" />
     <MESSAGE value="code refactor" />
     <MESSAGE value="seckill" />
+    <MESSAGE value="reentrant lock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1155,15 +1129,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/util/LockInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/util/ReadWriteLockInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="9" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.0">
@@ -1176,9 +1141,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/Releasable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="17" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1190,16 +1153,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/generator/IDGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="21" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/miskiller/PessClientThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="42" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="55" column="42" selection-start="2008" selection-end="2008" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/abstact/AbstractLock.java">
@@ -1226,68 +1185,60 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantReadWriteLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="17" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/redis/lock/intf/impl/RedisReentrantLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="29" selection-start="689" selection-end="689" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lock/IDGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="19" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#670#678#0" expanded="true" />
-            <element signature="e#1311#1319#0" expanded="true" />
-          </folding>
+        <state line="81" column="9" selection-start="2517" selection-end="2517" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lock/LockInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="24" column="5" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lock/PlatformTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="18" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lock/ReentrantTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="24" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1037#1045#0" expanded="true" />
-          </folding>
+        <state line="27" column="9" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/lock/FastJsonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="579" selection-end="579" vertical-scroll-proportion="1.4770241">
+        <state line="25" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#657#667#0" expanded="true" />
             <element signature="e#1492#1502#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/git">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="64" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>

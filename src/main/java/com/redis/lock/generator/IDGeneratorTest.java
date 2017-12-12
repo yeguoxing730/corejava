@@ -1,5 +1,8 @@
-package com.redis.lock;
+package com.redis.lock.generator;
 
+import com.redis.lock.intf.ReleaseLock;
+import com.redis.lock.intf.impl.RedisBasedDistributedLock;
+import com.redis.lock.util.DBUtil;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 

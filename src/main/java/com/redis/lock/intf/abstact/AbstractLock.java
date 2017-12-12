@@ -1,4 +1,6 @@
-package com.redis.lock;
+package com.redis.lock.intf.abstact;
+
+import com.redis.lock.intf.ReleaseLock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
@@ -81,4 +83,9 @@ public abstract class AbstractLock implements ReleaseLock,Lock {
      * @throws InterruptedException
      */
     protected abstract boolean lock(boolean useTimeout, long time, TimeUnit unit, boolean interrupt) throws InterruptedException;
+
+    /*
+         * @see cc.lixiaohui.lock.AbstractLock#isHeldByCurrentThread()
+         */
+    protected abstract boolean isHeldByCurrentThread();
 }

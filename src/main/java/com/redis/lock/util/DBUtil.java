@@ -1,4 +1,4 @@
-package com.redis.lock;
+package com.redis.lock.util;
 
 import java.sql.*;
 
@@ -37,7 +37,7 @@ public class DBUtil {
              //insert(35l,"hh",55,22);
                String[] arrs = {"中国","每个国","很舒服的","是","水电费"};
             for(int i=0;i<10000l;i++){
-                insertGood(i,arrs[i % arrs.length],i);
+                insertGood(i, arrs[i % arrs.length], i);
             }
         } catch (Exception e) {
             e.printStackTrace();

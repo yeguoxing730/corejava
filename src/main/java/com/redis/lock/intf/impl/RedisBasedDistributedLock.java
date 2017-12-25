@@ -73,6 +73,11 @@ public class RedisBasedDistributedLock extends AbstractLock {
         return false;
     }
 
+    @Override
+    protected boolean isHeldByCurrentThread() {
+        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
     public boolean tryLock() {
         long lockExpireTime = serverTimeMillis() + lockExpires + 1;//锁超时时间
         String stringOfLockExpireTime = String.valueOf(lockExpireTime);

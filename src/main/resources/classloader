@@ -1,0 +1,23 @@
+https://blog.csdn.net/briblue/article/details/54973413
+ClassLoader
+ BootStrapClassLoader  System.out.println(System.getProperty("sun.boot.class.path"));
+ ExtClassLoader System.out.println(System.getProperty("java.ext.dirs"));
+ AppClassLoader System.out.println(System.getProperty("java.class.path"));
+类加载采取双亲委托加载
+两种方式加载类
+  ClassLoader.load()
+  Class.forName()
+
+
+  类的加载过程  加载-》链接(分批内存结构 分配属性 方法空间  加载引用父类和关联类)-》初始化
+
+  JMM
+   NOHeap(maxPermSize)
+   Heap xms xmax
+     新生代xmn
+        Eden区 8
+        Survivor区 1
+          from
+          to
+     老生代
+

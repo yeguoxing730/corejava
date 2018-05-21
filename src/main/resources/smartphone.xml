@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smartphones>
+    <smartphone>
+        <brand>
+            <text>
+                Samsung
+            </text>
+        </brand>
+        <model>
+            Note3
+        </model>
+    </smartphone>
+    <smartphone>
+        <brand>
+            <text>
+                Apple
+            </text>
+        </brand>
+        <model>
+            IPhone8
+        </model>
+    </smartphone>
+</smartphones>

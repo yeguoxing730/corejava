@@ -1,4 +1,4 @@
-package com.designmodel.createobj.builder;
+package com.designmodel.builder;
 
 /**
  * Created with IntelliJ IDEA.

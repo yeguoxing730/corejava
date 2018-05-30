@@ -1,4 +1,4 @@
-package com.designmodel.createobj.singlton;
+package com.designmodel.singlton;
 
 /**
  * Created with IntelliJ IDEA.

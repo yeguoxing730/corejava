@@ -1,4 +1,4 @@
-package com.designmodel.createobj.staticfactory;
+package com.designmodel.staticfactory;
 
 /**
  * Created with IntelliJ IDEA.

@@ -16,6 +16,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * XML 解析的方式有DOM 和 SAX
+ * 还有其他几种第三方类库JDOM StAX XPath DOM4j 提高效率
+ */
 public class DomDemo {
     private Document document;
     private String fileName;

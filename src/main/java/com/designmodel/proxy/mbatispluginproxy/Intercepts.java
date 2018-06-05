@@ -1,4 +1,4 @@
-package com.designmodel.proxy.config;
+package com.designmodel.proxy.mbatispluginproxy;
 
 
 import java.lang.annotation.RetentionPolicy;

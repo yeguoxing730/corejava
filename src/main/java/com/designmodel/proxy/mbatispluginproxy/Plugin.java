@@ -1,9 +1,8 @@
-package com.designmodel.proxy.config;
+package com.designmodel.proxy.mbatispluginproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.nio.channels.InterruptibleChannel;
 
 /**
  * Created by yeguo on 2018/6/3.

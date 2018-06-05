@@ -1,4 +1,4 @@
-package com.designmodel.proxy.decorators;
+package com.designmodel.decorators;
 
 public class DecoratorTest {
     public static void main(String[] args){

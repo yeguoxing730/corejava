@@ -1,4 +1,4 @@
-package com.designmodel.proxy.decorators;
+package com.designmodel.decorators;
 
 public class LoudSing implements Singing {
     Singing originSing;

@@ -1,0 +1,43 @@
+﻿https://blog.csdn.net/luanlouis/article/details/40422941
+https://blog.csdn.net/luanlouis/article/details/40422941
+https://blog.csdn.net/luanlouis/article/details/40422941
+1.接口层
+ a.基于Mapper接口
+ b.基于statementId
+ Mapper接口底层实现还是转换为基于statementID这种方式 Mapper接口这种方式为了面向对象编程的需要
+同时也为了no xml的需要设计的 通过类名+方法名作为statementId 方法参数作为请求参数 方法返回作为结果对象
+
+
+2.数据处理
+ a.参数处理 
+   参数映射配置 参数映射解析 参数类型解析 ParameterHandler
+ b.SQL解析
+   sql语句配置 sql语句解析 sql语句动态生成 SqlSource
+ c.SQL执行
+   SimpleExcutor BatchExecutor ReuseExecutor
+ d.结果处理和映射
+   结果映射配置 结果映射解析 结果类型转换 ResultSetHandler
+3.架构支持
+ a.sql语句配置方式 
+    xml annotation
+ b.事务管理 连接池管理 缓存机制
+4.引导层
+  基于xml配置引导 基于 javaapi 引导
+	configuration->sqlsource-->mappedStatement-->		      
+sessionFactory->session->executor->statementId--> ==>BoundSql   
+			 statementHandler ->  Statement       ==> execute query 
+   parameterHandler
+   resultsetHandler 	                         ==>TyperHandler
+--> PreparedStatement SimpleStatement CallableStatement --> Resultset
+
+
+
+Executor的作用
+1.根据传递的参数 完成sql语句动态解析生成BoundSql对象，供StatementHandler使用
+2.为查询创建缓存 以提高性能
+3.创建JDBC的Statement连接对象传递给StatementHandler对象 返回List查询对象
+4.StatementHandler对象负责设置Statement对象中的查询参数，处理jdbc返回的resultset，将resultset加工为List集合返回
+
+
+DataSource分类
+jndi pooled unpooled

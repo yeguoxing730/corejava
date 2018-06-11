@@ -1,0 +1,35 @@
+﻿1.xml格式启动
+String resource = "org/mybatis/example/mybatis-config.xml";
+InputStream inputStream = Resources.getResourceAsStream(resource);
+SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+2.代码启动
+DataSource dataSource = BlogDataSourceFactory.getBlogDataSource();
+TransactionFactory transactionFactory = new JdbcTransactionFactory();
+Environment environment = new Environment("development", transactionFactory, dataSource);
+Configuration configuration = new Configuration(environment);
+configuration.addMapper(BlogMapper.class);
+SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
+
+3.sqlSession
+the way1:
+SqlSession session = sqlSessionFactory.openSession();
+try {
+  Blog blog = (Blog) session.selectOne("org.mybatis.example.BlogMapper.selectBlog", 101);
+} finally {
+  session.close();
+}
+the way2:
+SqlSession session = sqlSessionFactory.openSession();
+try {
+  BlogMapper mapper = session.getMapper(BlogMapper.class);
+  Blog blog = mapper.selectBlog(101);
+} finally {
+  session.close();
+}
+
+4.缓存
+内存 磁盘 堆外内存
+1.常被查询、最重要、数据量较小的数据存放在堆缓存，不用担心JVM的重启，有持久化机制；
+2.常被查询、数据量中等的数据存放在堆外缓存，几个G就好了，不用担心服务器的重启，有持久化机制；
+3.不常用、大量的数据、但又不想占用数据库IO的数据，放在Disk缓存，容量自便；

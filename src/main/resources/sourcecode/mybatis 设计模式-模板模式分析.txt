@@ -1,0 +1,89 @@
+模板模式
+
+基类或者父接口(抽象基类)定义好算法流程，子类实现不同的算法  子类不能改变算法的流程 
+
+Executor 定义接口
+BaseExecutor定义算法流程
+
+
+SimpleExecutor
+BatchExecutor
+CloseExecutor
+ReuseExecutor 定义不同的实现方法
+
+
+eg:
+1.Executor
+ int update(MappedStatement ms, Object parameter) throws SQLException;
+2.BaseExecutor 定义流程 基类并未给出doUpdate的具体算法
+  public int update(MappedStatement ms, Object parameter) throws SQLException {
+    ErrorContext.instance().resource(ms.getResource()).activity("executing an update").object(ms.getId());
+    if (closed) {
+      throw new ExecutorException("Executor was closed.");
+    }
+    clearLocalCache();
+    return doUpdate(ms, parameter);
+  }
+  @Override
+  public void clearLocalCache() {
+    if (!closed) {
+      localCache.clear();
+      localOutputParameterCache.clear();
+    }
+  }
+  protected abstract int doUpdate(MappedStatement ms, Object parameter)
+      throws SQLException;
+3.具体子类算法如下：
+BatchExecutor doUpdate算法
+	public int doUpdate(MappedStatement ms, Object parameterObject) throws SQLException {
+    final Configuration configuration = ms.getConfiguration();
+    final StatementHandler handler = configuration.newStatementHandler(this, ms, parameterObject, RowBounds.DEFAULT, null, null);
+    final BoundSql boundSql = handler.getBoundSql();
+    final String sql = boundSql.getSql();
+    final Statement stmt;
+    if (sql.equals(currentSql) && ms.equals(currentStatement)) {
+      int last = statementList.size() - 1;
+      stmt = statementList.get(last);
+      applyTransactionTimeout(stmt);
+     handler.parameterize(stmt);//fix Issues 322
+      BatchResult batchResult = batchResultList.get(last);
+      batchResult.addParameterObject(parameterObject);
+    } else {
+      Connection connection = getConnection(ms.getStatementLog());
+      stmt = handler.prepare(connection, transaction.getTimeout());
+      handler.parameterize(stmt);    //fix Issues 322
+      currentSql = sql;
+      currentStatement = ms;
+      statementList.add(stmt);
+      batchResultList.add(new BatchResult(ms, sql, parameterObject));
+    }
+  // handler.parameterize(stmt);
+    handler.batch(stmt);
+    return BATCH_UPDATE_RETURN_VALUE;
+  } 
+SimpleExecutor   doUpdate算法 
+  @Override
+  public int doUpdate(MappedStatement ms, Object parameter) throws SQLException {
+    Statement stmt = null;
+    try {
+      Configuration configuration = ms.getConfiguration();
+      StatementHandler handler = configuration.newStatementHandler(this, ms, parameter, RowBounds.DEFAULT, null, null);
+      stmt = prepareStatement(handler, ms.getStatementLog());
+      return handler.update(stmt);
+    } finally {
+      closeStatement(stmt);
+    }
+  }
+ClosedExecutor   doUpdate算法 
+	@Override
+    protected int doUpdate(MappedStatement ms, Object parameter) throws SQLException {
+      throw new UnsupportedOperationException("Not supported.");
+    }
+ResueExecutor doUpdate算法
+	@Override
+	public int doUpdate(MappedStatement ms, Object parameter) throws SQLException {
+		Configuration configuration = ms.getConfiguration();
+		StatementHandler handler = configuration.newStatementHandler(this, ms, parameter, RowBounds.DEFAULT, null, null);
+		Statement stmt = prepareStatement(handler, ms.getStatementLog());
+		return handler.update(stmt);
+	}

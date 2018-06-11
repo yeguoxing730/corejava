@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+  </mappers>
+<properties resource="org/mybatis/example/config.properties">
+  <property name="username" value="dev_user"/>
+<property name="password" value="F2Fa3!33TYyg"/>
+</properties>
+ <settings>
+  <setting name="cacheEnabled" value="true"/>
+  <setting name="lazyLoadingEnabled" value="true"/>
+  <setting name="multipleResultSetsEnabled" value="true"/>
+  <setting name="useColumnLabel" value="true"/>
+  <setting name="useGeneratedKeys" value="false"/>
+  <setting name="autoMappingBehavior" value="PARTIAL"/>
+  <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+  <setting name="defaultExecutorType" value="SIMPLE"/>
+  <setting name="defaultStatementTimeout" value="25"/>
+  <setting name="defaultFetchSize" value="100"/>
+  <setting name="safeRowBoundsEnabled" value="false"/>
+  <setting name="mapUnderscoreToCamelCase" value="false"/>
+  <setting name="localCacheScope" value="SESSION"/>
+  <setting name="jdbcTypeForNull" value="OTHER"/>
+  <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+</settings>
+<typeAliases>
+  <typeAlias alias="Author" type="domain.blog.Author"/>
+  <typeAlias alias="Blog" type="domain.blog.Blog"/>
+  <typeAlias alias="Comment" type="domain.blog.Comment"/>
+  <typeAlias alias="Post" type="domain.blog.Post"/>
+  <typeAlias alias="Section" type="domain.blog.Section"/>
+  <typeAlias alias="Tag" type="domain.blog.Tag"/>
+</typeAliases>
+<typeHandlers>
+  <typeHandler handler="org.mybatis.example.ExampleTypeHandler"/>
+</typeHandlers>
+
+<mappers>
+  <mapper resource="org/mybatis/builder/AuthorMapper.xml"/>
+  <mapper resource="org/mybatis/builder/BlogMapper.xml"/>
+  <mapper resource="org/mybatis/builder/PostMapper.xml"/>
+  <mapper namespace="org.apache.ibatis.submitted.rounding.Mapper">
+	<resultMap type="org.apache.ibatis.submitted.rounding.User" id="usermap">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="funkyNumber" property="funkyNumber"/>
+		<result column="roundingMode" property="roundingMode"/>
+	</resultMap>
+
+	<select id="getUser" resultMap="usermap">
+		select * from users
+	</select>
+	<insert id="insert">
+	    insert into users (id, name, funkyNumber, roundingMode) values (
+	    	#{id}, #{name}, #{funkyNumber}, #{roundingMode}
+	    )
+	</insert>
+	
+	<resultMap type="org.apache.ibatis.submitted.rounding.User" id="usermap2">
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="funkyNumber" property="funkyNumber"/>
+		<result column="roundingMode" property="roundingMode" typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
+	</resultMap>
+	<select id="getUser2" resultMap="usermap2">
+		select * from users2
+	</select>
+	<insert id="insert2">
+	    insert into users2 (id, name, funkyNumber, roundingMode) values (
+	    	#{id}, #{name}, #{funkyNumber}, #{roundingMode, typeHandler=org.apache.ibatis.type.EnumTypeHandler}
+	    )
+	</insert>
+
+</mapper>
+</mappers>
+<objectFactory type="org.mybatis.example.ExampleObjectFactory">
+  <property name="someProperty" value="100"/>
+</objectFactory>
+<plugins>
+  <plugin interceptor="org.mybatis.example.ExamplePlugin">
+    <property name="someProperty" value="100"/>
+  </plugin>
+</plugins>
+<environments default="development">
+  <environment id="development">
+    <transactionManager type="JDBC">
+      <property name="..." value="..."/>
+    </transactionManager>
+    <dataSource type="POOLED">
+      <property name="driver" value="${driver}"/>
+      <property name="url" value="${url}"/>
+      <property name="username" value="${username}"/>
+      <property name="password" value="${password}"/>
+    </dataSource>
+  </environment>
+</environments>
+<databaseIdProvider type="DB_VENDOR">
+  <property name="SQL Server" value="sqlserver"/>
+  <property name="DB2" value="db2"/>        
+  <property name="Oracle" value="oracle" />
+</databaseIdProvider>
+</configuration>

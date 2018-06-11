@@ -1,0 +1,68 @@
+﻿
+Executor 定义接口
+BaseExecutor定义算法流程
+
+
+SimpleExecutor
+BatchExecutor
+CloseExecutor
+ReuseExecutor 定义不同的实现方法
+具体创建那种executor 是根据具体类型创建
+
+策略和桥接都是接口和实现分开 区别是策略是行为模式 调用的是一个方法 而桥接模式是接口和实现都在变 用的不同方法
+
+<setting name="defaultExecutorType" value="SIMPLE" />
+
+
+SimpleExecutor：普通的执行器
+BatchExecutor：批处理执行器
+ReuseExecutor：预处理语句重用执行器
+
+MyBatis核心类Configuration类似于策略模式中的Context，区别于Context就是：Context维系是的传入的策略对象；
+Configuration是根据传入的策略对象类型，生产相应的策略对象，代码如下：
+// 配置文件中setting属性为defaultExecutorType的对应Configuration属性
+protected ExecutorType defaultExecutorType = ExecutorType.SIMPLE;
+// 根据默认的执行器类型，生成相应的执行器对象
+public Executor newExecutor(Transaction transaction) {
+    return newExecutor(transaction, defaultExecutorType);
+}
+// 可指定执行器类型，生成相应的执行器对象
+public Executor newExecutor(Transaction transaction, ExecutorType executorType) {
+    executorType = executorType == null ? defaultExecutorType : executorType;
+    executorType = executorType == null ? ExecutorType.SIMPLE : executorType;
+    Executor executor;
+    if (ExecutorType.BATCH == executorType) {
+        executor = new BatchExecutor(this, transaction);
+    } else if (ExecutorType.REUSE == executorType) {
+        executor = new ReuseExecutor(this, transaction);
+    } else {
+        executor = new SimpleExecutor(this, transaction);
+    }
+    if (cacheEnabled) {
+        executor = new CachingExecutor(executor);
+    }
+    executor = (Executor) interceptorChain.pluginAll(executor);
+    return executor;
+}
+
+执行器对象的使用者是接口的SqlSessionFactory的默认实现类DefaultSqlSessionFactory，用于生成SqlSession，代码如下
+
+// 指定执行器类型，事务隔离级别和事务是否自动提交，从数据源中生成SqlSession
+private SqlSession openSessionFromDataSource(ExecutorType execType, TransactionIsolationLevel level, boolean autoCommit) {
+    Transaction tx = null;
+    try {
+      final Environment environment = configuration.getEnvironment();
+      final TransactionFactory transactionFactory = getTransactionFactoryFromEnvironment(environment);
+      tx = transactionFactory.newTransaction(environment.getDataSource(), level, autoCommit);
+      // 调用Configuration的newExecutor(Transaction transaction,ExecutorType execType)生成执行器对象
+      final Executor executor = configuration.newExecutor(tx, execType);
+      return new DefaultSqlSession(configuration, executor, autoCommit);
+    } catch (Exception e) {
+      closeTransaction(tx); // may have fetched a connection so lets call close()
+      throw ExceptionFactory.wrapException("Error opening session.  Cause: " + e, e);
+    } finally {
+      ErrorContext.instance().reset();
+    }
+}
+
+策略和java自身的抽象类 很好的实现 compare和sort接口就是很好策略模式应用 避免了多个if else这样丑陋的代码

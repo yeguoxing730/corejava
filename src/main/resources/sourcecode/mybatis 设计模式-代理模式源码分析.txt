@@ -1,0 +1,72 @@
+mybatis 代理模式应用（JDK代理） 源码解析
+
+实现InvocationHandler接口的类有如下
+SqlSessionTemplate
+SqlSessionInterceptor
+
+MapperProxy.java
+
+PooledConnection.java
+PooledDataSource.java
+
+ConnectionLogger.java
+PreparedStatementLogger.java
+ResultSetLogger.java
+StatementLogger.java
+
+Plugin.java
+
+SqlSessionManager.java
+SqlSessionManager.SqlSessionInterceptor.java
+
+SqlSessionTemplate下的SqlSessionInterceptor是为了生成SqlSessionTemplate的代理对象的 当初始化SqlSessionTemplate时就会生成SqlSession的代理对象
+以后SqlSessionTemplate对象的所有操作都是通过这个代理对象来操作的
+ public SqlSessionTemplate(SqlSessionFactory sqlSessionFactory, ExecutorType executorType,
+      PersistenceExceptionTranslator exceptionTranslator) {
+
+    notNull(sqlSessionFactory, "Property 'sqlSessionFactory' is required");
+    notNull(executorType, "Property 'executorType' is required");
+
+    this.sqlSessionFactory = sqlSessionFactory;
+    this.executorType = executorType;
+    this.exceptionTranslator = exceptionTranslator;
+    this.sqlSessionProxy = (SqlSession) newProxyInstance(
+        SqlSessionFactory.class.getClassLoader(),
+        new Class[] { SqlSession.class },
+        new SqlSessionInterceptor());
+  }
+ @Override
+  public <T> T selectOne(String statement) {
+    return this.sqlSessionProxy.<T> selectOne(statement);
+  }
+
+
+MapperProxy MapperProxyFactory MapperFacotryBean 三个合为一体 生成MapperDao接口的代理对象
+XMLMapperBuilder parseXML文档 最后解析mappers 把每个mapper生成一个MapperProxyFactory 放入Configuration的MapperRegistry对象map中
+MapperFacotryBean对象是工程bean他会根据dao类 去mapperRegistry中取出MapperProxyFactory并生成MapperProxy对象
+
+PooledConnection PooledDataSource 获取Connection对象 当执行Connection对象的关闭时 PooledConnection代理对象把连接放入缓存 其他直接执行并返回结果
+
+ConnectionLogger PreparedStatementLogger ResultSetLogger StatementLogger 这几个对象只是在Connection PrepareStatement ResultSet Statement对象的基础
+上生成对应的代理对象 代理对象有记录日志的功能
+
+Plugin对象 结合Interceptor生成 在生成代理对象的基础上加入 Interceptor的功能(类似log)
+ 有他提供的wrap方法生成代理对象 InterceptorChain对象会循环生成代理对象 把所有的Interceptor功能给包裹进去 
+    ParameterHandler ResultSetHandler StatementHandler 都会由InterceptionChain循环包裹生成代理对象
+	 public ResultSetHandler newResultSetHandler(Executor executor, MappedStatement mappedStatement, RowBounds rowBounds, ParameterHandler parameterHandler,
+      ResultHandler resultHandler, BoundSql boundSql) {
+      ResultSetHandler resultSetHandler = new DefaultResultSetHandler(executor, mappedStatement, parameterHandler, resultHandler, boundSql, rowBounds);
+      resultSetHandler = (ResultSetHandler) interceptorChain.pluginAll(resultSetHandler);
+      return resultSetHandler;
+  }
+   public Object pluginAll(Object target) {
+    for (Interceptor interceptor : interceptors) {
+      target = interceptor.plugin(target);
+    }
+    return target;
+  }
+  
+  
+  
+  MapperProxy.getDianpingById
+  SqlSessionTemplate.getDianpingbyid

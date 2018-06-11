@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeCGLIB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/ChineseSing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/DecoratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/LoudSing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/Singing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/SlowSing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacadeImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacadeProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/DynamicProxyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/AnnotationInteceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/AnnotationInteceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/DynamicProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/DynamicProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Interceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Interceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Intercepts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Intercepts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Plugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Plugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/config/Sourceable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/mbatispluginproxy/Sourceable.java" afterDir="false" />
-    </list>
     <list id="a638c016-8d03-4c7a-bc83-c7890b371d6a" name="nocommit" comment="">
       <change beforePath="$PROJECT_DIR$/corejava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/corejava.iml" afterDir="false" />
+    </list>
+    <list default="true" id="ac74319a-d717-4c4d-b058-129255526910" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/StrategyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/bean/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/AlipayCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/CashPayCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/WeixinPayCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/itf/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/factory/ContextSpringFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/PrintStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/WriteStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-stragy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="corejava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -149,8 +139,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BookFacade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacade.java">
+      <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/itf/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
               <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -158,20 +148,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookFacadeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacadeImpl.java">
+      <file leaf-file-name="AlipayCalculator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/AlipayCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="100">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookFacadeProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacadeProxy.java">
+      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/bean/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="275">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+              <folding>
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StrategyTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/StrategyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,77 +186,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookFacadeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeImpl.java">
+      <file leaf-file-name="ContextSpringFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/factory/ContextSpringFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="650">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
-                <element signature="e#95#96#0" expanded="true" />
-                <element signature="e#145#146#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#176#194#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#671#672#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicProxyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/DynamicProxyTest.java">
+      <file leaf-file-name="spring-context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="spring-stragy.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-stragy.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="30" column="81" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="30" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/PrintStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding>
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WriteStrategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/WriteStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding>
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/Strategy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Singing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/Singing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoudSing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/LoudSing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
-              <folding>
-                <element signature="e#136#137#0" expanded="true" />
-                <element signature="e#174#175#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChineseSing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/ChineseSing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding>
-                <element signature="e#140#141#0" expanded="true" />
-                <element signature="e#178#179#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SlowSing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/SlowSing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DecoratorTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/DecoratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -287,57 +287,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/loger/appender/FileLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/DiskClassLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/ClassLoaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/classloader" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/FileUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/DeClassLoader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/DeClassLoaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/classloader/ThreadContextClassLoaderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jvm/JVMSummaryInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crypt/DES.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lock/ThreadCaChe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thread/webcrawler/LinkHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thread/webcrawler/LinkFinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thread/webcrawler/LinkFinderAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thread/webcrawler/WebCrawlerExecutiveService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thread/webcrawler/WebCrawlerForkJoin.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/user.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/user2.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/json/JSONOBJTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/io/file/AppendToFile.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/io/file/ReadFile.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/smartphone.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xml/rt/XPathFactoryExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/chain/InterceptorChainTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/FontProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xml/DomDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/Count.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/CountImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/CountProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/StaticProxyTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/BookFacadeImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/BookFacade.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/BookFacadeProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/DynamicProxyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/BookFacadeCglib.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/static/Count.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xml/UserDemo/SAXOperateXmlDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeCgli.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeCglib.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeCGLIB.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/Singing.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/ChineseSing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/LoudSing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/SlowSing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/DecoratorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/Count.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/CountImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/CountProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/StaticProxyTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/ChineseSing.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/Shape.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/Cycle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/Square.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/TemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/BaseShape.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/template/demo/AbstractShu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/composite/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/composite/Filer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/composite/Noder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/composite/Clienter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/HelloImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/CGLibProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/CGLIBTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine2000.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine2200.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Bus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Jeep.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/bridge/MainClass.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/impls/AlipayCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/impls/WeixinPayCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/impls/KuaiShouCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/Item.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/StrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/Strategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/impl/PrintStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/impl/WriteStrategy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/ContextSpringFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-stragy.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/StrategyTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/factory/ContextSpringFactory.java" />
       </list>
     </option>
   </component>
@@ -355,10 +355,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="1" />
-    <option name="width" value="1597" />
-    <option name="height" value="1021" />
+    <option name="x" value="117" />
+    <option name="y" value="31" />
+    <option name="width" value="1671" />
+    <option name="height" value="994" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -489,9 +489,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -542,7 +542,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="designmodel" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
+              <item name="stragy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="corejava" type="b2602c69:ProjectViewProjectNode" />
@@ -552,8 +552,8 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="designmodel" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-              <item name="decorators" type="462c0819:PsiDirectoryNode" />
+              <item name="stragy" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="corejava" type="b2602c69:ProjectViewProjectNode" />
@@ -562,15 +562,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="json" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="corejava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="corejava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="designmodel" type="462c0819:PsiDirectoryNode" />
+              <item name="stragy" type="462c0819:PsiDirectoryNode" />
               <item name="xml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -612,22 +605,22 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\designmodel\proxy\static" />
-      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\resources" />
-      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\xml" />
-      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\designmodel\chain" />
-      <recent name="D:\IDEAWorkspace\corejava\src\libs" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IDEA\ideaWorkspaces\java\core\src\libs\oracleaq" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.designmodel.template" />
       <recent name="com.designmodel.proxy.decorators" />
       <recent name="com.jvm" />
       <recent name="com.classloader" />
       <recent name="com.loger.appender" />
-      <recent name="rabbitmq" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\IDEA\ideaWorkspaces\java\core\src\libs\oracleaq" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\resources" />
+      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\designmodel\proxy\static" />
+      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\xml" />
+      <recent name="D:\IDEAWorkspace\person projects\corejava\src\main\java\com\designmodel\chain" />
+      <recent name="D:\IDEAWorkspace\corejava\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -642,67 +635,67 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DecoratorTest">
+  <component name="RunManager" selected="Application.StrategySpringClientFactory">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="DecoratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designmodel.proxy.decorators.DecoratorTest" />
+    <configuration name="CGLIBTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designmodel.proxy.cglibp.CGLIBTest" />
       <module name="corejava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.designmodel.proxy.decorators.*" />
+          <option name="PATTERN" value="com.designmodel.proxy.cglibp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="DynamicProxyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designmodel.proxy.dynamicp.DynamicProxyTest" />
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designmodel.bridge.MainClass" />
       <module name="corejava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.designmodel.proxy.dynamicp.*" />
+          <option name="PATTERN" value="com.designmodel.bridge.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="JSONOBJTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.json.JSONOBJTest" />
+    <configuration name="StrategySpringClientFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designmodel.stragy.xml.StrategySpringClientFactory" />
       <module name="corejava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.json.*" />
+          <option name="PATTERN" value="com.designmodel.stragy.xml.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
-    <configuration name="XPathFactoryExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xml.rt.XPathFactoryExample" />
+    <configuration name="StrategyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designmodel.stragy.code.StrategyTest" />
       <module name="corejava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xml.rt.*" />
+          <option name="PATTERN" value="com.designmodel.stragy.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TemplateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.designmodel.template.TemplateTest" />
+      <module name="corejava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.designmodel.template.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="null" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.designmodel.proxy.static.null" />
-      <module name="corejava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.designmodel.proxy.dynamicp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="">
       <option name="arquillianRunConfiguration">
@@ -1166,19 +1159,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat8ForStorage" />
-      <item itemvalue="Application.JSONOBJTest" />
-      <item itemvalue="Application.XPathFactoryExample" />
-      <item itemvalue="Application.null" />
-      <item itemvalue="Application.DynamicProxyTest" />
-      <item itemvalue="Application.DecoratorTest" />
+      <item itemvalue="Application.TemplateTest" />
+      <item itemvalue="Application.CGLIBTest" />
+      <item itemvalue="Application.MainClass" />
+      <item itemvalue="Application.StrategyTest" />
+      <item itemvalue="Application.StrategySpringClientFactory" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DecoratorTest" />
-        <item itemvalue="Application.DynamicProxyTest" />
-        <item itemvalue="Application.null" />
-        <item itemvalue="Application.XPathFactoryExample" />
-        <item itemvalue="Application.JSONOBJTest" />
+        <item itemvalue="Application.StrategySpringClientFactory" />
+        <item itemvalue="Application.StrategyTest" />
+        <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.CGLIBTest" />
+        <item itemvalue="Application.TemplateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1218,7 +1211,11 @@
       <workItem from="1527681814049" duration="4148000" />
       <workItem from="1527763190731" duration="2843000" />
       <workItem from="1528082778681" duration="1636000" />
-      <workItem from="1528179211703" duration="634000" />
+      <workItem from="1528179211703" duration="4838000" />
+      <workItem from="1528195240406" duration="1835000" />
+      <workItem from="1528249418193" duration="583000" />
+      <workItem from="1528362205948" duration="147000" />
+      <workItem from="1528698775275" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="pom">
       <created>1512116687323</created>
@@ -1486,7 +1483,49 @@
       <option name="project" value="LOCAL" />
       <updated>1527745663449</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="design model code update">
+      <created>1528180067623</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1528180067623</updated>
+    </task>
+    <task id="LOCAL-00040" summary="design model code update">
+      <created>1528180211412</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1528180211412</updated>
+    </task>
+    <task id="LOCAL-00041" summary="design model code update">
+      <created>1528181607870</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1528181607870</updated>
+    </task>
+    <task id="LOCAL-00042" summary="design model  proxy and composite">
+      <created>1528189605148</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1528189605148</updated>
+    </task>
+    <task id="LOCAL-00043" summary="bridge design model">
+      <created>1528195674280</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1528195674280</updated>
+    </task>
+    <task id="LOCAL-00044" summary="maven split xml jar">
+      <created>1528362349330</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1528362349332</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1522,7 +1561,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33604000" />
+    <option name="totallyTimeSpent" value="41690000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1545,37 +1584,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="1" width="1489" height="1021" extended-state="0" />
+    <frame x="117" y="31" width="1671" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299435" />
-      <window_info id="Palette&#9;" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32876712" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.7925532" />
-      <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19798657" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="right" id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6973789" visible="true" weight="0.31122088" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.60899067" side_tool="true" weight="0.24946581" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24982105" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30769232" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3299435" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3830035" />
+      <window_info id="Palette&#9;" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2887078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.19798657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6973789" visible="true" weight="0.2457786" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.24038461" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4800965" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.38356164" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.24125452" />
       <window_info active="true" anchor="bottom" id="Changes" order="7" visible="true" weight="0.30262113" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="IDEtalk" order="3" />
@@ -1652,7 +1691,11 @@
     <MESSAGE value="rt xml parser" />
     <MESSAGE value="FilterChain" />
     <MESSAGE value="jdk内置xml解析" />
-    <option name="LAST_COMMIT_MESSAGE" value="jdk内置xml解析" />
+    <MESSAGE value="design model code update" />
+    <MESSAGE value="design model  proxy and composite" />
+    <MESSAGE value="bridge design model" />
+    <MESSAGE value="maven split xml jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven split xml jar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1743,271 +1786,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/SAXQueryDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_161/src.zip!/javax/xml/parsers/DocumentBuilderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="118" column="40" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_161/src.zip!/javax/xml/xpath/XPathExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="122" column="17" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_161/src.zip!/javax/xml/parsers/DocumentBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3500">
-          <caret line="175" column="40" selection-start-line="175" selection-start-column="29" selection-end-line="175" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_161/src.zip!/javax/xml/xpath/XPathConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/smartphone.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.8.0_161/src.zip!/javax/xml/xpath/XPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4350">
-          <caret line="199" column="26" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/chain/InterceptorChainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corejava.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/json/JSONOBJTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.1/jackson-databind-2.9.1.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="126" column="42" lean-forward="true" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/rt/XPathFactoryExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-286">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/pp/DomDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2250">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/pp/Pricer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/pp/Header/Header.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/PricerPaserXMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/UserPaserXMLHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/SAXParserDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/books.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/SAXModifyDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/DomDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/FontProvider.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/Count.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/CountImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/StaticProxyTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/CountProxy.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xml/UserDemo/SAXOperateXmlDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/static/Count.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5875">
-          <caret line="235" column="34" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cglib/cglib/3.2.6/cglib-3.2.6.jar!/net/sf/cglib/proxy/Callback.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cglib/cglib/3.2.6/cglib-3.2.6.jar!/net/sf/cglib/proxy/MethodInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/singlton/PublicStaticObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/singlton/SafeDoubleCheckLocking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/singlton/EnumSinglton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeCGLIB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/BookFacadeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <element signature="e#95#96#0" expanded="true" />
-            <element signature="e#145#146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/dynamicp/BookFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -2026,9 +1804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2039,46 +1814,378 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/Singing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/ChineseSing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/LoudSing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="e#136#137#0" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/SlowSing.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/decorators/SlowSing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/decorators/DecoratorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/Count.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/CountImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/CountProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/staticp/StaticProxyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/decorators/ChineseSing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/builder/BuildingObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/Cycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/BaseShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/demo/AbstractShu.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/template/TemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/composite/Clienter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/composite/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/composite/Filer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/composite/Noder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/HelloImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/CGLIBTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/proxy/cglibp/CGLibProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#119#120#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#95#96#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/array/ArrayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="354" column="58" selection-start-line="354" selection-start-column="58" selection-end-line="354" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Jeep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine2000.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/bridge/Engine2200.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/decorators/Singing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/decorators/LoudSing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/decorators/DecoratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/WeixinPayCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" lean-forward="true" selection-start-column="37" selection-end-column="37" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/CashPayCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+          <folding>
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/user.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-stragy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="30" column="81" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="30" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/bean/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/itf/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/impls/AlipayCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/code/StrategyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/PrintStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/impl/WriteStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding>
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/itf/Strategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/designmodel/stragy/xml/factory/ContextSpringFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#176#194#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

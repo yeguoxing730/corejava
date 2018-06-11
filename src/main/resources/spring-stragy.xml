@@ -19,7 +19,7 @@
             </array>
         </property>
     </bean>
-    <bean id="ctf" class = "com.designmodel.stragy.xml.factory.ContextSpringFactory">
+    <bean id="ctf" class = "com.designmodel.action.stragy.xml.factory.ContextSpringFactory">
         <property name="stgMap">
             <map>
                 <entry key="writeStg" value-ref="writeStg"/>
@@ -27,6 +27,6 @@
             </map>
         </property>
     </bean>
-    <bean id="writeStg" class = "com.designmodel.stragy.xml.impl.WriteStrategy"/>
-    <bean id="printStg" class = "com.designmodel.stragy.xml.impl.PrintStrategy"/>
+    <bean id="writeStg" class = "com.designmodel.action.stragy.xml.impl.WriteStrategy"/>
+    <bean id="printStg" class = "com.designmodel.action.stragy.xml.impl.PrintStrategy"/>
 </beans>

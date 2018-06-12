@@ -1,6 +1,6 @@
-package com.designmodel.action.vistor;
+package com.designmodel.action.visitor;
 
-public class ConcreteVisitorB implements Vistor {
+public class ConcreteVisitorA implements Vistor {
     @Override
     public void visit(ConcreteElementNodeA node) {
         System.out.println(node.operationA());

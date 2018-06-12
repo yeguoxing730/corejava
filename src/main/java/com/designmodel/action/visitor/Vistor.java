@@ -1,4 +1,4 @@
-package com.designmodel.action.vistor;
+package com.designmodel.action.visitor;
 
 public interface Vistor {
     void visit(ConcreteElementNodeA node);

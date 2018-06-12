@@ -1,4 +1,4 @@
-package com.designmodel.action.vistor;
+package com.designmodel.action.visitor;
 
 import java.util.ArrayList;
 import java.util.List;

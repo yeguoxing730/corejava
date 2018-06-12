@@ -1,4 +1,4 @@
-package com.designmodel.action.vistor;
+package com.designmodel.action.visitor;
 
 public class ConcreteElementNodeA extends ElementNode {
     @Override

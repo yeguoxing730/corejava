@@ -21,7 +21,7 @@ public class CallableFutureTask {
         thread.start();*/
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(0);
         } catch (InterruptedException e1) {
             e1.printStackTrace();
         }

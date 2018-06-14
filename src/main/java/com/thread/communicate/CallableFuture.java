@@ -11,9 +11,9 @@ public class CallableFuture {
         Task task = new Task();
         Future<Integer> result = executor.submit(task);
         executor.shutdown();
-
         try {
             Thread.sleep(1000);
+            while (!executor.isTerminated());
         } catch (InterruptedException e1) {
             e1.printStackTrace();
         }

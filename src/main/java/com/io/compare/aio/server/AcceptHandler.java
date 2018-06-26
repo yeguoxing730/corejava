@@ -1,17 +1,12 @@
-package com.io.aio;
+package com.io.compare.aio.server;
 
-/**
- * Created with IntelliJ IDEA.
- * User: uc203808
- * Date: 4/17/17
- * Time: 2:20 PM
- * To change this template use File | Settings | File Templates.
- */
+import com.io.aio.ReadHandler;
+
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
-public class AcceptHandler implements CompletionHandler<AsynchronousSocketChannel, AsyncServerHandler> {
 
+public class AcceptHandler implements CompletionHandler<AsynchronousSocketChannel, AsyncServerHandler> {
     @Override
     public void completed(AsynchronousSocketChannel channel,AsyncServerHandler serverHandler) {
         //继续接受其他客户端的请求

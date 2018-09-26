@@ -7,7 +7,7 @@ package com.thread.procedureconsumer;
  * Time: 2:15 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Consumer extends Thread{
+public class Consumer extends Thread {
     // 每次消费的产品数量
     private int num;
 
@@ -15,41 +15,34 @@ public class Consumer extends Thread{
     private Storage storage;
 
     // 构造函数，设置仓库
-    public Consumer(Storage storage)
-    {
+    public Consumer(Storage storage) {
         this.storage = storage;
     }
 
     // 线程run函数
-    public void run()
-    {
+    public void run() {
         consume(num);
     }
 
     // 调用仓库Storage的生产函数
-    public void consume(int num)
-    {
+    public void consume(int num) {
         storage.consume(num);
     }
 
     // get/set方法
-    public int getNum()
-    {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(int num)
-    {
+    public void setNum(int num) {
         this.num = num;
     }
 
-    public Storage getStorage()
-    {
+    public Storage getStorage() {
         return storage;
     }
 
-    public void setStorage(Storage storage)
-    {
+    public void setStorage(Storage storage) {
         this.storage = storage;
     }
 }

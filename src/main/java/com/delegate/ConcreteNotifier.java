@@ -7,7 +7,7 @@ package com.delegate;
  * Time: 3:38 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ConcreteNotifier extends Notifier{
+public class ConcreteNotifier extends Notifier {
 
     @Override
     public void addListener(Object object, String methodName, Object... args) {

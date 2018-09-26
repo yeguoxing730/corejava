@@ -9,9 +9,9 @@ import java.io.*;
  * Time: 3:47 PM
  * To change this template use File | Settings | File Templates.
  */
-public abstract  class BeanUtil {
+public abstract class BeanUtil {
     @SuppressWarnings("unchecked")
-    public static  Object cloneTo(Object src) throws RuntimeException {
+    public static Object cloneTo(Object src) throws RuntimeException {
 
         ByteArrayOutputStream memoryBuffer = new ByteArrayOutputStream();
 

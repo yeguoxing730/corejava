@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface ClassAnnotation {
     public String name();
+
     public String value();
 }

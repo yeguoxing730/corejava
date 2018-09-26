@@ -20,20 +20,21 @@ public class AnnotationInteceptor implements Interceptor {
                 //执行原方法的逻辑
                 Object x = invocation.proceed();
                 System.out.println("原方法执行完毕");
-                return new Double(Math.random() * 10).intValue()+(int)x;
+                return new Double(Math.random() * 10).intValue() + (int) x;
             } else {
                 System.out.println(invocation.getMethod().getName() + " ：该方法不能执行代理");
-                 return    invocation.proceed();
+                return invocation.proceed();
             }
         }
         return null;
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Sourceable source = new Source();
         //lambda表达式貌似不能加注解，所以换成传统实现类
         Interceptor interceptor = new AnnotationInteceptor();
         Sourceable sourceable = (Sourceable) Plugin.wrap(source, interceptor);
-        System.out.println("method1========="+ sourceable.method1());
-        System.out.println("method2========="+ sourceable.method2(666));
+        System.out.println("method1=========" + sourceable.method1());
+        System.out.println("method2=========" + sourceable.method2(666));
     }
 }

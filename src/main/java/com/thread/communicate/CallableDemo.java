@@ -10,14 +10,14 @@ import java.util.concurrent.FutureTask;
  * 子线程完成某件任务后，把得到的结果回传给主线程
  */
 public class CallableDemo {
-    public static void main(MysqlxDatatypes.Scalar.String[] args){
+    public static void main(MysqlxDatatypes.Scalar.String[] args) {
         Callable<Integer> callable = new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
                 System.out.println("Task starts");
                 Thread.sleep(1000);
                 int result = 0;
-                for (int i=0; i<=100; i++) {
+                for (int i = 0; i <= 100; i++) {
                     result += i;
                 }
                 System.out.println("Task finished and return result");

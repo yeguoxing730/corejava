@@ -6,17 +6,17 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- www.importnew.com/26850.html
- 如何让两个线程依次执行？
- 那如何让 两个线程按照指定方式有序交叉运行呢？
- 四个线程 A B C D，其中 D 要等到 A B C 全执行完毕后才执行，而且 A B C 是同步运行的
- 三个运动员各自准备，等到三个人都准备好后，再一起跑
- 子线程完成某件任务后，把得到的结果回传给主线程
+ * www.importnew.com/26850.html
+ * 如何让两个线程依次执行？
+ * 那如何让 两个线程按照指定方式有序交叉运行呢？
+ * 四个线程 A B C D，其中 D 要等到 A B C 全执行完毕后才执行，而且 A B C 是同步运行的
+ * 三个运动员各自准备，等到三个人都准备好后，再一起跑
+ * 子线程完成某件任务后，把得到的结果回传给主线程
  */
 
 //让两个现场依次执行
 public class BAfterA {
-    public  static  void main(String[] args){
+    public static void main(String[] args) {
 //        demo1();
 //        demo2();
 //        runDAfterABC();
@@ -24,7 +24,7 @@ public class BAfterA {
     }
 
     private static void printNumber(String threadName) {
-        int i=0;
+        int i = 0;
         while (i++ < 3) {
             try {
                 Thread.sleep(100);
@@ -34,7 +34,8 @@ public class BAfterA {
             System.out.println(threadName + "print:" + i);
         }
     }
-    private static void demo1(){
+
+    private static void demo1() {
         Thread A = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -56,6 +57,7 @@ public class BAfterA {
         B.start();
         A.start();
     }
+
     /**
      * A 1, B 1, B 2, B 3, A 2, A 3
      */
@@ -102,6 +104,7 @@ public class BAfterA {
         A.start();
         B.start();
     }
+
     private static void runDAfterABC() {
         int worker = 3;
         CountDownLatch countDownLatch = new CountDownLatch(worker);
@@ -117,7 +120,7 @@ public class BAfterA {
                 }
             }
         }).start();
-        for (char threadName='A'; threadName <= 'C'; threadName++) {
+        for (char threadName = 'A'; threadName <= 'C'; threadName++) {
             final String tN = String.valueOf(threadName);
             new Thread(new Runnable() {
                 @Override
@@ -139,7 +142,7 @@ public class BAfterA {
         int runner = 3;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(runner);
         final Random random = new Random();
-        for (char runnerName='A'; runnerName <= 'C'; runnerName++) {
+        for (char runnerName = 'A'; runnerName <= 'C'; runnerName++) {
             final String rN = String.valueOf(runnerName);
             new Thread(new Runnable() {
                 @Override

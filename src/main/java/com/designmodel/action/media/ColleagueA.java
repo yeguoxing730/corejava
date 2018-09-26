@@ -1,6 +1,6 @@
 package com.designmodel.action.media;
 
-public class ColleagueA extends AbstractColleague{
+public class ColleagueA extends AbstractColleague {
 
     @Override
     public void setNumber(int number, AbstractMediator am) {

@@ -12,7 +12,7 @@ import java.util.concurrent.locks.Lock;
  * Time: 8:34 AM
  * To change this template use File | Settings | File Templates.
  */
-public abstract class AbstractLock implements ReleaseLock,Lock {
+public abstract class AbstractLock implements ReleaseLock, Lock {
     /**
      * <pre>
      * 这里需不需要保证可见性值得讨论, 因为是分布式的锁,
@@ -78,14 +78,14 @@ public abstract class AbstractLock implements ReleaseLock,Lock {
      * @param useTimeout
      * @param time
      * @param unit
-     * @param interrupt 是否响应中断
+     * @param interrupt  是否响应中断
      * @return
      * @throws InterruptedException
      */
     protected abstract boolean lock(boolean useTimeout, long time, TimeUnit unit, boolean interrupt) throws InterruptedException;
 
     /*
-         * @see cc.lixiaohui.lock.AbstractLock#isHeldByCurrentThread()
-         */
+     * @see cc.lixiaohui.lock.AbstractLock#isHeldByCurrentThread()
+     */
     protected abstract boolean isHeldByCurrentThread();
 }

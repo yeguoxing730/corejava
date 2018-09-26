@@ -7,8 +7,10 @@ package com.io.netty;
  * Time: 2:44 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.socket.SocketChannel;
+
 public class ChildChannelInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel channel) throws Exception {

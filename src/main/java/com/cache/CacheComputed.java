@@ -19,10 +19,11 @@ import static org.junit.Assert.assertEquals;
 
 public class CacheComputed {
     public static void main(String[] args) throws InterruptedException {
-       // whenCacheMiss_thenValueIsComputed()  ;
+        // whenCacheMiss_thenValueIsComputed()  ;
     }
+
     @Test
-    public  void whenCacheMiss_thenValueIsComputed() throws InterruptedException {
+    public void whenCacheMiss_thenValueIsComputed() throws InterruptedException {
         CacheLoader<String, String> loader;
         loader = new CacheLoader<String, String>() {
             // 当guava cache中不存在，则会调用load方法
@@ -34,14 +35,14 @@ public class CacheComputed {
         LoadingCache<String, String> cache;
         cache = CacheBuilder
                 .newBuilder()
-                        // 写数据1s后重新加载缓存
+                // 写数据1s后重新加载缓存
                 .refreshAfterWrite(1L, TimeUnit.SECONDS)
                 .build(loader);
         assertEquals(0, cache.size());
         cache.put("test", "test");
         System.out.println(cache.getUnchecked("test"));
         System.out.println(cache.getUnchecked("hello"));
-        System.out.println( cache.size());
+        System.out.println(cache.size());
         System.out.println(cache.getUnchecked("test"));
         assertEquals("test", cache.getUnchecked("test"));
         assertEquals("HELLO", cache.getUnchecked("hello"));
@@ -49,6 +50,7 @@ public class CacheComputed {
         TimeUnit.SECONDS.sleep(2);
         assertEquals("TEST", cache.getUnchecked("test"));
     }
+
     @Test
     public void whenCacheReachMaxSize_thenEviction() {
         CacheLoader<String, String> loader;
@@ -66,11 +68,12 @@ public class CacheComputed {
         System.out.println(cache.getUnchecked("forth"));
         System.out.println(cache.size());
         System.out.println(cache.getIfPresent("first"));
-        System.out.println(cache.getIfPresent("forth"))    ;
+        System.out.println(cache.getIfPresent("forth"));
         assertEquals(3, cache.size());
         assertNull(cache.getIfPresent("first"));
         assertEquals("FORTH", cache.getIfPresent("forth"));
     }
+
     @Test
     public void whenCacheReachMaxWeight_thenEviction() {
         CacheLoader<String, String> loader;
@@ -103,6 +106,7 @@ public class CacheComputed {
         assertNull(cache.getIfPresent("first"));
         assertEquals("LAST", cache.getIfPresent("last"));
     }
+
     @Test
     public void whenEntryIdle_thenEviction() throws InterruptedException {
         CacheLoader<String, String> loader;
@@ -117,16 +121,17 @@ public class CacheComputed {
                 .expireAfterAccess(2, TimeUnit.MILLISECONDS)
                 .build(loader);
         System.out.println(cache.getUnchecked("hello"));
-        System.out.println( cache.size());
+        System.out.println(cache.size());
         assertEquals(1, cache.size());
         System.out.println(cache.getUnchecked("hello"));
         Thread.sleep(300);
         System.out.println(cache.getUnchecked("test"));
-        System.out.println( cache.size());
-        System.out.println( cache.getIfPresent("hello"));
+        System.out.println(cache.size());
+        System.out.println(cache.getIfPresent("hello"));
         assertEquals(1, cache.size());
         assertNull(cache.getIfPresent("hello"));
     }
+
     @Test
     public void whenEntryRemovedFromCache_thenNotify() {
         CacheLoader<String, String> loader;
@@ -142,7 +147,7 @@ public class CacheComputed {
             public void onRemoval(RemovalNotification<String, String> n) {
                 if (n.wasEvicted()) {
                     String cause = n.getCause().name();
-                    System.out.println("cause==="+cause)  ;
+                    System.out.println("cause===" + cause);
                     assertEquals(RemovalCause.SIZE.toString(), cause);
                 }
             }
@@ -156,9 +161,10 @@ public class CacheComputed {
         System.out.println(cache.getUnchecked("second"));
         System.out.println(cache.getUnchecked("third"));
         System.out.println(cache.getUnchecked("last"));
-        System.out.println(cache.size())             ;
+        System.out.println(cache.size());
         assertEquals(3, cache.size());
     }
+
     @Test
     public void cache_reLoad() {
         CacheLoader<String, String> loader;
@@ -167,6 +173,7 @@ public class CacheComputed {
             public String load(String key) {
                 return key.toUpperCase();
             }
+
             /**
              * 重写reload方法可以定制自己的reload策略
              * @param key

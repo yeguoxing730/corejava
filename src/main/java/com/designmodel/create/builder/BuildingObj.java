@@ -12,13 +12,12 @@ package com.designmodel.create.builder;
  * 适合构造器参数太多的情况 不想写太多的重载构造方法
  * 可以采用构建器来构建自己 参数通过构造器传入到构造对象内部
  */
-public  class BuildingObj {
+public class BuildingObj {
     private static String Name = null;
     private static int age = 0;
 
 
-
-    public static  class Builder{
+    public static class Builder {
         private String Name;
         private int age;
 
@@ -26,7 +25,7 @@ public  class BuildingObj {
             return Name;
         }
 
-        public  Builder  setName(String name) {
+        public Builder setName(String name) {
             Name = name;
             return this;
         }
@@ -39,18 +38,22 @@ public  class BuildingObj {
             this.age = age;
             return this;
         }
-        public BuildingObj build(){
+
+        public BuildingObj build() {
             return new BuildingObj(this);
         }
     }
-    private BuildingObj(Builder builder){
-           this.Name = builder.getName();
-           this.age = builder.getAge();
+
+    private BuildingObj(Builder builder) {
+        this.Name = builder.getName();
+        this.age = builder.getAge();
     }
-    public void sayHello(){
-        System.out.println(Name+" say hello.....");
+
+    public void sayHello() {
+        System.out.println(Name + " say hello.....");
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         BuildingObj buildingObj = new Builder().setName("HH").setAge(19).build();
         buildingObj.sayHello();
     }

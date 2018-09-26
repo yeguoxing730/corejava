@@ -69,7 +69,7 @@ public class ChatFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String msg = writeContext.getText().trim();
-                if(msg.length() > 0){
+                if (msg.length() > 0) {
                     service.sendMsg(uname + "^" + writeContext.getText());
                 }
                 writeContext.setText(null);
@@ -104,9 +104,9 @@ public class ChatFrame {
 
             @Override
             public void keyReleased(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     String msg = writeContext.getText().trim();
-                    if(msg.length() > 0){
+                    if (msg.length() > 0) {
                         service.sendMsg(uname + "^" + writeContext.getText());
                     }
                     writeContext.setText(null);

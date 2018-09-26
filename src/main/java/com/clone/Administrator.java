@@ -10,7 +10,7 @@ import java.util.Date;
  * Time: 3:43 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Administrator implements Cloneable,Serializable {
+public class Administrator implements Cloneable, Serializable {
     private User user;
 
     private Boolean editable;
@@ -22,7 +22,6 @@ public class Administrator implements Cloneable,Serializable {
         this.editable = editable;
 
     }
-
 
 
     @Override
@@ -69,7 +68,7 @@ public class Administrator implements Cloneable,Serializable {
         return result;
     }
 
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception {
 
         Administrator a1 = new Administrator(new User("Kent", "123456", new Date()), true);
 
@@ -78,20 +77,18 @@ public class Administrator implements Cloneable,Serializable {
         Administrator a3 = (Administrator) a1.clone();
 
 
+        System.out.println(a1 == a2);            // true
 
-        System.out.println(a1 == a2);			// true
-
-        System.out.println(a1.equals(a2));		// true
-
+        System.out.println(a1.equals(a2));        // true
 
 
-        System.out.println(a1 == a3);			// false
+        System.out.println(a1 == a3);            // false
 
-        System.out.println(a1.equals(a3));		// true
+        System.out.println(a1.equals(a3));        // true
 
 
-        System.out.println(a1.getUser() == a3.getUser());		//true ! It's not our expected!!!!!
+        System.out.println(a1.getUser() == a3.getUser());        //true ! It's not our expected!!!!!
 
-        System.out.println(a1.getUser().equals(a3.getUser()));	//true
+        System.out.println(a1.getUser().equals(a3.getUser()));    //true
     }
 }

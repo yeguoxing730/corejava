@@ -11,6 +11,10 @@ import java.util.List;
  * Date: 5/11/16
  * Time: 3:26 PM
  * To change this template use File | Settings | File Templates.
+ * <p>
+ * 初始化 增 删 改 查 比较 合并 转换 排序
+ * <p>
+ * 初始化 增 删 改 查 比较 合并 转换 排序
  */
 /**
  * 初始化 增 删 改 查 比较 合并 转换 排序
@@ -24,27 +28,27 @@ import java.util.List;
  * Arrays工具类 提供了对数组的 排序 查找 复制 比较 填充 转换为List的功能
  */
 public class ArrayTest {
-     public static void main(String[] args){
-                 //  declareArrAndPrint();
+    public static void main(String[] args) {
+        //  declareArrAndPrint();
         // insertElementToArr();
-         //removeElementToArr();
+        //removeElementToArr();
 //         findElement();
 //         copyArrays();
 //         sortArrays();
 //         mergeArrs();
 //         convertArrsToList();
-         //   compareArrs();
-         fillArrs();
-     }
+        //   compareArrs();
+        fillArrs();
+    }
 
     /**
      * 数组声明
      */
-    public static void  declareArrAndPrint(){
-        String[] stringArray = { "a", "b", "c", "d", "e" };
+    public static void declareArrAndPrint() {
+        String[] stringArray = {"a", "b", "c", "d", "e"};
         String[] aArray = new String[5];
-        String[] bArray = {"a","b","c", "d", "e"};
-        String[] cArray = new String[]{"a","b","c","d","e"};
+        String[] bArray = {"a", "b", "c", "d", "e"};
+        String[] cArray = new String[]{"a", "b", "c", "d", "e"};
         System.out.println(stringArray);
         System.out.println(Arrays.toString(stringArray));
         System.out.println(Arrays.toString(aArray));
@@ -56,16 +60,17 @@ public class ArrayTest {
      * 增加元素  and update
      * 由于数组是final 所以增加元素会生成新的数组
      */
-    public static void insertElementToArr(){
-        int[] intArray = { 1, 2, 3, 4, 5 };
+    public static void insertElementToArr() {
+        int[] intArray = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(intArray));
-        intArray[4]=7;
+        intArray[4] = 7;
         System.out.println(Arrays.toString(intArray));
-        intArray =  insertElement(intArray,6,2);
+        intArray = insertElement(intArray, 6, 2);
         System.out.println(Arrays.toString(intArray));
     }
+
     public static int[] insertElement(int original[],
-                                      int element, int index){
+                                      int element, int index) {
         int length = original.length;
         int destination[] = new int[length + 1];
         System.arraycopy(original, 0, destination, 0, index);
@@ -74,70 +79,78 @@ public class ArrayTest {
                 + 1, length - index);
         return destination;
     }
+
     /**
      * remove element
      */
-    public static void removeElementToArr(){
-        int[] intArray = { 1, 2, 3, 4, 5 };
+    public static void removeElementToArr() {
+        int[] intArray = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(intArray));
-        intArray =  removeElement(intArray, 1);
-        intArray =  removeElement(intArray,3);
+        intArray = removeElement(intArray, 1);
+        intArray = removeElement(intArray, 3);
         System.out.println(Arrays.toString(intArray));
-        Integer[] intArrays = { 1, 2, 3, 4, 5 };
-        intArrays = removeElementUsingList(intArrays,3);
+        Integer[] intArrays = {1, 2, 3, 4, 5};
+        intArrays = removeElementUsingList(intArrays, 3);
         System.out.println(Arrays.toString(intArrays));
 
     }
+
     public static int[] removeElement(int[] a, int del) {
-        System.arraycopy(a,del+1,a,del,a.length-1-del);
+        System.arraycopy(a, del + 1, a, del, a.length - 1 - del);
         return a;
     }
-    public static Integer[] removeElementUsingList(Integer[] arrs,int index){
+
+    public static Integer[] removeElementUsingList(Integer[] arrs, int index) {
         ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(arrs));
         a.remove(index);
         Integer[] arr = new Integer[a.size()];
-         a.toArray(arr);
-        return   arr;
+        a.toArray(arr);
+        return arr;
     }
+
     /**
      * 查找
      */
-    public static void findElement(){
-        int[] intArray = { 1, 2, 3, 4, 5 };
+    public static void findElement() {
+        int[] intArray = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(intArray));
         int index = Arrays.binarySearch(intArray, 4);
-        System.out.println("element index:"+index);
+        System.out.println("element index:" + index);
     }
+
     /**
      * 复制
      */
-    public static void copyArrays(){
-        int[] src = { 1, 2, 3, 4, 5 };
+    public static void copyArrays() {
+        int[] src = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(src));
-        int[] dest =new int[5];
+        int[] dest = new int[5];
         System.out.println(Arrays.toString(dest));
-        System.arraycopy( src, 0, dest, 0, src.length-3 );
+        System.arraycopy(src, 0, dest, 0, src.length - 3);
         System.out.println(Arrays.toString(dest));
-        int[] dest2 = Arrays.copyOf(src,src.length-2);
-        System.out.println("dest2"+Arrays.toString(dest2));
+        int[] dest2 = Arrays.copyOf(src, src.length - 2);
+        System.out.println("dest2" + Arrays.toString(dest2));
     }
+
     /**
      * 排序
      */
-    public static void sortArrays(){
-        int[] src = { 1, 9, 3, 4, 6,0 };
+    public static void sortArrays() {
+        int[] src = {1, 9, 3, 4, 6, 0};
         System.out.println(Arrays.toString(src));
         Arrays.sort(src);
         System.out.println(Arrays.toString(src));
     }
+
     /**
      * 合并数组
      */
-    public static void mergeArrs(){
-        Integer[] a = { 1, 9, 3, 4, 6,0 };
-        Integer[] b = { 5, 2, 5, 1, 6,9 };
-        System.out.println(Arrays.toString(concat(a,b)));
+    public static void mergeArrs() {
+        Integer[] a = {1, 9, 3, 4, 6, 0};
+        Integer[] b = {5, 2, 5, 1, 6, 9};
+        System.out.println(Arrays.toString(concat(a, b)));
     }
+
     private static <T> T[] concat(T[] a, T[] b) {
         final int alen = a.length;
         final int blen = b.length;
@@ -153,11 +166,12 @@ public class ArrayTest {
         System.arraycopy(b, 0, result, alen, blen);
         return result;
     }
+
     /**
      * 转换
      */
-    public static void convertArrsToList(){
-        Integer[] a = { 1, 9, 3, 4, 6,0 };
+    public static void convertArrsToList() {
+        Integer[] a = {1, 9, 3, 4, 6, 0};
         //first way    (most popular and accepted answer)
         ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(a));
         System.out.println(arrayList);
@@ -169,33 +183,35 @@ public class ArrayTest {
         //list.add(9);
         //third way
         List<Integer> thirdList = new ArrayList<Integer>(a.length);
-        Collections.addAll(thirdList,a);
-        System.out.println("thirdList..."+thirdList);
+        Collections.addAll(thirdList, a);
+        System.out.println("thirdList..." + thirdList);
     }
+
     /**
      * 比较
      */
-    public static void compareArrs(){
-        Integer[] a = { 1, 9, 3, 4, 6,0 };
-        Integer[] b = { 1, 9, 3, 4, 6,0 };
-        Integer[] c = { 1, 9, 3, 4, 6 };
+    public static void compareArrs() {
+        Integer[] a = {1, 9, 3, 4, 6, 0};
+        Integer[] b = {1, 9, 3, 4, 6, 0};
+        Integer[] c = {1, 9, 3, 4, 6};
         System.out.println(a.equals(b));
-        System.out.println(Arrays.equals(a,b));
-        System.out.println(Arrays.equals(a,c));
+        System.out.println(Arrays.equals(a, b));
+        System.out.println(Arrays.equals(a, c));
 
         Object[] arr1 = {a};
         Object[] arr2 = {b};
         System.out.println(arr1.equals(arr2));
-        System.out.println(Arrays.equals(arr1,arr2));
-        System.out.println(Arrays.deepEquals(arr1,arr2));
+        System.out.println(Arrays.equals(arr1, arr2));
+        System.out.println(Arrays.deepEquals(arr1, arr2));
     }
+
     /**
      * 填充
      *
      */
-    public static  void fillArrs(){
+    public static void fillArrs() {
         // initializing int array
-        int arr[] = new int[] {1, 6, 3, 2, 9};
+        int arr[] = new int[]{1, 6, 3, 2, 9};
 
         // let us print the values
         System.out.println("Actual values: ");

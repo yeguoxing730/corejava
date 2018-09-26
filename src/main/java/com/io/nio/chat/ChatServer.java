@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Vector;
 
-public class ChatServer implements Runnable{
+public class ChatServer implements Runnable {
 
     private Selector selector;
     private SelectionKey serverKey;
@@ -22,12 +22,12 @@ public class ChatServer implements Runnable{
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public ChatServer(){
+    public ChatServer() {
         usernames = new Vector<String>();
         init();
     }
 
-    public void init(){
+    public void init() {
         try {
             selector = Selector.open();
             //创建serverSocketChannel
@@ -46,16 +46,16 @@ public class ChatServer implements Runnable{
     @Override
     public void run() {
         try {
-            while(true){
+            while (true) {
                 //获取就绪channel
                 int count = selector.select();
-                if(count > 0){
+                if (count > 0) {
                     Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
-                    while(iterator.hasNext()){
+                    while (iterator.hasNext()) {
                         SelectionKey key = iterator.next();
 
                         //若此key的通道是等待接受新的套接字连接
-                        if(key.isAcceptable()){
+                        if (key.isAcceptable()) {
                             System.out.println(key.toString() + " : 接收");
                             //一定要把这个accpet状态的服务器key去掉，否则会出错
                             iterator.remove();
@@ -67,12 +67,12 @@ public class ChatServer implements Runnable{
                             socket.register(selector, SelectionKey.OP_READ);
                         }
                         //若此key的通道是有数据可读状态
-                        if(key.isValid() && key.isReadable()){
+                        if (key.isValid() && key.isReadable()) {
                             System.out.println(key.toString() + " : 读");
                             readMsg(key);
                         }
                         //若此key的通道是写数据状态
-                        if(key.isValid() && key.isWritable()){
+                        if (key.isValid() && key.isWritable()) {
                             System.out.println(key.toString() + " : 写");
                             writeMsg(key);
                         }
@@ -94,7 +94,7 @@ public class ChatServer implements Runnable{
             int count = channel.read(buffer);
             StringBuffer buf = new StringBuffer();
             //如果读取到了数据
-            if(count > 0){
+            if (count > 0) {
                 //让buffer翻转，把buffer中的数据读取出来
                 buffer.flip();
                 buf.append(new String(buffer.array(), 0, count));
@@ -102,42 +102,42 @@ public class ChatServer implements Runnable{
             String msg = buf.toString();
 
             //如果此数据是客户端连接时发送的数据
-            if(msg.indexOf("open_") != -1){
+            if (msg.indexOf("open_") != -1) {
                 String name = msg.substring(5);//取出名字
                 printInfo(name + " --> online");
                 usernames.add(name);
                 Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
-                while(iter.hasNext()){
+                while (iter.hasNext()) {
                     SelectionKey skey = iter.next();
                     //若不是服务器套接字通道的key，则将数据设置到此key中
                     //并更新此key感兴趣的动作
-                    if(skey != serverKey){
+                    if (skey != serverKey) {
                         skey.attach(usernames);
                         skey.interestOps(skey.interestOps() | SelectionKey.OP_WRITE);
                     }
                 }
                 //如果是下线时发送的数据
-            }else if(msg.indexOf("exit_") != -1){
+            } else if (msg.indexOf("exit_") != -1) {
                 String username = msg.substring(5);
                 usernames.remove(username);
                 key.attach("close");
                 //要退出的当前channel加上close的标示，并把兴趣转为写，如果write中收到了close，则中断channel的链接
                 key.interestOps(SelectionKey.OP_WRITE);
                 Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
-                while(iter.hasNext()){
+                while (iter.hasNext()) {
                     SelectionKey sKey = iter.next();
                     sKey.attach(usernames);
                     sKey.interestOps(sKey.interestOps() | SelectionKey.OP_WRITE);
                 }
                 //如果是聊天发送数据
-            }else{
+            } else {
                 String uname = msg.substring(0, msg.indexOf("^"));
                 msg = msg.substring(msg.indexOf("^") + 1);
-                printInfo("("+uname+")说：" + msg);
+                printInfo("(" + uname + ")说：" + msg);
                 String dateTime = sdf.format(new Date());
                 String smsg = uname + " " + dateTime + "\n  " + msg + "\n";
                 Iterator<SelectionKey> iter = selector.selectedKeys().iterator();
-                while(iter.hasNext()){
+                while (iter.hasNext()) {
                     SelectionKey sKey = iter.next();
                     sKey.attach(smsg);
                     sKey.interestOps(sKey.interestOps() | SelectionKey.OP_WRITE);

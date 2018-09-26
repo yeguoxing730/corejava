@@ -8,6 +8,7 @@ import java.lang.reflect.Method;
 
 public class BookFacadeCGLIB implements MethodInterceptor {
     private Object target;
+
     /**
      * 创建代理对象
      *
@@ -27,8 +28,8 @@ public class BookFacadeCGLIB implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, net.sf.cglib.proxy.MethodProxy methodProxy) throws Throwable {
         System.out.println("事物开始");
-         Object proxyObj =  methodProxy.invokeSuper(o, objects);
+        Object proxyObj = methodProxy.invokeSuper(o, objects);
         System.out.println("事物结束");
-      return proxyObj;
+        return proxyObj;
     }
 }

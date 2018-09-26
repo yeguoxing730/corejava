@@ -3,6 +3,7 @@ package com.io.file;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+
 //将内容追加到文件尾部
 public class AppendToFile {
     /**

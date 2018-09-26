@@ -1,4 +1,5 @@
 package com.designmodel.action.expression;
+
 //终结符表达式(Terminal Expression)
 public class Constant implements Expression {
     private int i;

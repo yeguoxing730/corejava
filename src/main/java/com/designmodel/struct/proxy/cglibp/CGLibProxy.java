@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 public class CGLibProxy implements MethodInterceptor {
 
-    public <T> T  getProxy(Class<T> cls){
+    public <T> T getProxy(Class<T> cls) {
         return (T) Enhancer.create(cls, this);
     }
 
@@ -23,12 +23,11 @@ public class CGLibProxy implements MethodInterceptor {
     }
 
 
-
-    public void before(){
+    public void before() {
         System.out.println("before....");
     }
 
-    public void after(){
+    public void after() {
         System.out.println("after...");
     }
 }

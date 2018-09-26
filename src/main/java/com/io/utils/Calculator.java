@@ -11,8 +11,9 @@ import javax.script.ScriptException;
  * Time: 9:34 AM
  * To change this template use File | Settings | File Templates.
  */
-public final  class Calculator {
+public final class Calculator {
     private final static ScriptEngine jse = new ScriptEngineManager().getEngineByName("JavaScript");
+
     public static Object cal(String expression) throws ScriptException {
         return jse.eval(expression);
     }

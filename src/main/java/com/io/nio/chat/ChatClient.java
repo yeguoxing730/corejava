@@ -12,6 +12,7 @@ public class ChatClient {
     private static ChatClient client;
 
     private static byte[] lock = new byte[1];
+
     //单例模式管理
     private ChatClient() throws IOException {
         socket = SocketChannel.open();
@@ -19,9 +20,9 @@ public class ChatClient {
         socket.configureBlocking(false);
     }
 
-    public static ChatClient getIntance(){
-        synchronized(lock){
-            if(client == null){
+    public static ChatClient getIntance() {
+        synchronized (lock) {
+            if (client == null) {
                 try {
                     client = new ChatClient();
                 } catch (IOException e) {
@@ -32,7 +33,7 @@ public class ChatClient {
         }
     }
 
-    public void sendMsg(String msg){
+    public void sendMsg(String msg) {
         try {
             socket.write(ByteBuffer.wrap(msg.getBytes()));
         } catch (IOException e) {
@@ -40,20 +41,20 @@ public class ChatClient {
         }
     }
 
-    public String receiveMsg(){
+    public String receiveMsg() {
         String msg = null;
         try {
             ByteBuffer buffer = ByteBuffer.allocate(1024);
             StringBuffer buf = new StringBuffer();
             int count = 0;
             //不一定一次就能读满，连续读
-            while((count = socket.read(buffer)) > 0){
+            while ((count = socket.read(buffer)) > 0) {
                 buf.append(new String(buffer.array(), 0, count));
             }
             //有数据
-            if(buf.length() > 0){
+            if (buf.length() > 0) {
                 msg = buf.toString();
-                if(buf.toString().equals("close")){
+                if (buf.toString().equals("close")) {
                     //不过不sleep会导致ioException的发生,因为如果这里直接关闭掉通道，在server里，
                     //该channel在read（buffer）时会发生读取异常，通过sleep一段时间，使得服务端那边的channel先关闭，客户端
                     //的channel后关闭，这样就能防止read(buffer)的ioException

@@ -16,6 +16,6 @@ public class myClassTest {
     public static void main(String[] args) {
         IntVector intVector = new IntVector(12);
         intVector.set(1, 10);
-       System.out.println("测试 C++对象方法调用=>" + intVector.get(1));
+        System.out.println("测试 C++对象方法调用=>" + intVector.get(1));
     }
 }

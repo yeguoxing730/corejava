@@ -9,9 +9,9 @@ package com.kafka;
  */
 public class UserKafkaTest {
     public static void main(String[] args) {
-        UserKafkaProducer producerThread=new UserKafkaProducer(KafkaProperties.topic);
+        UserKafkaProducer producerThread = new UserKafkaProducer(KafkaProperties.topic);
         producerThread.start();
-        UserKafkaConsumer consumerThread=new UserKafkaConsumer(KafkaProperties.topic);
+        UserKafkaConsumer consumerThread = new UserKafkaConsumer(KafkaProperties.topic);
         consumerThread.start();
     }
 }

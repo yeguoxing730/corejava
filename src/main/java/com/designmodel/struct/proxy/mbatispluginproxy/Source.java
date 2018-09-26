@@ -12,7 +12,7 @@ public class Source implements Sourceable {
 
     @Override
     public int method2(int x) {
-        System.out.println("execute method two"+(233+x));
-        return 233+x;
+        System.out.println("execute method two" + (233 + x));
+        return 233 + x;
     }
 }

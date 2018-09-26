@@ -20,11 +20,13 @@ public class WebCrawlerForkJoin implements LinkHandler {
     private void startCrawling() {
         startNewThread(this.url);
     }
+
     @Override
     public void queueLink(String link) throws Exception {
         startNewThread(link);
     }
-    private void startNewThread(String link)  {
+
+    private void startNewThread(String link) {
         mainPool.invoke(new LinkFinderAction(link, this));
     }
 

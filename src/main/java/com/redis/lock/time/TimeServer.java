@@ -1,4 +1,5 @@
 package com.redis.lock.time;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +11,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+
 public class TimeServer {
     private ServerSocketChannel serverChannel;
 
@@ -179,6 +181,7 @@ public class TimeServer {
     private long time() {
         return System.currentTimeMillis();
     }
+
     public static void main(String[] args) throws IOException {
         TimeServer timeServer = new TimeServer();
         timeServer.start(9999);

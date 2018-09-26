@@ -12,14 +12,14 @@
                                username="guest"
                                password="guest"
                                host="127.0.0.1"
-                               port="5672" />
+                               port="5672"/>
     <!--定义rabbit template用于数据的接收和发送 -->
-    <rabbit:template id="directTemplate"  connection-factory="rabbitConnectionFactory"
-                     exchange="directExchange" />
+    <rabbit:template id="directTemplate" connection-factory="rabbitConnectionFactory"
+                     exchange="directExchange"/>
     <!--通过指定下面的admin信息，当前producer中的exchange和queue会在rabbitmq服务器上自动生成 -->
-    <rabbit:admin connection-factory="rabbitConnectionFactory" />
+    <rabbit:admin connection-factory="rabbitConnectionFactory"/>
     <!--定义queue -->
-    <rabbit:queue name="queueTest" durable="true" auto-delete="false" exclusive="false" />
+    <rabbit:queue name="queueTest" durable="true" auto-delete="false" exclusive="false"/>
     <!-- 定义direct exchange，绑定queueTest -->
     <rabbit:direct-exchange name="directExchange" durable="true" auto-delete="false">
         <rabbit:bindings>
@@ -39,31 +39,31 @@
     <!--topic 主题定义开始-->
     <rabbit:queue name="test123queue" durable="true"/>
     <rabbit:queue name="test321queue" durable="true"/>
-    <rabbit:template id="topicTemplate"  connection-factory="rabbitConnectionFactory"
-                     exchange="topicExchange" />
+    <rabbit:template id="topicTemplate" connection-factory="rabbitConnectionFactory"
+                     exchange="topicExchange"/>
     <rabbit:topic-exchange name="topicExchange" xmlns="http://www.springframework.org/schema/rabbit" durable="true">
         <bindings>
-            <binding queue="test123queue" pattern="*.*.test123" />
-            <binding queue="test321queue" pattern="test321.#" />
+            <binding queue="test123queue" pattern="*.*.test123"/>
+            <binding queue="test321queue" pattern="test321.#"/>
         </bindings>
     </rabbit:topic-exchange>
 
-    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency= "8">
+    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency="8">
         <rabbit:listener queues="test123queue" ref="detailQueueConsumer" method="onMessage"/>
         <rabbit:listener queues="test321queue" ref="testQueueConsumer" method="onMessage"/>
     </rabbit:listener-container>
 
     <!--topic 主题定义结束-->
     <!--fanout 主题定义开始-->
-    <rabbit:template id="fanoutTemplate"  connection-factory="rabbitConnectionFactory"
-                     exchange="fanoutExchange" />
+    <rabbit:template id="fanoutTemplate" connection-factory="rabbitConnectionFactory"
+                     exchange="fanoutExchange"/>
     <rabbit:fanout-exchange name="fanoutExchange" xmlns="http://www.springframework.org/schema/rabbit" durable="true">
         <rabbit:bindings>
             <rabbit:binding queue="test123queue"></rabbit:binding>
             <rabbit:binding queue="test321queue"></rabbit:binding>
         </rabbit:bindings>
     </rabbit:fanout-exchange>
-    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency= "8">
+    <rabbit:listener-container connection-factory="rabbitConnectionFactory" concurrency="8">
         <rabbit:listener queues="test123queue" ref="detailQueueConsumer" method="onMessage"/>
         <rabbit:listener queues="test321queue" ref="testQueueConsumer" method="onMessage"/>
     </rabbit:listener-container>

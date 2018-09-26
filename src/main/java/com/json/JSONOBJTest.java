@@ -8,10 +8,13 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Properties;
+
 //http://www.cnblogs.com/lovebread/archive/2009/11/23/1609122.html
 public class JSONOBJTest {
-    private static final HashSet<Integer> userids = new HashSet(){};
-    private static final HashMap<String,SummaryUser> userMap = new HashMap(){};
+    private static final HashSet<Integer> userids = new HashSet() {
+    };
+    private static final HashMap<String, SummaryUser> userMap = new HashMap() {
+    };
     private static final Properties properites = new Properties();
 
     static {
@@ -20,17 +23,18 @@ public class JSONOBJTest {
             String userJson = properites.getProperty("68293069");
             ObjectMapper mapper = new ObjectMapper();
             SummaryUser obj2 = mapper.readValue(userJson, SummaryUser.class);
-            userMap.put("68293069",obj2);
+            userMap.put("68293069", obj2);
             System.out.println(obj2.getArea());
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         userids.add(68292069);
     }
-    public  static void main(String[] args) throws Exception{
-       ObjectMapper mapper = new ObjectMapper();
-       InputStreamReader fileInputStream = new InputStreamReader(JSONOBJTest.class.getClassLoader().getResourceAsStream("userlist.json"));
-       BufferedReader reader =  new BufferedReader(fileInputStream);
+
+    public static void main(String[] args) throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        InputStreamReader fileInputStream = new InputStreamReader(JSONOBJTest.class.getClassLoader().getResourceAsStream("userlist.json"));
+        BufferedReader reader = new BufferedReader(fileInputStream);
         String tempString = null;
         int line = 1;
         // 一次读入一行，直到读入null为文件结束
@@ -38,7 +42,7 @@ public class JSONOBJTest {
             // 显示行号
             System.out.println("line " + line + ": " + tempString);
             SummaryUser obj2 = mapper.readValue(tempString, SummaryUser.class);
-            userMap.put(obj2.getUserid(),obj2);
+            userMap.put(obj2.getUserid(), obj2);
             line++;
         }
         reader.close();
@@ -59,6 +63,7 @@ public class JSONOBJTest {
         System.out.println(obj2.getArea());
     }
 }
+
 class SummaryUser implements Serializable {
     private String area;
     private String city;

@@ -12,9 +12,9 @@ import com.java8.Hints;
  */
 @Hints({@Hint("hint1"), @Hint("hint2")})
 public class PersonHintsTest {
-    public static void main(String[] args){
-       Hint hint =  PersonHintsTest.class.getAnnotation(Hint.class);
-       System.out.println(hint);
+    public static void main(String[] args) {
+        Hint hint = PersonHintsTest.class.getAnnotation(Hint.class);
+        System.out.println(hint);
 //       Hints hints1 = PersonHintsTest.class.getAnnotation(Hints.class);
 //       System.out.println(hints1.value().length);  // 2
         Hint[] hints2 = PersonHintsTest.class.getAnnotationsByType(Hint.class);

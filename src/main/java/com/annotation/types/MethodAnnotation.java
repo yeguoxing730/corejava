@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface MethodAnnotation {
     public String name();
+
     public String value();
 }

@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class DeClassLoader extends ClassLoader{
+public class DeClassLoader extends ClassLoader {
     private String mLibPath;
 
     public DeClassLoader(String path) {
@@ -19,7 +19,7 @@ public class DeClassLoader extends ClassLoader{
 
         String fileName = getFileName(name);
 
-        File file = new File(mLibPath,fileName);
+        File file = new File(mLibPath, fileName);
 
         try {
             FileInputStream is = new FileInputStream(file);
@@ -41,7 +41,7 @@ public class DeClassLoader extends ClassLoader{
             is.close();
             bos.close();
 
-            return defineClass(name,data,0,data.length);
+            return defineClass(name, data, 0, data.length);
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -55,10 +55,10 @@ public class DeClassLoader extends ClassLoader{
     private String getFileName(String name) {
         // TODO Auto-generated method stub
         int index = name.lastIndexOf('.');
-        if(index == -1){
-            return name+".classen";
-        }else{
-            return name.substring(index+1)+".classen";
+        if (index == -1) {
+            return name + ".classen";
+        } else {
+            return name.substring(index + 1) + ".classen";
         }
     }
 }

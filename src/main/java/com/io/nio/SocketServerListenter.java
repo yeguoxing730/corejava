@@ -12,30 +12,31 @@ import java.nio.channels.SocketChannel;
  * To change this template use File | Settings | File Templates.
  */
 public class SocketServerListenter {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.socket().bind(new InetSocketAddress(9999));
 
-        while(true){
+        while (true) {
             SocketChannel socketChannel =
                     serverSocketChannel.accept();
             System.out.println("get....");
             //do something with socketChannel...
         }
     }
-     static void nonBlockListen() throws Exception{
-         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 
-         serverSocketChannel.socket().bind(new InetSocketAddress(9999));
-         serverSocketChannel.configureBlocking(false);
+    static void nonBlockListen() throws Exception {
+        ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 
-         while(true){
-             SocketChannel socketChannel =
-                     serverSocketChannel.accept();
+        serverSocketChannel.socket().bind(new InetSocketAddress(9999));
+        serverSocketChannel.configureBlocking(false);
 
-             if(socketChannel != null){
-                 //do something with socketChannel...
-             }
-         }
+        while (true) {
+            SocketChannel socketChannel =
+                    serverSocketChannel.accept();
+
+            if (socketChannel != null) {
+                //do something with socketChannel...
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="GB2312" standalone="no"?>
 <employees>
-<employee>
-<name>qiankunshe</name>
-<age>25</age>
-</employee>
+    <employee>
+        <name>qiankunshe</name>
+        <age>25</age>
+    </employee>
 </employees>

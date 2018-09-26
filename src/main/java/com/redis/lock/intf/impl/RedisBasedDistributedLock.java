@@ -30,7 +30,7 @@ public class RedisBasedDistributedLock extends AbstractLock {
     }
 
     // 阻塞式获取锁的实现
-    protected boolean lock(boolean useTimeout, long time, TimeUnit unit, boolean interrupt) throws InterruptedException{
+    protected boolean lock(boolean useTimeout, long time, TimeUnit unit, boolean interrupt) throws InterruptedException {
         if (interrupt) {
             checkInterruption();
         }
@@ -117,7 +117,7 @@ public class RedisBasedDistributedLock extends AbstractLock {
      * Queries if this lock is held by any thread.
      *
      * @return {@code true} if any thread holds this lock and
-     *         {@code false} otherwise
+     * {@code false} otherwise
      */
     public boolean isLocked() {
         if (locked) {
@@ -151,7 +151,7 @@ public class RedisBasedDistributedLock extends AbstractLock {
     }
 
     private void checkInterruption() throws InterruptedException {
-        if(Thread.currentThread().isInterrupted()) {
+        if (Thread.currentThread().isInterrupted()) {
             throw new InterruptedException();
         }
     }
@@ -166,7 +166,7 @@ public class RedisBasedDistributedLock extends AbstractLock {
         return start + timeout > System.currentTimeMillis();
     }
 
-    private long serverTimeMillis(){
+    private long serverTimeMillis() {
         return timeClient.currentTimeMillis();
     }
 

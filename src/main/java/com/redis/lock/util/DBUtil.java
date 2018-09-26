@@ -10,9 +10,10 @@ import java.sql.*;
  * To change this template use File | Settings | File Templates.
  */
 public class DBUtil {
-   public static Connection conn;
+    public static Connection conn;
     public static Statement stmt;
-    public static void destroy(){
+
+    public static void destroy() {
         try {
             stmt.close();
             conn.close();
@@ -20,23 +21,25 @@ public class DBUtil {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
-    public static void init(){
+
+    public static void init() {
         String url = "jdbc:mysql://10.35.47.59:3306/lyz?"
                 + "user=root&password=Welcome1&useUnicode=true&characterEncoding=UTF8";
         try {
             Class.forName("com.mysql.jdbc.Driver");// 动态加载mysql驱动
             conn = DriverManager.getConnection(url);
             stmt = conn.createStatement();
-        }  catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         try {
             init();
-             //insert(35l,"hh",55,22);
-               String[] arrs = {"中国","每个国","很舒服的","是","水电费"};
-            for(int i=0;i<10000l;i++){
+            //insert(35l,"hh",55,22);
+            String[] arrs = {"中国", "每个国", "很舒服的", "是", "水电费"};
+            for (int i = 0; i < 10000l; i++) {
                 insertGood(i, arrs[i % arrs.length], i);
             }
         } catch (Exception e) {
@@ -53,7 +56,7 @@ public class DBUtil {
     }
 
 
-    public static  void insertGood(int id,String name,int count) throws Exception{
+    public static void insertGood(int id, String name, int count) throws Exception {
         try {
             // 之所以要使用下面这条语句，是因为要使用MySQL的驱动，所以我们要把它驱动起来，
             // 可以通过Class.forName把它加载进去，也可以通过初始化来驱动起来，下面三种形式都可以
@@ -67,7 +70,7 @@ public class DBUtil {
             // 一个Connection代表一个数据库连接
 
             // Statement里面带有很多方法，比如executeUpdate可以实现插入，更新和删除等
-            String sql = "insert into goods(id,name,count) values("+id+",'"+name+"',"+count+")";
+            String sql = "insert into goods(id,name,count) values(" + id + ",'" + name + "'," + count + ")";
             System.out.println(sql);
             int result = stmt.executeUpdate(sql);// executeUpdate语句会返回一个受影响的行数，如果返回-1就没有成功
             if (result != -1) {
@@ -82,7 +85,8 @@ public class DBUtil {
 
         }
     }
-    public static  void insert(Long id,String name,int sex,int age) throws Exception{
+
+    public static void insert(Long id, String name, int sex, int age) throws Exception {
         try {
             // 之所以要使用下面这条语句，是因为要使用MySQL的驱动，所以我们要把它驱动起来，
             // 可以通过Class.forName把它加载进去，也可以通过初始化来驱动起来，下面三种形式都可以
@@ -96,8 +100,8 @@ public class DBUtil {
             // 一个Connection代表一个数据库连接
 
             // Statement里面带有很多方法，比如executeUpdate可以实现插入，更新和删除等
-           String sql = "insert into user(id,name,sex,age) values("+id+",'"+name+"',"+sex+","+age+")";
-           System.out.println(sql);
+            String sql = "insert into user(id,name,sex,age) values(" + id + ",'" + name + "'," + sex + "," + age + ")";
+            System.out.println(sql);
             int result = stmt.executeUpdate(sql);// executeUpdate语句会返回一个受影响的行数，如果返回-1就没有成功
             if (result != -1) {
                 System.out.println("插入数据成功");

@@ -7,6 +7,7 @@ package com.oracleaq;
  * Time: 5:21 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import oracle.jdbc.driver.OracleConnection;
 import oracle.jdbc.internal.OracleTypes;
 import oracle.jpub.runtime.MutableStruct;
@@ -16,6 +17,7 @@ import oracle.sql.Datum;
 import oracle.sql.STRUCT;
 
 import java.sql.SQLException;
+
 @SuppressWarnings("deprecation")
 public class QUEUE_MESSAGE_TYPE implements CustomDatum, CustomDatumFactory {
     public static final String _SQL_NAME = "QUEUE_MESSAGE_TYPE";
@@ -23,7 +25,7 @@ public class QUEUE_MESSAGE_TYPE implements CustomDatum, CustomDatumFactory {
 
     MutableStruct _struct;
     // 12表示字符串
-    static int[] _sqlType = { 12 };
+    static int[] _sqlType = {12};
     static CustomDatumFactory[] _factory = new CustomDatumFactory[1];
     static final QUEUE_MESSAGE_TYPE _MessageFactory = new QUEUE_MESSAGE_TYPE();
 

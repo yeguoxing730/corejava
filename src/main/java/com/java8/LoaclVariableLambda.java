@@ -8,6 +8,6 @@ package com.java8;
  * To change this template use File | Settings | File Templates.
  */
 @FunctionalInterface
-public interface LoaclVariableLambda<F,T>  {
+public interface LoaclVariableLambda<F, T> {
     T convert(F from);
 }

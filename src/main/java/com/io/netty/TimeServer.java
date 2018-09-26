@@ -14,8 +14,9 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+
 public class TimeServer {
-    public void bind(int port) throws Exception{
+    public void bind(int port) throws Exception {
         //配置服务端NIO 线程组
         EventLoopGroup boss = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
@@ -42,6 +43,7 @@ public class TimeServer {
 
     /**
      * main 函数
+     *
      * @param args
      */
     public static void main(String[] args) {

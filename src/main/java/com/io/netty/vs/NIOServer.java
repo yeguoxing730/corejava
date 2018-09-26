@@ -12,10 +12,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class NIOServer {
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception {
         new NIOServer().serve(222);
 
     }
+
     public void serve(int port) throws IOException {
         System.out.println("Listening for connections on port " + port);
         ServerSocketChannel serverChannel;

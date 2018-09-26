@@ -11,12 +11,13 @@ import java.util.Random;
  * To change this template use File | Settings | File Templates.
  */
 public class Java8Arrays {
-    public static void main(String[] args){
-            Java8Arrays java8Arrays = new Java8Arrays();
+    public static void main(String[] args) {
+        Java8Arrays java8Arrays = new Java8Arrays();
         java8Arrays.createLargeArray();
     }
+
     public void createLargeArray() {
-        Integer[] array = new Integer[1024*1024*4]; // 4M
+        Integer[] array = new Integer[1024 * 1024 * 4]; // 4M
         Arrays.parallelSetAll(
                 array, i -> new Integer(new Random().nextInt()));
     }

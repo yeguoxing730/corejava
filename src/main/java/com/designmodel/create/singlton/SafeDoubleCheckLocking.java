@@ -9,14 +9,15 @@ package com.designmodel.create.singlton;
  */
 public class SafeDoubleCheckLocking {
     private static volatile Object instance;   //避免指令重拍
-    public  static Object getInstance(){
-        if(instance == null){
-                  synchronized (SafeDoubleCheckLocking.class){
-                      if(instance == null){      //分配内存空间 分配内存地址 初始化实例 如果发生指令重排则对象并未初始化完成 所以加上volitale确保了不发生指令重排
-                            instance = new Object();
-                      }
-                  }
+
+    public static Object getInstance() {
+        if (instance == null) {
+            synchronized (SafeDoubleCheckLocking.class) {
+                if (instance == null) {      //分配内存空间 分配内存地址 初始化实例 如果发生指令重排则对象并未初始化完成 所以加上volitale确保了不发生指令重排
+                    instance = new Object();
+                }
+            }
         }
-        return  instance;
+        return instance;
     }
 }

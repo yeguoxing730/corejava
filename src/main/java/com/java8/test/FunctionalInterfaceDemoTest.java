@@ -10,7 +10,7 @@ import com.java8.FunctionalInterfaceDemo;
  * To change this template use File | Settings | File Templates.
  */
 public class FunctionalInterfaceDemoTest {
-    public  static  void main(String[] args){
+    public static void main(String[] args) {
         FunctionalInterfaceDemo<String, Integer> converter = (from) -> Integer.valueOf(from);
         Integer converted = converter.convert("123");
         System.out.println(converted);    // 123

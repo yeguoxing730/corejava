@@ -3,25 +3,28 @@ package com.collection.list;
 public class SingleList {
     int size = 0;
     Node first;
-    public SingleList(){}
 
-    public void add(String data){
-        Node node = new Node(data,null);
-        if(first == null)
+    public SingleList() {
+    }
+
+    public void add(String data) {
+        Node node = new Node(data, null);
+        if (first == null)
             first = node;
         else
             node.next = first;
-            first = node;
+        first = node;
         size++;
     }
-    public void printSingleList(){
-        if(size > 0 ){
+
+    public void printSingleList() {
+        if (size > 0) {
             Node node = first;
-            while (node.data!= null){
-                System.out.println("-----------"+node.data);
-                if(node.next != null){
+            while (node.data != null) {
+                System.out.println("-----------" + node.data);
+                if (node.next != null) {
                     node = node.next;
-                }else {
+                } else {
                     break;
                 }
             }
@@ -31,15 +34,16 @@ public class SingleList {
     public Node reverse() {
         Node node = this.first;
         Node header = new Node();
-        Node  next = null;
+        Node next = null;
         while (node != null) {
             header = new Node(node.data, next);
             next = header;
             node = node.next;
         }
-        return  header;
+        return header;
     }
-    public static void  main(String[] args){
+
+    public static void main(String[] args) {
         SingleList singleList = new SingleList();
         singleList.add("a");
         singleList.add("b");
@@ -48,10 +52,13 @@ public class SingleList {
         singleList.reverse();
     }
 
-    class  Node{
+    class Node {
         String data;
         Node next;
-        public Node(){}
+
+        public Node() {
+        }
+
         public Node(String data, Node next) {
             this.data = data;
             this.next = next;

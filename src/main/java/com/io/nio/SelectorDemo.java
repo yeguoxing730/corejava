@@ -20,14 +20,14 @@ public class SelectorDemo {
         SocketChannel channel = SocketChannel.open();
         channel.configureBlocking(false);
         SelectionKey key = channel.register(selector, SelectionKey.OP_READ);
-        while(true) {
+        while (true) {
             int readyChannels = selector.select();
-            if(readyChannels == 0) continue;
+            if (readyChannels == 0) continue;
             Set selectedKeys = selector.selectedKeys();
             Iterator keyIterator = selectedKeys.iterator();
-            while(keyIterator.hasNext()) {
+            while (keyIterator.hasNext()) {
 //                SelectionKey key = keyIterator.next();
-                if(key.isAcceptable()) {
+                if (key.isAcceptable()) {
                     // a connection was accepted by a ServerSocketChannel.
                 } else if (key.isConnectable()) {
                     // a connection was established with a remote server.

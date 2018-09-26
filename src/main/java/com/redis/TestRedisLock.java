@@ -26,8 +26,9 @@ public class TestRedisLock {
     public static Jedis jedis;
     static RedisConnection connection;
     public static final Object LOCK = new Object();
+
     @BeforeClass
-    public static void before(){
+    public static void before() {
         if (pool == null) {
             try {
                 JedisPoolConfig config = new JedisPoolConfig();
@@ -56,7 +57,7 @@ public class TestRedisLock {
     }
 
     @Test
-    public void testAdd(){
+    public void testAdd() {
         Jedis jedis = pool.getResource();
         long count = jedis.setnx("test", String.valueOf(System.currentTimeMillis()));
         long time = jedis.ttl("test");
@@ -67,9 +68,9 @@ public class TestRedisLock {
     }
 
     @Test
-    public void testTryLock()	{
+    public void testTryLock() {
         RedisLockUtil util = new RedisLockUtil();
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             RedisLockThread redisLockThread = new RedisLockThread(util);
             Thread thread = new Thread(redisLockThread, "LOCK_THREAD_" + i);
             thread.start();
@@ -78,7 +79,7 @@ public class TestRedisLock {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while(true){
+                while (true) {
                     System.out.println("当前存活的线程:" + pool.getNumActive());
                     System.out.println("当前空闲的线程:" + pool.getNumIdle());
                     try {
@@ -97,7 +98,8 @@ public class TestRedisLock {
     }
 
     static AtomicInteger count = new AtomicInteger(0);
-    public static synchronized Jedis getJedis(){
+
+    public static synchronized Jedis getJedis() {
         System.out.println("获得jedis连接" + count.incrementAndGet());
         return pool.getResource();
     }

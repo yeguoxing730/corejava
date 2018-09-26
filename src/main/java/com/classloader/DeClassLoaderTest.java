@@ -15,10 +15,10 @@ public class DeClassLoaderTest {
             //通过我们自定义的加载器加载class文件
             Class c = diskLoader.loadClass("com.classloader.Test");
 
-            if(c != null){
+            if (c != null) {
                 try {
                     Object obj = c.newInstance();
-                    Method method = c.getDeclaredMethod("say",null);
+                    Method method = c.getDeclaredMethod("say", null);
                     //通过反射调用Test类的say方法
                     method.invoke(obj, null);
                 } catch (InstantiationException | IllegalAccessException

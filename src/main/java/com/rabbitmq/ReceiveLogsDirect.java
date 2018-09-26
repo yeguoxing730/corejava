@@ -23,12 +23,12 @@ public class ReceiveLogsDirect {
         channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.DIRECT);
         String queueName = channel.queueDeclare().getQueue();
 
-        if (argv.length < 1){
+        if (argv.length < 1) {
             System.err.println("Usage: ReceiveLogsDirect [info] [warning] [error]");
             System.exit(1);
         }
 
-        for(String severity : argv){
+        for (String severity : argv) {
             channel.queueBind(queueName, EXCHANGE_NAME, severity);
         }
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");

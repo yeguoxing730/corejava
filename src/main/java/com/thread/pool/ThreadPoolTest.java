@@ -15,8 +15,8 @@ public class ThreadPoolTest {
         ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);
         try {
             //schedule to run after sometime
-            System.out.println("Current Time = "+getNowDate());
-            for(int i=0; i<3; i++){
+            System.out.println("Current Time = " + getNowDate());
+            for (int i = 0; i < 3; i++) {
                 Thread.sleep(1000);
                 WorkerThread worker = new WorkerThread();
                 //延迟10秒后执行
@@ -27,7 +27,7 @@ public class ThreadPoolTest {
             e.printStackTrace();
         }
         scheduledThreadPool.shutdown();
-        while(!scheduledThreadPool.isTerminated()){
+        while (!scheduledThreadPool.isTerminated()) {
             //wait for all tasks to finish
         }
         System.out.println("Finished all threads");
@@ -41,7 +41,7 @@ public class ThreadPoolTest {
     public static String getNowDate() {
         Date currentTime = new Date();
         SimpleDateFormat formatter;
-        formatter = new SimpleDateFormat ("yyyy-MM-dd HH:mm:ss");
+        formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String ctime = formatter.format(currentTime);
         return ctime;
     }

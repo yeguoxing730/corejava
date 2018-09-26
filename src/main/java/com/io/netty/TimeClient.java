@@ -7,6 +7,7 @@ package com.io.netty;
  * Time: 2:48 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -15,8 +16,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+
 public class TimeClient {
-    public void connect(int port, String host) throws Exception{
+    public void connect(int port, String host) throws Exception {
         //配置客户端NIO 线程组
         EventLoopGroup group = new NioEventLoopGroup();
 
@@ -46,6 +48,7 @@ public class TimeClient {
 
     /**
      * main 函数
+     *
      * @param args
      */
     public static void main(String[] args) {

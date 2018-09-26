@@ -14,13 +14,13 @@ import java.util.List;
  */
 public class Deal {
     private String ccy;
-    private String  PricingDirection;
-    private String  AssetCode;
-    private String  NbAssets;
-    private String  Version;
-    private String  Id;
-    private String  DealDate;
-    private String  MarketDataGroup;
+    private String PricingDirection;
+    private String AssetCode;
+    private String NbAssets;
+    private String Version;
+    private String Id;
+    private String DealDate;
+    private String MarketDataGroup;
     private List<Parameter> ParameterList = new ArrayList<Parameter>();
     private Description description = new Description();
     private List<AssetModel> assetModelList = new ArrayList<AssetModel>();

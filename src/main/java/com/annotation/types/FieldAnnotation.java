@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface FieldAnnotation {
     public String name();
+
     public String value();
 }

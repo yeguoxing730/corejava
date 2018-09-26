@@ -21,9 +21,9 @@ public class ResponeProcessor {
                     // 写操作
                     SocketChannel writeChannel = (SocketChannel) key.channel();
                     //拿到客户端传递的数据
-                    ByteArrayOutputStream attachment = (ByteArrayOutputStream)key.attachment();
+                    ByteArrayOutputStream attachment = (ByteArrayOutputStream) key.attachment();
 
-                    System.out.println("客户端发送来的数据："+new String(attachment.toByteArray()));
+                    System.out.println("客户端发送来的数据：" + new String(attachment.toByteArray()));
 
                     ByteBuffer buffer = ByteBuffer.allocate(1024);
                     String message = "你好，我好，大家好！！";

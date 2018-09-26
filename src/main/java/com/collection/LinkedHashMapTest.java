@@ -11,7 +11,7 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class LinkedHashMapTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //linked hashmap     保证了存储的顺序                    遍历时
         /**先进先出
          *
@@ -26,7 +26,7 @@ public class LinkedHashMapTest {
         lmap.put("地理", 6);
         lmap.put("生物", 7);
         lmap.put("化学", 8);
-        for(Map.Entry<String, Integer> entry : lmap.entrySet()) {
+        for (Map.Entry<String, Integer> entry : lmap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     }

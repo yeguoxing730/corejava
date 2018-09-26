@@ -2,6 +2,7 @@ package com.loger.appender;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintWriter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +14,7 @@ public class FileLog {
     private static Logger errorLogger = null;
     private static Logger infoLogger = null;
 
-    private static Logger countTimeLogger=null;
+    private static Logger countTimeLogger = null;
 
 
     static {
@@ -29,10 +30,10 @@ public class FileLog {
      */
     static void loadLogger() {
         debugLogger = LoggerFactory.getLogger("debugLogger");
-        infoLogger =  LoggerFactory.getLogger("infoLogger");
-        errorLogger =  LoggerFactory.getLogger("errorLogger");
+        infoLogger = LoggerFactory.getLogger("infoLogger");
+        errorLogger = LoggerFactory.getLogger("errorLogger");
 
-        countTimeLogger =  LoggerFactory.getLogger("countTimeLogger");
+        countTimeLogger = LoggerFactory.getLogger("countTimeLogger");
     }
 
     //自定义的输出类型
@@ -41,8 +42,8 @@ public class FileLog {
         countTimeLogger.info(msg.toString());
     }
 
-    public static void countTimeLog(String msg,Exception e) {
-        countTimeLogger.info(msg+"\n"+getExceptionTrace(e));
+    public static void countTimeLog(String msg, Exception e) {
+        countTimeLogger.info(msg + "\n" + getExceptionTrace(e));
     }
 
 
@@ -61,7 +62,7 @@ public class FileLog {
     }
 
     /**
-     * @param e: error级别的异常信息
+     * @param e:   error级别的异常信息
      * @param msg: error级别的错误信息
      */
     public static void errorLog(Exception e, String msg) {
@@ -83,7 +84,7 @@ public class FileLog {
     }
 
     /**
-     * @param e: debug级别的异常信息
+     * @param e:   debug级别的异常信息
      * @param msg: debug级别的错误信息
      */
     public static void debugLog(Exception e, String msg) {
@@ -105,7 +106,7 @@ public class FileLog {
     }
 
     /**
-     * @param e: debug级别的异常信息
+     * @param e:   debug级别的异常信息
      * @param msg: debug级别的错误信息
      */
     public static void systemLog(Exception e, String msg) {
@@ -121,7 +122,7 @@ public class FileLog {
     }
 
     /**
-     * @param e: debug级别的异常信息
+     * @param e:   debug级别的异常信息
      * @param msg: debug级别的错误信息
      */
     private static String getExceptionTrace(Exception e) {

@@ -94,11 +94,11 @@ public class RedisReentrantReadWriteLock implements ReadWriteLock {
          * @see cc.lixiaohui.lock.Lock#tryLock()
          */
         public boolean tryLock() {
-			/*
-			 * walkthrough
-			 * 1. 判断写锁是否被持有, 若被持有, return false
-			 * 2.
-			 */
+            /*
+             * walkthrough
+             * 1. 判断写锁是否被持有, 若被持有, return false
+             * 2.
+             */
             long lockExpireTime = readWriteLock.serverTimeMillis() + lockExpires + 1;
             //String stringOflockExpireTime = String.valueOf(lockExpireTime);
 
@@ -126,8 +126,6 @@ public class RedisReentrantReadWriteLock implements ReadWriteLock {
                 locked = false;
                 return false;
             }
-
-
 
 
             return false;
@@ -166,7 +164,6 @@ public class RedisReentrantReadWriteLock implements ReadWriteLock {
         protected boolean isHeldByCurrentThread() {
             return false;
         }
-
 
 
     }

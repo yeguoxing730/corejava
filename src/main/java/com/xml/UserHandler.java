@@ -30,8 +30,7 @@ public class UserHandler extends DefaultHandler {
             bLastName = true;
         } else if (qName.equalsIgnoreCase("nickname")) {
             bNickName = true;
-        }
-        else if (qName.equalsIgnoreCase("marks")) {
+        } else if (qName.equalsIgnoreCase("marks")) {
             bMarks = true;
         }
     }

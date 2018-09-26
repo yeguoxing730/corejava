@@ -15,10 +15,11 @@ public class DirectProducer implements IMessageProducer {
     private Logger logger = LoggerFactory.getLogger(DirectProducer.class);
     @Resource
     private AmqpTemplate directTemplate;
+
     @Override
     public void sendMessage(Object message) {
         logger.info("发送消息");
-        logger.info("to send message:","direct----"+message);
-        directTemplate.convertAndSend("queueTestKey",message);
+        logger.info("to send message:", "direct----" + message);
+        directTemplate.convertAndSend("queueTestKey", message);
     }
 }

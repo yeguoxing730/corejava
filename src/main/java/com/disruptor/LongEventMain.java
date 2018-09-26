@@ -17,12 +17,12 @@ import java.util.concurrent.Executors;
  * To change this template use File | Settings | File Templates.
  */
 public class LongEventMain {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
         LongEventFactory factory = new LongEventFactory();
-        int ringBufferSize = 1024*1024;
+        int ringBufferSize = 1024 * 1024;
         Disruptor<LongEvent> disruptor = new Disruptor<LongEvent>(
-                factory,ringBufferSize,executor, ProducerType.SINGLE,
+                factory, ringBufferSize, executor, ProducerType.SINGLE,
                 new YieldingWaitStrategy());
 //        disruptor.handleEventsWith(new LongEventHandler());
         //一、 菱形操作 执行完hander1 和 handler2后执行handler3 handler1和handler2没有先后关系
@@ -46,18 +46,18 @@ public class LongEventMain {
         LongEventHandler3 h3 = new LongEventHandler3();
         LongEventHandler4 h4 = new LongEventHandler4();
         LongEventHandler5 h5 = new LongEventHandler5();
-        disruptor.handleEventsWith(h1,h2);
+        disruptor.handleEventsWith(h1, h2);
         disruptor.after(h1).handleEventsWith(h3);
         disruptor.after(h2).handleEventsWith(h4);
-        disruptor.after(h3,h4).handleEventsWith(h5);
+        disruptor.after(h3, h4).handleEventsWith(h5);
 
         disruptor.start();
         RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
         LongEventProducer producer = new LongEventProducer(ringBuffer);
         ByteBuffer byteBuffer = ByteBuffer.allocate(8);
-       // for(long a=0;a<1024*2048;a++){
-        for(long a=0;a<100;a++){
-            byteBuffer.putLong(0,a);
+        // for(long a=0;a<1024*2048;a++){
+        for (long a = 0; a < 100; a++) {
+            byteBuffer.putLong(0, a);
             producer.onData(byteBuffer);
         }
         disruptor.shutdown();

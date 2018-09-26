@@ -17,9 +17,10 @@ public class TopicProcedurer implements IMessageProducer {
     private Logger logger = LoggerFactory.getLogger(DirectProducer.class);
     @Resource
     private AmqpTemplate topicTemplate;
+
     @Override
     public void sendMessage(Object message) {
-        for(int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             String str = "topic hello" + i;
             topicTemplate.send(new Message(str.getBytes(), new MessageProperties()));
         }

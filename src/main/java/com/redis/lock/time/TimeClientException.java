@@ -1,6 +1,7 @@
 package com.redis.lock.time;
 
 import java.net.SocketAddress;
+
 public class TimeClientException extends RuntimeException {
     /**
      *

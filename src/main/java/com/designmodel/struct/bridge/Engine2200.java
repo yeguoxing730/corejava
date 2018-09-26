@@ -1,6 +1,6 @@
 package com.designmodel.struct.bridge;
 
-public class Engine2200  implements Engine {
+public class Engine2200 implements Engine {
 
     @Override
     public void installEngine() {

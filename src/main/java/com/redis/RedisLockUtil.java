@@ -30,34 +30,36 @@ public class RedisLockUtil {
 
     /**
      * 获得redis锁
-     * @author	 zcd
-     * @since 	 2017年4月25日
-     * @param key 锁的主键
+     *
+     * @param key    锁的主键
      * @param expire 锁的过期时间
+     * @author zcd
+     * @since 2017年4月25日
      */
-    public void tryLock(String key, int expire){
+    public void tryLock(String key, int expire) {
         this.tryLock(null, key, expire);
     }
 
     /**
      * 获得redis锁
-     * @author	 zcd
-     * @since 	 2017年4月25日
-     * @param jedis redis连接
-     * @param key 锁的主键
+     *
+     * @param jedis  redis连接
+     * @param key    锁的主键
      * @param expire 锁的过期时间
+     * @author zcd
+     * @since 2017年4月25日
      */
-    public void tryLock(Jedis jedis, String key, int expire){
+    public void tryLock(Jedis jedis, String key, int expire) {
         boolean locked = (jedis == null ? getLock(key, expire) : getLock(jedis, key, expire));
-        while(!locked){
+        while (!locked) {
             try {
                 //已经有正在等待的线程&持有锁的线程不为空
-                if(hasWaitThread && holdLockThread != null){
+                if (hasWaitThread && holdLockThread != null) {
                     synchronized (holdLockThread) {
                         //等待持有锁的线程执行notifyAll
                         holdLockThread.wait(expire);
                     }
-                }else{
+                } else {
                     Thread.sleep(100);
                 }
             } catch (InterruptedException e) {
@@ -70,68 +72,72 @@ public class RedisLockUtil {
 
     /**
      * 释放redis锁，通知通知其他等待线程
-     * @author	 zcd
-     * @since 	 2017年4月25日
+     *
      * @param key 锁的key
      * @return
+     * @author zcd
+     * @since 2017年4月25日
      */
     public boolean freeLock(String key) {
         Jedis jedis = TestRedisLock.getJedis();
         try {
             return jedis.del(key) > 0;
-        } finally{
+        } finally {
             doFinally(jedis);
         }
     }
 
     /**
      * 释放redis锁，同时释放jedis连接，通知通知其他等待线程
-     * @author	 zcd
-     * @since 	 2017年4月25日
+     *
      * @param jedis
      * @param key
      * @return
+     * @author zcd
+     * @since 2017年4月25日
      */
     public boolean freeLock(Jedis jedis, String key) {
         try {
             return jedis.del(key) > 0;
-        } finally{
+        } finally {
             doFinally(jedis);
         }
     }
 
     /**
      * 从redis获得含有有效时间的锁
-     * @author	 zcd
-     * @since 	 2017年4月25日
-     * @param key 锁的主键
+     *
+     * @param key    锁的主键
      * @param expire 过期时间
      * @return
+     * @author zcd
+     * @since 2017年4月25日
      */
-    private boolean getLock(String key, int expire){
+    private boolean getLock(String key, int expire) {
         Jedis jedis = TestRedisLock.getJedis();
         try {
             return getLock(jedis, key, expire);
-        } finally{
+        } finally {
             jedis.close();
         }
     }
 
     /**
      * 从redis获得含有有效时间的锁
-     * @author	 zcd
-     * @since 	 2017年4月25日
+     *
      * @param jedis
      * @param key
      * @param expire
      * @return
+     * @author zcd
+     * @since 2017年4月25日
      */
-    private boolean getLock(Jedis jedis, String key, int expire){
+    private boolean getLock(Jedis jedis, String key, int expire) {
         //失败:0, 成功:1
         long locked = jedis.setnx(key, String.valueOf(expire));
         //解决死锁
         solveDeadLock(jedis, key, expire);
-        if(locked == 1){
+        if (locked == 1) {
             //设置持有redis锁的线程&设置线程等待的标识
             this.holdLockThread = Thread.currentThread();
             this.hasWaitThread = true;
@@ -144,40 +150,42 @@ public class RedisLockUtil {
 
     /**
      * 解决用于redis服务器宕机发生的死锁现象,关闭jedis
-     * @author	 zcd
-     * @since 	 2017年4月25日
+     *
      * @param key
      * @param expire
+     * @author zcd
+     * @since 2017年4月25日
      */
     private void solveDeadLock(String key, int expire) {
         Jedis jedis = TestRedisLock.getJedis();
         try {
             this.solveDeadLock(jedis, key, expire);
-        } finally{
+        } finally {
             jedis.close();
         }
     }
 
     /**
      * 解决用于redis服务器宕机发生的死锁现象
-     * @author	 zcd
-     * @since 	 2017年4月25日
-     * @param jedis redis连接
-     * @param key 锁的主键
+     *
+     * @param jedis  redis连接
+     * @param key    锁的主键
      * @param expire 过期时间
+     * @author zcd
+     * @since 2017年4月25日
      */
-    private void solveDeadLock(Jedis jedis, String key, int expire){
+    private void solveDeadLock(Jedis jedis, String key, int expire) {
         //判断尝试获得锁的次数
-        if(tryTimes.get() < MAX_TRY_TIMES){
+        if (tryTimes.get() < MAX_TRY_TIMES) {
             return;
         }
-        if(jedis == null){
+        if (jedis == null) {
             solveDeadLock(key, expire);
             return;
         }
         Long ttl = jedis.ttl(key);
         //锁的过期时间大于0 并且redis中的锁过期时间是 -1 或是小于0，那么说明此锁会产生死锁，直接删除
-        if(ttl < 0 || expire > 0){
+        if (ttl < 0 || expire > 0) {
             jedis.del(key);
             doReset();
         }
@@ -186,17 +194,19 @@ public class RedisLockUtil {
 
     /**
      * 执行finally中逻辑操作
-     * @author	 zcd
-     * @since 	 2017年4月25日
+     *
      * @param jedis
+     * @author zcd
+     * @since 2017年4月25日
      */
-    private void doFinally(Jedis jedis){
-        if(jedis != null){
+    private void doFinally(Jedis jedis) {
+        if (jedis != null) {
             jedis.close();
         }
         doReset();
     }
-    private void doReset(){
+
+    private void doReset() {
         hasWaitThread = false;
         holdLockThread = null;
         System.out.println(Thread.currentThread().getName() + " : 释放锁，通知等待线程");

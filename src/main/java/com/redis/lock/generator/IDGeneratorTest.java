@@ -10,6 +10,7 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.HashSet;
 import java.util.Set;
+
 public class IDGeneratorTest {
     private static Set<String> generatedIds = new HashSet<String>();
 
@@ -73,7 +74,7 @@ public class IDGeneratorTest {
             while (!stop) {
                 String id = idGenerator.getAndIncrement();
                 if (id != null) {
-                    if(generatedIds.contains(id)) {
+                    if (generatedIds.contains(id)) {
                         System.out.println(time() + ": duplicate id generated, id = " + id);
                         stop = true;
                         continue;
@@ -84,7 +85,7 @@ public class IDGeneratorTest {
                 }
             }
             // 释放资源
-         //   idGenerator.release();
+            //   idGenerator.release();
             System.out.println(time() + ": consume " + name + " done ");
         }
 

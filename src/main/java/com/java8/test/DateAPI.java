@@ -16,7 +16,7 @@ import java.util.Locale;
  * To change this template use File | Settings | File Templates.
  */
 public class DateAPI {
-    public  static void main(String[] args){
+    public static void main(String[] args) {
         Clock clock = Clock.systemDefaultZone();
         long millis = clock.millis();
         System.out.println(millis);
@@ -60,7 +60,6 @@ public class DateAPI {
         System.out.println(tomorrow);
         System.out.println(yesterday);
         System.out.println(dayOfWeek);    // FRIDAY
-
 
 
         LocalDateTime sylvester = LocalDateTime.of(2014, Month.DECEMBER, 31, 23, 59, 59);

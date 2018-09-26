@@ -10,7 +10,7 @@ package com.designmodel.create.staticfactory;
 public class ProviderImp implements Provider {
     @Override
     public Service newService() {
-        return new Service(){
+        return new Service() {
             @Override
             public void SayHello() {
                 System.out.println("provider provide Service instance implement.Say hi to everyone.");

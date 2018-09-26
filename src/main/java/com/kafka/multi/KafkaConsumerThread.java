@@ -17,6 +17,7 @@ public class KafkaConsumerThread implements Runnable {
     public KafkaConsumerThread(KafkaStream<byte[], byte[]> stream) {
         this.stream = stream;
     }
+
     @Override
     public void run() {
         ConsumerIterator<byte[], byte[]> it = stream.iterator();

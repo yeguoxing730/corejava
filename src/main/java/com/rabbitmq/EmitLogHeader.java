@@ -12,6 +12,7 @@ import com.rabbitmq.client.*;
 
 import java.util.HashMap;
 import java.util.Map;
+
 public class EmitLogHeader {
     private static final String EXCHANGE_NAME = "header_test";
 

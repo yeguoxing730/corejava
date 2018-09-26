@@ -11,6 +11,7 @@ package com.rabbitmq;
 import com.rabbitmq.client.*;
 
 import java.io.IOException;
+
 public class ReceiveLogsTopic {
     private static final String EXCHANGE_NAME = "topic_logs";
 

@@ -5,5 +5,6 @@ package com.designmodel.struct.proxy.mbatispluginproxy;
  */
 public interface Sourceable {
     public int method1();
+
     public int method2(int val);
 }

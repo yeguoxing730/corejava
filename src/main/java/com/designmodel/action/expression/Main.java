@@ -12,7 +12,7 @@ public class Main {
         context.addValue(b, 10000);
 
         Expression expression = new Div(new Mul(a, b), new Add(new Sub(a, b), c));
-        System.out.println("Result = "+expression.interpret(context));
+        System.out.println("Result = " + expression.interpret(context));
     }
 }
 /**

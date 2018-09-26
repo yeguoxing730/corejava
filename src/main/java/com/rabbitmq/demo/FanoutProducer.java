@@ -17,10 +17,11 @@ public class FanoutProducer implements IMessageProducer {
     private Logger logger = LoggerFactory.getLogger(FanoutProducer.class);
     @Resource
     private AmqpTemplate fanoutTemplate;
+
     @Override
     public void sendMessage(Object message) {
         System.out.println("fanout producer");
-        for(int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             String str = "fanout ....hello" + i;
             fanoutTemplate.send("leo.pay.fanout.exchange", "", new Message(str.getBytes(), new MessageProperties()));
         }

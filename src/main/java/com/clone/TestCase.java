@@ -17,15 +17,15 @@ public class TestCase {
 
         Administrator src = new Administrator(new User("Kent", "123456", new Date()), true);
 
-        Administrator dist = (Administrator)BeanUtil.cloneTo(src);
+        Administrator dist = (Administrator) BeanUtil.cloneTo(src);
 
-        System.out.println(src == dist);			// false
+        System.out.println(src == dist);            // false
 
-        System.out.println(src.equals(dist));		// true
+        System.out.println(src.equals(dist));        // true
 
-        System.out.println(src.getUser() == dist.getUser());		//false ! Well done!
+        System.out.println(src.getUser() == dist.getUser());        //false ! Well done!
 
-        System.out.println(src.getUser().equals(dist.getUser()));	//true
+        System.out.println(src.getUser().equals(dist.getUser()));    //true
 
     }
 }

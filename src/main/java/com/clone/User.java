@@ -10,7 +10,7 @@ import java.util.Date;
  * Time: 3:42 PM
  * To change this template use File | Settings | File Templates.
  */
-public class User implements Cloneable,Serializable {
+public class User implements Cloneable, Serializable {
     private String username;
 
     private String password;
@@ -34,7 +34,6 @@ public class User implements Cloneable,Serializable {
         return super.clone();
 
     }
-
 
 
 }

@@ -10,7 +10,7 @@ import com.java8.DefaultFormulaInterface;
  * To change this template use File | Settings | File Templates.
  */
 public class DefaultFormulaInterfaceTest {
-    public  static  void main(String[] args){
+    public static void main(String[] args) {
         DefaultFormulaInterface formula = new DefaultFormulaInterface() {
             @Override
             public double calculate(int a) {

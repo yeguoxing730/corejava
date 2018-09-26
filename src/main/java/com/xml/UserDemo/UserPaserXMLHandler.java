@@ -29,10 +29,10 @@ public class UserPaserXMLHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if(qName.equals("user")){
+        if (qName.equals("user")) {
             SAXOperateXmlDemo.user = new User(); //每次解析到user标签了才会创建user对象的实例
             //添加user标签中的id属性
-            if(attributes.getLength() > 0){
+            if (attributes.getLength() > 0) {
                 SAXOperateXmlDemo.user.setId(Long.valueOf(attributes.getValue("id")));
             }
         }
@@ -44,7 +44,7 @@ public class UserPaserXMLHandler extends DefaultHandler {
         //需要说明的是，因为每一个非空标签都有characters(),那么无法知道user子标签循环完了
         //但是可以这样，如果不考虑子标签顺序可以判断是否解析到了最后一个子标签来判断
         //或者直接在user标签的endElement()中添加即可。
-        if(qName.equals("user")){
+        if (qName.equals("user")) {
             SAXOperateXmlDemo.userList.add(SAXOperateXmlDemo.user);
             SAXOperateXmlDemo.user = null;
         }
@@ -55,12 +55,12 @@ public class UserPaserXMLHandler extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
         String content = new String(ch, start, length);
         //System.out.println(currentQName + "：" + content);
-        if(SAXOperateXmlDemo.user != null && currentQName != null){
-            if(currentQName.equals("name")){
+        if (SAXOperateXmlDemo.user != null && currentQName != null) {
+            if (currentQName.equals("name")) {
                 SAXOperateXmlDemo.user.setName(content);
-            }else if(currentQName.equals("age")){
+            } else if (currentQName.equals("age")) {
                 SAXOperateXmlDemo.user.setAge(Long.valueOf(content));
-            }else if(currentQName.equals("hobby")){
+            } else if (currentQName.equals("hobby")) {
                 SAXOperateXmlDemo.user.setHobby(content);
             }
         }

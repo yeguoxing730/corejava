@@ -7,12 +7,14 @@ package com.io.netty;
  * Time: 1:48 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.apache.log4j.Logger;
+
 public class NettyServerBootstrap {
     private static Logger logger = Logger.getLogger(NettyServerBootstrap.class);
 
@@ -63,7 +65,7 @@ public class NettyServerBootstrap {
 
     public static void main(String[] args) throws InterruptedException {
 
-        NettyServerBootstrap server= new NettyServerBootstrap(9999);
+        NettyServerBootstrap server = new NettyServerBootstrap(9999);
 
     }
 }

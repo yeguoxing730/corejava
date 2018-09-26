@@ -1,4 +1,5 @@
 package com.redis;
+
 import redis.clients.jedis.Jedis;
 
 /**
@@ -8,10 +9,11 @@ import redis.clients.jedis.Jedis;
  * Time: 4:19 PM
  * To change this template use File | Settings | File Templates.
  */
-public class RedisLockThread  implements Runnable{
+public class RedisLockThread implements Runnable {
 
     RedisLockUtil util = null;
-    RedisLockThread(RedisLockUtil util){
+
+    RedisLockThread(RedisLockUtil util) {
         this.util = util;
     }
 

@@ -11,13 +11,15 @@ public class Invocation {
     private Method method;
     private Object[] args;
     private Object target;
-    public Invocation(Object target,Method method,Object[] args){
+
+    public Invocation(Object target, Method method, Object[] args) {
         this.target = target;
         this.method = method;
         this.args = args;
     }
-    public Object proceed() throws InvocationTargetException,IllegalAccessException{
-        return this.method.invoke(this.target,this.args);
+
+    public Object proceed() throws InvocationTargetException, IllegalAccessException {
+        return this.method.invoke(this.target, this.args);
     }
 
     public Method getMethod() {

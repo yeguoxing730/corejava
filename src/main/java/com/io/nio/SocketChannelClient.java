@@ -12,7 +12,7 @@ import java.nio.channels.SocketChannel;
  * To change this template use File | Settings | File Templates.
  */
 public class SocketChannelClient {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         SocketChannel socketChannel = SocketChannel.open();
         socketChannel.connect(new InetSocketAddress("http://127.0.0.1", 9999));
         String newData = "New String to write to file..." + System.currentTimeMillis();
@@ -23,11 +23,12 @@ public class SocketChannelClient {
 
         buf.flip();
 
-        while(buf.hasRemaining()) {
+        while (buf.hasRemaining()) {
             socketChannel.write(buf);
         }
     }
-    static void nonBlockingClient() throws Exception{
+
+    static void nonBlockingClient() throws Exception {
         SocketChannel socketChannel = SocketChannel.open();
         socketChannel.configureBlocking(false);
         socketChannel.connect(new InetSocketAddress("http://localhost", 9999));
@@ -39,10 +40,10 @@ public class SocketChannelClient {
 
         buf.flip();
 
-        while(buf.hasRemaining()) {
+        while (buf.hasRemaining()) {
             socketChannel.write(buf);
         }
-        while(! socketChannel.finishConnect() ){
+        while (!socketChannel.finishConnect()) {
             //wait, or do something else...
         }
     }

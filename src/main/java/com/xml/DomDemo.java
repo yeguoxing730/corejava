@@ -114,11 +114,12 @@ public class DomDemo {
             System.out.println(e.getMessage());
         } catch (ParserConfigurationException e) {
             System.out.println(e.getMessage());
-        }         catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
-    public static void main(String[] args)throws Exception{
+
+    public static void main(String[] args) throws Exception {
         DomDemo domDemo = new DomDemo();
         domDemo.createXml("domxml.xml");
         domDemo.parserXml("domxml.xml");

@@ -7,24 +7,26 @@ package com.redis.lock.miskiller;
  * Time: 1:40 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import com.redis.lock.util.RedisUtil;
 import redis.clients.jedis.Jedis;
 
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 public class PessimisticLockTest {
 
     public static void main(String[] args) {
-        long starTime=System.currentTimeMillis();
+        long starTime = System.currentTimeMillis();
 
         initPrduct();
         initClient();
         printResult();
 
-        long endTime=System.currentTimeMillis();
-        long Time=endTime-starTime;
-        System.out.println("程序运行时间： "+Time+"ms");
+        long endTime = System.currentTimeMillis();
+        long Time = endTime - starTime;
+        System.out.println("程序运行时间： " + Time + "ms");
     }
 
     /**

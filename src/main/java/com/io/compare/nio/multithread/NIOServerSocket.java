@@ -18,7 +18,7 @@ public class NIOServerSocket {
     private static Selector selector = null;
 
     //添加SelectionKey到队列
-    public static void addWriteQueen(SelectionKey key){
+    public static void addWriteQueen(SelectionKey key) {
         synchronized (writeQueen) {
             writeQueen.add(key);
             //唤醒主线程
@@ -67,7 +67,7 @@ public class NIOServerSocket {
                         ServerSocketChannel ssChannel = (ServerSocketChannel) key.channel();
                         SocketChannel socketChannel = ssChannel.accept();
 
-                        System.out.println("处理请求："+ socketChannel.getRemoteAddress());
+                        System.out.println("处理请求：" + socketChannel.getRemoteAddress());
 
                         // 获取客户端的数据
                         // 设置非阻塞状态
@@ -87,14 +87,14 @@ public class NIOServerSocket {
                         ResponeProcessor.ProcessorRespone(key);
                     }
                 }
-            }else{
+            } else {
                 synchronized (writeQueen) {
-                    while(writeQueen.size() > 0){
+                    while (writeQueen.size() > 0) {
                         SelectionKey key = writeQueen.remove(0);
                         //注册写事件
                         SocketChannel channel = (SocketChannel) key.channel();
                         Object attachment = key.attachment();
-                        channel.register(selector, SelectionKey.OP_WRITE,attachment);
+                        channel.register(selector, SelectionKey.OP_WRITE, attachment);
                     }
                 }
             }

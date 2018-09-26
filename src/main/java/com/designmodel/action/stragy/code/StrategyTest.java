@@ -5,7 +5,7 @@ import com.designmodel.action.stragy.code.impls.*;
 import com.designmodel.action.stragy.code.itf.Calculator;
 
 public class StrategyTest {
-    public static void main(String [] args){
+    public static void main(String[] args) {
         Item meat = new Item("1001", "猪肉", 100L);
         Calculator alipayCalculator = new AlipayCalculator();
         Calculator weixinPayCalculator = new WeixinPayCalculator();

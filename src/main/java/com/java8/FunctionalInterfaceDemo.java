@@ -8,6 +8,6 @@ package com.java8;
  * To change this template use File | Settings | File Templates.
  */
 @FunctionalInterface
-public interface FunctionalInterfaceDemo<F,T> {
+public interface FunctionalInterfaceDemo<F, T> {
     T convert(F from);
 }

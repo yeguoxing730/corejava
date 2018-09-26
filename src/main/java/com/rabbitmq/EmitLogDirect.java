@@ -34,13 +34,13 @@ public class EmitLogDirect {
         connection.close();
     }
 
-    private static String getSeverity(String[] strings){
+    private static String getSeverity(String[] strings) {
         if (strings.length < 1)
             return "info";
         return strings[0];
     }
 
-    private static String getMessage(String[] strings){
+    private static String getMessage(String[] strings) {
         if (strings.length < 2)
             return "Hello World!";
         return joinStrings(strings, " ", 1);
@@ -48,8 +48,8 @@ public class EmitLogDirect {
 
     private static String joinStrings(String[] strings, String delimiter, int startIndex) {
         int length = strings.length;
-        if (length == 0 ) return "";
-        if (length < startIndex ) return "";
+        if (length == 0) return "";
+        if (length < startIndex) return "";
         StringBuilder words = new StringBuilder(strings[startIndex]);
         for (int i = startIndex + 1; i < length; i++) {
             words.append(delimiter).append(strings[i]);

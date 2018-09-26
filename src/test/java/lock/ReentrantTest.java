@@ -36,6 +36,7 @@ public class ReentrantTest {
         }
 
     }
+
     // 创建count个线程，每个线程都是不同的jedis连接以及不同的与时间服务器的连接
     private List<Thread> createThreads(int count) throws IOException {
         List<Thread> threads = new ArrayList<Thread>();
@@ -84,7 +85,6 @@ public class ReentrantTest {
             }
 
         }
-
 
 
     }

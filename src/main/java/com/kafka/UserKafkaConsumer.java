@@ -17,23 +17,26 @@ import java.util.Properties;
  * Time: 5:28 PM
  * To change this template use File | Settings | File Templates.
  */
-public class UserKafkaConsumer extends Thread{
+public class UserKafkaConsumer extends Thread {
     private final ConsumerConnector consumer;
     private final String topic;
-    public UserKafkaConsumer(String topic){
-        consumer=kafka.consumer.Consumer.createJavaConsumerConnector(
+
+    public UserKafkaConsumer(String topic) {
+        consumer = kafka.consumer.Consumer.createJavaConsumerConnector(
                 createConsumerConfig());
-        this.topic=topic;
+        this.topic = topic;
     }
+
     private ConsumerConfig createConsumerConfig() {
-        Properties props=new Properties();
-        props.put("zookeeper.connect",KafkaProperties.zkConnect);
-        props.put("group.id","test-consumer-group"+1);
-        props.put("zookeeper.session.timeout.ms","40000");
-        props.put("zookeeper.sync.time.ms","200");
-        props.put("auto.commit.interval.ms","1000");
+        Properties props = new Properties();
+        props.put("zookeeper.connect", KafkaProperties.zkConnect);
+        props.put("group.id", "test-consumer-group" + 1);
+        props.put("zookeeper.session.timeout.ms", "40000");
+        props.put("zookeeper.sync.time.ms", "200");
+        props.put("auto.commit.interval.ms", "1000");
         return new ConsumerConfig(props);
     }
+
     @Override
     public void run() {
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
@@ -51,7 +54,8 @@ public class UserKafkaConsumer extends Thread{
             }
         }
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         new UserKafkaConsumer(KafkaProperties.topic).start();
     }
 }

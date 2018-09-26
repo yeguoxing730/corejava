@@ -29,30 +29,30 @@ public class SAXModifyDemo extends DefaultHandler {
             SAXModifyDemo obj = new SAXModifyDemo();
             obj.childLoop(inputFile);
             FileWriter filewriter = new FileWriter("newfile.xml");
-            for(int loopIndex = 0; loopIndex < numberLines; loopIndex++){
+            for (int loopIndex = 0; loopIndex < numberLines; loopIndex++) {
                 filewriter.write(displayText[loopIndex].toCharArray());
                 filewriter.write('\n');
                 System.out.println(displayText[loopIndex].toString());
             }
             filewriter.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(System.err);
         }
     }
 
-    public void childLoop(File input){
+    public void childLoop(File input) {
         DefaultHandler handler = this;
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser saxParser = factory.newSAXParser();
             saxParser.parse(input, handler);
-        } catch (Throwable t) {}
+        } catch (Throwable t) {
+        }
     }
 
     public void startDocument() {
         displayText[numberLines] = indentation;
-        displayText[numberLines] += "<?xml version=\"1.0\" encoding=\""+
+        displayText[numberLines] += "<?xml version=\"1.0\" encoding=\"" +
                 "UTF-8" + "\"?>";
         numberLines++;
     }
@@ -81,7 +81,7 @@ public class SAXModifyDemo extends DefaultHandler {
         if (attributes != null) {
             int numberAttributes = attributes.getLength();
             for (int loopIndex = 0; loopIndex < numberAttributes;
-                 loopIndex++){
+                 loopIndex++) {
                 displayText[numberLines] += ' ';
                 displayText[numberLines] += attributes.getQName(loopIndex);
                 displayText[numberLines] += "=\"";
@@ -96,7 +96,7 @@ public class SAXModifyDemo extends DefaultHandler {
     public void characters(char characters[],
                            int start, int length) {
         String characterData = (new String(characters, start, length)).trim();
-        if(characterData.indexOf("\n") < 0 && characterData.length() > 0) {
+        if (characterData.indexOf("\n") < 0 && characterData.length() > 0) {
             displayText[numberLines] = indentation;
             displayText[numberLines] += characterData;
             numberLines++;
@@ -105,7 +105,7 @@ public class SAXModifyDemo extends DefaultHandler {
 
     public void endElement(String uri, String localName,
                            String qualifiedName) {
-        indentation = indentation.substring(0, indentation.length() - 4) ;
+        indentation = indentation.substring(0, indentation.length() - 4);
         displayText[numberLines] = indentation;
         displayText[numberLines] += "</";
         displayText[numberLines] += qualifiedName;

@@ -9,10 +9,12 @@ package com.designmodel.create.staticfactory;
  */
 public class ProviderManager {
     private static Provider staticProvider;
-    public static void registerProvider(Provider provider){
-        staticProvider =provider;
+
+    public static void registerProvider(Provider provider) {
+        staticProvider = provider;
     }
-    public static Service getService(){
+
+    public static Service getService() {
         return staticProvider.newService();
     }
 }

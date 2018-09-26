@@ -8,12 +8,15 @@ package com.thread.procedureconsumer;
  * To change this template use File | Settings | File Templates.
  */
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         doTest(getSynchroizedStorage());
         doTest(getLockStorage());
         doTest(getBlockQueueStorage());
-    };
-    public static void doTest(Storage storage){
+    }
+
+    ;
+
+    public static void doTest(Storage storage) {
         // 生产者对象
         Producer p1 = new Producer(storage);
         Producer p2 = new Producer(storage);
@@ -54,13 +57,16 @@ public class Test {
         p6.start();
         p7.start();
     }
-    public static Storage  getSynchroizedStorage(){
-       return new SynchroizedStorage();
+
+    public static Storage getSynchroizedStorage() {
+        return new SynchroizedStorage();
     }
-    public static Storage  getLockStorage(){
+
+    public static Storage getLockStorage() {
         return new LockStorage();
     }
-    public static Storage  getBlockQueueStorage(){
+
+    public static Storage getBlockQueueStorage() {
         return new BlockQueueStorage();
     }
 }

@@ -40,9 +40,10 @@ public class IDGeneratorTest {
         // create (availableProcessors + 1) threads to consume id.
         int count = Runtime.getRuntime().availableProcessors() + 1;
         List<Thread> threads = new ArrayList<Thread>();
+        Jedis jedis = new Jedis(HOST, PORT);
+        ReleaseLock lock = new RedisReentrantLock(jedis, LOCK_KEY, LOCK_EXPIRE);
         for (int i = 0; i < count; i++) {
-            Jedis jedis = new Jedis(HOST, PORT);
-            ReleaseLock lock = new RedisReentrantLock(jedis, LOCK_KEY, LOCK_EXPIRE);
+
             IDGenerator generator = new IDGenerator(lock);
             IDConsumeTask consumer = new IDConsumeTask(generator, "consumer" + i);
             Thread thread = new Thread(consumer);
@@ -96,7 +97,7 @@ public class IDGeneratorTest {
                     stopAll();
                 }
                 if (id != null) {
-                    if(generatedIds.contains(id)) {
+                    if (generatedIds.contains(id)) {
                         logger.error("{} : duplicate id generated, id = {}", time(), id);
                         stop = true;
                         continue;

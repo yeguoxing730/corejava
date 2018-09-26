@@ -15,12 +15,15 @@ import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
+
 public class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
     //用于读取半包消息和发送应答
     private AsynchronousSocketChannel channel;
+
     public ReadHandler(AsynchronousSocketChannel channel) {
         this.channel = channel;
     }
+
     //读取到消息后的处理
     @Override
     public void completed(Integer result, ByteBuffer attachment) {
@@ -33,9 +36,9 @@ public class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
             String expression = new String(message, "UTF-8");
             System.out.println("服务器收到消息: " + expression);
             String calrResult = null;
-            try{
+            try {
                 calrResult = Calculator.cal(expression).toString();
-            }catch(Exception e){
+            } catch (Exception e) {
                 calrResult = "计算错误：" + e.getMessage();
             }
             //向客户端发送消息
@@ -44,6 +47,7 @@ public class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
             e.printStackTrace();
         }
     }
+
     //发送消息
     private void doWrite(String result) {
         byte[] bytes = result.getBytes();
@@ -51,19 +55,20 @@ public class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
         writeBuffer.put(bytes);
         writeBuffer.flip();
         //异步写数据 参数与前面的read一样
-        channel.write(writeBuffer, writeBuffer,new CompletionHandler<Integer, ByteBuffer>() {
+        channel.write(writeBuffer, writeBuffer, new CompletionHandler<Integer, ByteBuffer>() {
             @Override
             public void completed(Integer result, ByteBuffer buffer) {
                 //如果没有发送完，就继续发送直到完成
                 if (buffer.hasRemaining())
                     channel.write(buffer, buffer, this);
-                else{
+                else {
                     //创建新的Buffer
                     ByteBuffer readBuffer = ByteBuffer.allocate(1024);
                     //异步读  第三个参数为接收消息回调的业务Handler
                     channel.read(readBuffer, readBuffer, new ReadHandler(channel));
                 }
             }
+
             @Override
             public void failed(Throwable exc, ByteBuffer attachment) {
                 try {
@@ -73,6 +78,7 @@ public class ReadHandler implements CompletionHandler<Integer, ByteBuffer> {
             }
         });
     }
+
     @Override
     public void failed(Throwable exc, ByteBuffer attachment) {
         try {

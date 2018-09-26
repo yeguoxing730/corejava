@@ -17,7 +17,8 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
 import org.apache.log4j.Logger;
 
 import java.util.Date;
-public class TimeServerHandler  extends ChannelInboundHandlerAdapter{
+
+public class TimeServerHandler extends ChannelInboundHandlerAdapter {
     private static Logger logger = Logger.getLogger(TimeServerHandler.class);
 
     @Override
@@ -25,7 +26,7 @@ public class TimeServerHandler  extends ChannelInboundHandlerAdapter{
 
         System.out.println("Server -> read");
 
-        ByteBuf buf = (ByteBuf)msg;
+        ByteBuf buf = (ByteBuf) msg;
         byte[] req = new byte[buf.readableBytes()];
         buf.readBytes(req);
 
@@ -33,16 +34,16 @@ public class TimeServerHandler  extends ChannelInboundHandlerAdapter{
 
         System.out.println("timeServer received order: " + body);
 
-        String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body)? (new Date()).toGMTString() : "BAD ORDER";
+        String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body) ? (new Date()).toGMTString() : "BAD ORDER";
 
         //response
         ByteBuf resp = Unpooled.copiedBuffer(currentTime.getBytes());
         //异步发送应答消息给客户端: 这里并没有把消息直接写入SocketChannel,而是放入发送缓冲数组中
-        final ChannelFuture f =ctx.writeAndFlush(resp);
+        final ChannelFuture f = ctx.writeAndFlush(resp);
         f.addListener(new ChannelFutureListener() {
             @Override
             public void operationComplete(ChannelFuture future) {
-           //     assert f == future;
+                //     assert f == future;
                 System.out.println("The server have been sent msg to client successful.");
                 ctx.close();
             }

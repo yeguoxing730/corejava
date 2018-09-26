@@ -9,8 +9,11 @@
 package com.swig.c;
 
 public class exampleJNI {
-  public final static native void My_variable_set(double jarg1);
-  public final static native double My_variable_get();
-  public final static native int fact(int jarg1);
-  public final static native int my_mod(int jarg1, int jarg2);
+    public final static native void My_variable_set(double jarg1);
+
+    public final static native double My_variable_get();
+
+    public final static native int fact(int jarg1);
+
+    public final static native int my_mod(int jarg1, int jarg2);
 }

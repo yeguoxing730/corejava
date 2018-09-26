@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.LOCAL_VARIABLE)
 public @interface LocalAreaAnnotation {
     public String name();
+
     public String value();
 }

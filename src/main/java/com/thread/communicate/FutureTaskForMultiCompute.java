@@ -10,14 +10,14 @@ import java.util.concurrent.*;
 public class FutureTaskForMultiCompute {
     public static void main(String[] args) {
 
-        FutureTaskForMultiCompute inst=new FutureTaskForMultiCompute();
+        FutureTaskForMultiCompute inst = new FutureTaskForMultiCompute();
         // 创建任务集合
         List<FutureTask<Integer>> taskList = new ArrayList<FutureTask<Integer>>();
         // 创建线程池
         ExecutorService exec = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 10; i++) {
             // 传入Callable对象创建FutureTask对象
-            FutureTask<Integer> ft = new FutureTask<Integer>(inst.new ComputeTask(i, ""+i));
+            FutureTask<Integer> ft = new FutureTask<Integer>(inst.new ComputeTask(i, "" + i));
             taskList.add(ft);
             // 提交给线程池执行任务，也可以通过exec.invokeAll(taskList)一次性提交所有任务;
             exec.submit(ft);
@@ -49,13 +49,13 @@ public class FutureTaskForMultiCompute {
         private Integer result = 0;
         private String taskName = "";
 
-        public ComputeTask(Integer iniResult, String taskName){
+        public ComputeTask(Integer iniResult, String taskName) {
             result = iniResult;
             this.taskName = taskName;
-            System.out.println("生成子线程计算任务: "+taskName);
+            System.out.println("生成子线程计算任务: " + taskName);
         }
 
-        public String getTaskName(){
+        public String getTaskName() {
             return this.taskName;
         }
 
@@ -64,11 +64,11 @@ public class FutureTaskForMultiCompute {
             // TODO Auto-generated method stub
 
             for (int i = 0; i < 100; i++) {
-                result =+ i;
+                result = +i;
             }
             // 休眠5秒钟，观察主线程行为，预期的结果是主线程会继续执行，到要取得FutureTask的结果是等待直至完成。
             Thread.sleep(5000);
-            System.out.println("子线程计算任务: "+taskName+" 执行完成!");
+            System.out.println("子线程计算任务: " + taskName + " 执行完成!");
             return result;
         }
     }

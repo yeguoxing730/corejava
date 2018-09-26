@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.util.concurrent.TimeUnit;
+
 public class PessClientThread implements Runnable {
     String key = "prdNum";// 商品主键
     String clientList = "clientList";// // 抢购到商品的顾客列表主键
@@ -15,6 +16,7 @@ public class PessClientThread implements Runnable {
     RedisBasedDistributedLock redisBasedDistributedLock;
     Jedis jedis = null;
     SocketAddress addr = new InetSocketAddress("localhost", 9999);
+
     public PessClientThread(int num) {
         clientName = "编号=" + num;
         init();
@@ -24,7 +26,7 @@ public class PessClientThread implements Runnable {
         jedis = RedisUtil.getInstance().getJedis();
 
         try {
-            redisBasedDistributedLock = new RedisBasedDistributedLock(jedis, "lock.lock", 5 * 1000,addr);
+            redisBasedDistributedLock = new RedisBasedDistributedLock(jedis, "lock.lock", 5 * 1000, addr);
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -38,13 +40,13 @@ public class PessClientThread implements Runnable {
 
         while (true) {
             //先判断缓存是否有商品
-            if(Integer.valueOf(jedis.get(key))<= 0) {
+            if (Integer.valueOf(jedis.get(key)) <= 0) {
                 break;
             }
 
             //缓存还有商品，取锁，商品数目减去1
             System.out.println("顾客:" + clientName + "开始抢商品");
-            if (redisBasedDistributedLock.tryLock(3,TimeUnit.SECONDS)) { //等待3秒获取锁，否则返回false
+            if (redisBasedDistributedLock.tryLock(3, TimeUnit.SECONDS)) { //等待3秒获取锁，否则返回false
                 int prdNum = Integer.valueOf(jedis.get(key)); //再次取得商品缓存数目
                 if (prdNum > 0) {
                     jedis.decr(key);//商品数减1

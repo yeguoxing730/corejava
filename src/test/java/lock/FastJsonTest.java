@@ -57,6 +57,7 @@ public class FastJsonTest {
         System.out.println(info.isLegal());
     }
 }
+
 class User {
     private String name;
 

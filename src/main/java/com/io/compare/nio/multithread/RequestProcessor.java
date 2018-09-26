@@ -10,9 +10,9 @@ import java.util.concurrent.Executors;
 
 public class RequestProcessor {
     //构造线程池
-    private static ExecutorService executorService  = Executors.newFixedThreadPool(10);
+    private static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    public static void ProcessorRequest(final SelectionKey key){
+    public static void ProcessorRequest(final SelectionKey key) {
         //获得线程并执行
         executorService.submit(new Runnable() {
 
@@ -33,7 +33,7 @@ public class RequestProcessor {
                             baos.write(buffer.get());
                         }
                     }
-                    System.out.println("服务器端接收到的数据："+ new String(baos.toByteArray()));
+                    System.out.println("服务器端接收到的数据：" + new String(baos.toByteArray()));
 
                     //将数据添加到key中
                     key.attach(baos);

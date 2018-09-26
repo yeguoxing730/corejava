@@ -8,6 +8,7 @@ import redis.clients.jedis.Jedis;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
+
 /**
  * Created with IntelliJ IDEA.
  * User: uc203808
@@ -159,7 +160,7 @@ public class RedisReentrantLock extends AbstractLock {
      * Queries if this lock is held by any thread.
      *
      * @return {@code true} if any thread holds this lock and {@code false}
-     *         otherwise
+     * otherwise
      */
     public boolean isLocked() {
         // walkthrough

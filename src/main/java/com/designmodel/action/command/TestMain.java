@@ -1,7 +1,7 @@
 package com.designmodel.action.command;
 
 public class TestMain {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         Document doc = new Document(); //文档实体对象
         AddCommand addCmd = new AddCommand(doc); //具体命令实体对象
         UndoCommand undoCmd = new UndoCommand(doc); //具体命令实体对象
@@ -26,7 +26,7 @@ public class TestMain {
  * （1）整个调用过程比较繁杂，或者存在多处这种调用。使用Command类对该调用加以封装，便于功能的再利用。
  * （2）调用前后需要对调用参数进行某些处理。
  * （3）调用前后需要进行某些额外处理，比如日志，缓存，记录历史操作等。
- *
+ * <p>
  * 命令模式的使用流程就是首先创建一个抽象命令，然后创建多个具体命令实现抽象命令接口，然后创建一个命令接受者角色，它包含各种的行为的具体实现，然后再有一个命令调用者角色，提供给客户端，用于接收客户端的参数。
  * 下面总结下命令模式的优点：
  * （1）命令模式将行为调用者和各种行为分隔开，降低程序的耦合，便于程序扩展。

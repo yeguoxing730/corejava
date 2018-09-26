@@ -14,7 +14,7 @@ import java.nio.ByteBuffer;
 public class FileChannel {
     public static void main(String[] args) throws IOException {
         RandomAccessFile aFile = null;
-        try{
+        try {
             aFile = new RandomAccessFile("file/io-data.txt", "rw");
             java.nio.channels.FileChannel inChannel = aFile.getChannel();
             ByteBuffer buf = ByteBuffer.allocate(48);
@@ -22,16 +22,16 @@ public class FileChannel {
             while (bytesRead != -1) {
                 System.out.println("Read " + bytesRead);
                 buf.flip();
-                while(buf.hasRemaining()){
+                while (buf.hasRemaining()) {
                     System.out.print((char) buf.get());
                 }
                 buf.clear();
                 bytesRead = inChannel.read(buf);
             }
 
-        }   catch (Exception e){
-            System.out.println(e.getStackTrace())  ;
-        }finally {
+        } catch (Exception e) {
+            System.out.println(e.getStackTrace());
+        } finally {
             aFile.close();
         }
     }

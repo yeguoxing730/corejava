@@ -8,28 +8,44 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class TpsWorkbeanch {
-    /** 线程数量 */
+    /**
+     * 线程数量
+     */
     public static final int N_THRESHOLDS = 5;
 
-    /** 30 秒总时间 */
+    /**
+     * 30 秒总时间
+     */
     public static final int TIME_THRESHOLDS = 30;
 
-    /** 用原子变量来统计执行时间，便于作原子递减 */
+    /**
+     * 用原子变量来统计执行时间，便于作原子递减
+     */
     private static AtomicInteger totalTime = new AtomicInteger(TIME_THRESHOLDS);
 
-    /** 用于统计执行的事物总数，用原子方式累加记录 */
+    /**
+     * 用于统计执行的事物总数，用原子方式累加记录
+     */
     private static AtomicLong totalExecCount = new AtomicLong(0L);
 
-    /** 需要到等到所有线程都在同一起跑线，才开始统计计数，类似于发令枪 */
+    /**
+     * 需要到等到所有线程都在同一起跑线，才开始统计计数，类似于发令枪
+     */
     private static CyclicBarrier barrier = new CyclicBarrier(N_THRESHOLDS);
 
-    /** 执行时间到达时，所有的线程需要依次退出，主线程才开始统计执行事物总数 */
+    /**
+     * 执行时间到达时，所有的线程需要依次退出，主线程才开始统计执行事物总数
+     */
     private static CountDownLatch countDownLatch = new CountDownLatch(N_THRESHOLDS);
 
-    /** 线程执行标记 , 用volatile修饰，使变量修改具有线程可见性 */
+    /**
+     * 线程执行标记 , 用volatile修饰，使变量修改具有线程可见性
+     */
     private static volatile boolean runnning = true;
 
-    /** 用线程池来执行统计 */
+    /**
+     * 用线程池来执行统计
+     */
     private static ExecutorService executorService;
 
     /**

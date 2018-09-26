@@ -6,18 +6,19 @@ import java.util.Date;
 /**
  * Created by yeguo on 2018/5/20.
  */
-public class WorkerThread implements Runnable{
+public class WorkerThread implements Runnable {
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName()+" Start. Time = "+getNowDate());
+        System.out.println(Thread.currentThread().getName() + " Start. Time = " + getNowDate());
         threadSleep();
-        System.out.println(Thread.currentThread().getName()+" End. Time = "+getNowDate());
+        System.out.println(Thread.currentThread().getName() + " End. Time = " + getNowDate());
 
     }
+
     /**
      * 睡3秒
      */
-    public void threadSleep(){
+    public void threadSleep() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -25,6 +26,7 @@ public class WorkerThread implements Runnable{
             e.printStackTrace();
         }
     }
+
     /**
      * 获取现在时间
      *

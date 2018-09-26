@@ -18,19 +18,21 @@ import java.util.List;
  */
 public class DomDemo {
     private static Pricer pricer = new Pricer();
-    public  static void main(String[] args) throws Exception{
+
+    public static void main(String[] args) throws Exception {
         readXML();
     }
-    public static void readXML() throws Exception{
+
+    public static void readXML() throws Exception {
         SAXReader reader = new SAXReader();
         File file = new File("file/pp_in.xml");
         Document document = reader.read(file);
         Element root = document.getRootElement();
         List<Element> childElements = root.elements();
         for (Element child : childElements) {
-            if(child.getQName().getName().equalsIgnoreCase("Header")){
+            if (child.getQName().getName().equalsIgnoreCase("Header")) {
                 parserHeader(child.elements());
-            }  else{
+            } else {
 
             }
 //            System.out.println(child.getQName());
@@ -59,26 +61,28 @@ public class DomDemo {
 //            System.out.println();
         }
     }
-    public static void parserHeader(List<Element> elements){
-        for(Element child:elements){
 
-            if(child.getQName().getName().equalsIgnoreCase("Output")){
-                System.out.println("-------2-----"+child.getQName().getName());
-                List<Element> parameters  = child.elements();
-                for(Element parameter:parameters){
+    public static void parserHeader(List<Element> elements) {
+        for (Element child : elements) {
+
+            if (child.getQName().getName().equalsIgnoreCase("Output")) {
+                System.out.println("-------2-----" + child.getQName().getName());
+                List<Element> parameters = child.elements();
+                for (Element parameter : parameters) {
                     Parameter parameterVar = new Parameter();
                     parameterVar.setName(parameter.attribute("name").getStringValue());
                     parameterVar.setValue(parameter.attribute("value").getStringValue());
                     pricer.getHeader().getOutput().add(parameterVar);
                 }
-            }else if(child.getQName().getName().equalsIgnoreCase("AsOfDate")){
-                System.out.println("-------2-----"+child.getStringValue());
+            } else if (child.getQName().getName().equalsIgnoreCase("AsOfDate")) {
+                System.out.println("-------2-----" + child.getStringValue());
                 pricer.getHeader().setAsOfDate(child.getStringValue());
             }
         }
 
     }
-    public static void readXmlIterator()throws Exception{
+
+    public static void readXmlIterator() throws Exception {
         SAXReader reader = new SAXReader();
         Document document = reader.read(new File("books.xml"));
         Element root = document.getRootElement();

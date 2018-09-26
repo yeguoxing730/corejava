@@ -59,7 +59,8 @@ public class NettyClient {
         new NettyClient(host, port).start();
     }
 }
-class EchoClientHandler extends    SimpleChannelInboundHandler<ByteBuf> {
+
+class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) {

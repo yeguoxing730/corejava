@@ -16,6 +16,7 @@ public class KafkaProducer implements Runnable {
     private Producer<String, String> producer = null;
 
     private ProducerConfig config = null;
+
     @Override
     public void run() {
         Properties props = new Properties();
@@ -37,6 +38,7 @@ public class KafkaProducer implements Runnable {
 
         config = new ProducerConfig(props);
     }
+
     public static void main(String[] args) {
         Thread t = new Thread(new KafkaProducer());
         t.start();

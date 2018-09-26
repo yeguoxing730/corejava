@@ -7,6 +7,7 @@ package com.oracleaq;
  * Time: 5:28 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import oracle.jms.AQjmsAdtMessage;
 import oracle.jms.AQjmsDestination;
 import oracle.jms.AQjmsFactory;
@@ -14,6 +15,7 @@ import oracle.jms.AQjmsSession;
 
 import javax.jms.*;
 import java.util.Properties;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         JmsConfig config = new JmsConfig();

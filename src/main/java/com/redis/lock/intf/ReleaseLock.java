@@ -33,7 +33,6 @@ public interface ReleaseLock extends Releasable {
      * @param time
      * @param unit
      * @return {@code true} 若成功获取到锁, {@code false} 若在指定时间内未获取到锁
-     *
      */
     boolean tryLock(long time, TimeUnit unit);
 

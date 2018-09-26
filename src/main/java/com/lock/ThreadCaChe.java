@@ -43,7 +43,7 @@ public class ThreadCaChe {
                 try {
                     if (value == null) {
                         // 从数据中获取数据
-                        value = "andy is shuai ge"+(new Random()).nextInt(100);// 查询数据库
+                        value = "andy is shuai ge" + (new Random()).nextInt(100);// 查询数据库
                         // 存入缓存中
                         cacheMap.put(key, value);
                     }

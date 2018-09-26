@@ -5,6 +5,7 @@ import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
+
 public class TimeClient {
     private static final String TIME_CMD = "time";
 
@@ -19,8 +20,8 @@ public class TimeClient {
     }
 
     /**
-     * @throws TimeClientException when connection with time server is closed.
      * @return currentTimeMillis in server
+     * @throws TimeClientException when connection with time server is closed.
      */
     public long currentTimeMillis() {
         try {
@@ -34,7 +35,7 @@ public class TimeClient {
             System.arraycopy(buf.array(), buf.position(), bytes, 0, bytes.length);
 
             return Long.parseLong(new String(bytes));
-        } catch(NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.err.println(e);
             return System.currentTimeMillis();
         } catch (IOException e) {

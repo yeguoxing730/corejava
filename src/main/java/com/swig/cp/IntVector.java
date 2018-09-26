@@ -9,70 +9,70 @@
 package com.swig.cp;
 
 public class IntVector {
-  private transient long swigCPtr;
-  protected transient boolean swigCMemOwn;
+    private transient long swigCPtr;
+    protected transient boolean swigCMemOwn;
 
-  protected IntVector(long cPtr, boolean cMemoryOwn) {
-    swigCMemOwn = cMemoryOwn;
-    swigCPtr = cPtr;
-  }
-
-  protected static long getCPtr(IntVector obj) {
-    return (obj == null) ? 0 : obj.swigCPtr;
-  }
-
-  protected void finalize() {
-    delete();
-  }
-
-  public synchronized void delete() {
-    if (swigCPtr != 0) {
-      if (swigCMemOwn) {
-        swigCMemOwn = false;
-        testJNI.delete_IntVector(swigCPtr);
-      }
-      swigCPtr = 0;
+    protected IntVector(long cPtr, boolean cMemoryOwn) {
+        swigCMemOwn = cMemoryOwn;
+        swigCPtr = cPtr;
     }
-  }
 
-  public IntVector() {
-    this(testJNI.new_IntVector__SWIG_0(), true);
-  }
+    protected static long getCPtr(IntVector obj) {
+        return (obj == null) ? 0 : obj.swigCPtr;
+    }
 
-  public IntVector(long n) {
-    this(testJNI.new_IntVector__SWIG_1(n), true);
-  }
+    protected void finalize() {
+        delete();
+    }
 
-  public long size() {
-    return testJNI.IntVector_size(swigCPtr, this);
-  }
+    public synchronized void delete() {
+        if (swigCPtr != 0) {
+            if (swigCMemOwn) {
+                swigCMemOwn = false;
+                testJNI.delete_IntVector(swigCPtr);
+            }
+            swigCPtr = 0;
+        }
+    }
 
-  public long capacity() {
-    return testJNI.IntVector_capacity(swigCPtr, this);
-  }
+    public IntVector() {
+        this(testJNI.new_IntVector__SWIG_0(), true);
+    }
 
-  public void reserve(long n) {
-    testJNI.IntVector_reserve(swigCPtr, this, n);
-  }
+    public IntVector(long n) {
+        this(testJNI.new_IntVector__SWIG_1(n), true);
+    }
 
-  public boolean isEmpty() {
-    return testJNI.IntVector_isEmpty(swigCPtr, this);
-  }
+    public long size() {
+        return testJNI.IntVector_size(swigCPtr, this);
+    }
 
-  public void clear() {
-    testJNI.IntVector_clear(swigCPtr, this);
-  }
+    public long capacity() {
+        return testJNI.IntVector_capacity(swigCPtr, this);
+    }
 
-  public void add(int x) {
-    testJNI.IntVector_add(swigCPtr, this, x);
-  }
+    public void reserve(long n) {
+        testJNI.IntVector_reserve(swigCPtr, this, n);
+    }
 
-  public int get(int i) {
-    return testJNI.IntVector_get(swigCPtr, this, i);
-  }
+    public boolean isEmpty() {
+        return testJNI.IntVector_isEmpty(swigCPtr, this);
+    }
 
-  public void set(int i, int val) {
-    testJNI.IntVector_set(swigCPtr, this, i, val);
-  }
+    public void clear() {
+        testJNI.IntVector_clear(swigCPtr, this);
+    }
+
+    public void add(int x) {
+        testJNI.IntVector_add(swigCPtr, this, x);
+    }
+
+    public int get(int i) {
+        return testJNI.IntVector_get(swigCPtr, this, i);
+    }
+
+    public void set(int i, int val) {
+        testJNI.IntVector_set(swigCPtr, this, i, val);
+    }
 
 }

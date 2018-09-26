@@ -3,7 +3,7 @@ package com.designmodel.action.chain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilterChain implements Filter{
+public class FilterChain implements Filter {
     List<Filter> fs = new ArrayList<Filter>();
     int index = 0;
 
@@ -15,10 +15,10 @@ public class FilterChain implements Filter{
 
 
     @Override
-    public void doFilter(Request request, Response response,FilterChain chain) {
-        if(index == fs.size()) return;
+    public void doFilter(Request request, Response response, FilterChain chain) {
+        if (index == fs.size()) return;
         Filter f = fs.get(index);
-        index ++;
+        index++;
         f.doFilter(request, response, chain);
     }
 

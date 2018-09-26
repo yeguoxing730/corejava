@@ -70,16 +70,14 @@ public class RPCClient {
             System.out.println(" [x] Requesting fib(30)");
             response = fibonacciRpc.call("50");
             System.out.println(" [.] Got '" + response + "'");
-        }
-        catch  (IOException | TimeoutException | InterruptedException e) {
+        } catch (IOException | TimeoutException | InterruptedException e) {
             e.printStackTrace();
-        }
-        finally {
-            if (fibonacciRpc!= null) {
+        } finally {
+            if (fibonacciRpc != null) {
                 try {
                     fibonacciRpc.close();
+                } catch (IOException _ignore) {
                 }
-                catch (IOException _ignore) {}
             }
         }
     }

@@ -13,10 +13,12 @@ package com.designmodel.create.singlton;
  */
 public enum EnumSinglton {
     EnumSinglton;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         EnumSinglton.sayHello();
     }
-    public void sayHello(){
+
+    public void sayHello() {
         System.out.println("say hello......");
     }
 }

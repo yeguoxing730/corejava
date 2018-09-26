@@ -7,11 +7,13 @@ package com.io.netty;
  * Time: 2:49 PM
  * To change this template use File | Settings | File Templates.
  */
+
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-public class TimeCLientHandler extends ChannelInboundHandlerAdapter{
+
+public class TimeCLientHandler extends ChannelInboundHandlerAdapter {
     private final ByteBuf firstMSG;
 
     public TimeCLientHandler() {
@@ -31,7 +33,7 @@ public class TimeCLientHandler extends ChannelInboundHandlerAdapter{
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         System.out.println("client -> read");
 
-        ByteBuf buf = (ByteBuf)msg;
+        ByteBuf buf = (ByteBuf) msg;
         byte[] req = new byte[buf.readableBytes()];
         buf.readBytes(req);
 

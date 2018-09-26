@@ -4,6 +4,7 @@ public interface LinkHandler {
 
     /**
      * Places the link in the queue
+     *
      * @param link
      * @throws Exception
      */
@@ -11,12 +12,14 @@ public interface LinkHandler {
 
     /**
      * Returns the number of visited links
+     *
      * @return
      */
     int size();
 
     /**
      * Checks if the link was already visited
+     *
      * @param link
      * @return
      */
@@ -24,6 +27,7 @@ public interface LinkHandler {
 
     /**
      * Marks this link as visited
+     *
      * @param link
      */
     void addVisited(String link);

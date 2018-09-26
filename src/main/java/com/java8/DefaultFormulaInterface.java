@@ -9,6 +9,7 @@ package com.java8;
  */
 public interface DefaultFormulaInterface {
     double calculate(int a);
+
     default double sqrt(int a) {
         return Math.sqrt(a);
     }

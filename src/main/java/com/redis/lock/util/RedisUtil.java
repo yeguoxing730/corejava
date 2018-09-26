@@ -11,6 +11,7 @@ import redis.clients.jedis.BinaryClient.LIST_POSITION;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+
 /**
  * Created with IntelliJ IDEA.
  * User: uc203808
@@ -114,8 +115,7 @@ public class RedisUtil {
      * 删除指定的key,也可以传入一个包含key的数组
      * </p>
      *
-     * @param keys
-     *            一个key 也可以使 string 数组
+     * @param keys 一个key 也可以使 string 数组
      * @return 返回删除成功的个数
      */
     public Long del(String... keys) {
@@ -209,8 +209,7 @@ public class RedisUtil {
      *
      * @param key
      * @param value
-     * @param seconds
-     *            单位:秒
+     * @param seconds 单位:秒
      * @return 成功返回OK 失败和异常返回null
      */
     public String setex(String key, String value, int seconds) {
@@ -256,8 +255,7 @@ public class RedisUtil {
      *
      * @param key
      * @param str
-     * @param offset
-     *            下标位置
+     * @param offset 下标位置
      * @return 返回替换后 value 的长度
      */
     public Long setrange(String key, String str, int offset) {
@@ -279,8 +277,7 @@ public class RedisUtil {
      * 通过批量的key获取批量的value
      * </p>
      *
-     * @param keys
-     *            string数组 也可以是一个key
+     * @param keys string数组 也可以是一个key
      * @return 成功返回value的集合, 失败返回null的集合 ,异常返回空
      */
     public List<String> mget(String... keys) {
@@ -311,7 +308,6 @@ public class RedisUtil {
      *
      * @param keysvalues
      * @return 成功返回OK 失败 异常 返回 null
-     *
      */
     public String mset(String... keysvalues) {
         Jedis jedis = null;
@@ -387,8 +383,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param startOffset
-     *            开始位置 从0 开始 负数表示从右边开始截取
+     * @param startOffset 开始位置 从0 开始 负数表示从右边开始截取
      * @param endOffset
      * @return 如果没有返回null
      */
@@ -530,8 +525,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param field
-     *            字段
+     * @param field 字段
      * @param value
      * @return 如果存在返回0 异常返回null
      */
@@ -629,8 +623,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param fields
-     *            可以使 一个String 也可以是 String数组
+     * @param fields 可以使 一个String 也可以是 String数组
      * @return
      */
     public List<String> hmget(String key, String... fields) {
@@ -727,8 +720,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param fields
-     *            可以是 一个 field 也可以是 一个数组
+     * @param fields 可以是 一个 field 也可以是 一个数组
      * @return
      */
     public Long hdel(String key, String... fields) {
@@ -820,8 +812,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param strs
-     *            可以使一个string 也可以使string数组
+     * @param strs 可以使一个string 也可以使string数组
      * @return 返回list的value个数
      */
     public Long lpush(String key, String... strs) {
@@ -845,8 +836,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param strs
-     *            可以使一个string 也可以使string数组
+     * @param strs 可以使一个string 也可以使string数组
      * @return 返回list的value个数
      */
     public Long rpush(String key, String... strs) {
@@ -870,12 +860,9 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param where
-     *            LIST_POSITION枚举类型
-     * @param pivot
-     *            list里面的value
-     * @param value
-     *            添加的value
+     * @param where LIST_POSITION枚举类型
+     * @param pivot list里面的value
+     * @param value 添加的value
      * @return
      */
     public Long linsert(String key, LIST_POSITION where, String pivot, String value) {
@@ -902,8 +889,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param index
-     *            从0开始
+     * @param index 从0开始
      * @param value
      * @return 成功返回OK
      */
@@ -928,8 +914,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param count
-     *            当count为0时删除全部
+     * @param count 当count为0时删除全部
      * @param value
      * @return 返回被删除的个数
      */
@@ -1127,8 +1112,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param members
-     *            可以是一个String 也可以是一个String数组
+     * @param members 可以是一个String 也可以是一个String数组
      * @return 添加成功的个数
      */
     public Long sadd(String key, String... members) {
@@ -1152,8 +1136,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param members
-     *            可以是一个String 也可以是一个String数组
+     * @param members 可以是一个String 也可以是一个String数组
      * @return 删除的个数
      */
     public Long srem(String key, String... members) {
@@ -1202,8 +1185,7 @@ public class RedisUtil {
      * 以第一个set为标准
      * </p>
      *
-     * @param keys
-     *            可以使一个string 则返回set中所有的value 也可以是string数组
+     * @param keys 可以使一个string 则返回set中所有的value 也可以是string数组
      * @return
      */
     public Set<String> sdiff(String... keys) {
@@ -1229,10 +1211,8 @@ public class RedisUtil {
      * 以第一个set为标准
      * </p>
      *
-     * @param dstkey
-     *            差集存入的key
-     * @param keys
-     *            可以使一个string 则返回set中所有的value 也可以是string数组
+     * @param dstkey 差集存入的key
+     * @param keys   可以使一个string 则返回set中所有的value 也可以是string数组
      * @return
      */
     public Long sdiffstore(String dstkey, String... keys) {
@@ -1255,8 +1235,7 @@ public class RedisUtil {
      * 通过key获取指定set中的交集
      * </p>
      *
-     * @param keys
-     *            可以使一个string 也可以是一个string数组
+     * @param keys 可以使一个string 也可以是一个string数组
      * @return
      */
     public Set<String> sinter(String... keys) {
@@ -1280,8 +1259,7 @@ public class RedisUtil {
      * </p>
      *
      * @param dstkey
-     * @param keys
-     *            可以使一个string 也可以是一个string数组
+     * @param keys   可以使一个string 也可以是一个string数组
      * @return
      */
     public Long sinterstore(String dstkey, String... keys) {
@@ -1304,8 +1282,7 @@ public class RedisUtil {
      * 通过key返回所有set的并集
      * </p>
      *
-     * @param keys
-     *            可以使一个string 也可以是一个string数组
+     * @param keys 可以使一个string 也可以是一个string数组
      * @return
      */
     public Set<String> sunion(String... keys) {
@@ -1329,8 +1306,7 @@ public class RedisUtil {
      * </p>
      *
      * @param dstkey
-     * @param keys
-     *            可以使一个string 也可以是一个string数组
+     * @param keys   可以使一个string 也可以是一个string数组
      * @return
      */
     public Long sunionstore(String dstkey, String... keys) {
@@ -1353,12 +1329,9 @@ public class RedisUtil {
      * 通过key将set中的value移除并添加到第二个set中
      * </p>
      *
-     * @param srckey
-     *            需要移除的
-     * @param dstkey
-     *            添加的
-     * @param member
-     *            set中的value
+     * @param srckey 需要移除的
+     * @param dstkey 添加的
+     * @param member set中的value
      * @return
      */
     public Long smove(String srckey, String dstkey, String member) {
@@ -1503,8 +1476,7 @@ public class RedisUtil {
      * </p>
      *
      * @param key
-     * @param members
-     *            可以使一个string 也可以是一个string数组
+     * @param members 可以使一个string 也可以是一个string数组
      * @return
      */
     public Long zrem(String key, String... members) {

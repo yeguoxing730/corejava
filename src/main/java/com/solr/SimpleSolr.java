@@ -153,7 +153,7 @@ public class SimpleSolr {
             commit.deleteByQuery(queryCon);
             commit.setCommitWithin(5000);
             commit.process(client);
-            System.out.println("url:"+commit.getPath()+"\t xml:"+commit.getXML()+" method:"+commit.getMethod());
+            System.out.println("url:" + commit.getPath() + "\t xml:" + commit.getXML() + " method:" + commit.getMethod());
 //            rsp = client.deleteByQuery(queryCon);
 //            client.commit();
 //            System.out.println("delete query:" + queryCon + " result:" + rsp.getStatus() + " Qtime:" + rsp.getQTime());
@@ -164,7 +164,7 @@ public class SimpleSolr {
 
     }
 
-    public void updateField(String id,String fieldName, Object fieldValue) {
+    public void updateField(String id, String fieldName, Object fieldValue) {
         System.out.println("======================updateField ===================");
         HashMap<String, Object> oper = new HashMap<String, Object>();
 //        多值更新方法

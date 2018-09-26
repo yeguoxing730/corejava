@@ -44,6 +44,7 @@ public class PlainNio2EchoServer {
 
     private final class EchoCompletionHandler implements CompletionHandler<Integer, ByteBuffer> {
         private final AsynchronousSocketChannel channel;
+
         EchoCompletionHandler(AsynchronousSocketChannel channel) {
             this.channel = channel;
         }

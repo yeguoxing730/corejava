@@ -20,6 +20,7 @@ import java.net.NetworkInterface;
 public class PlatformUtils {
     /**
      * 获取localhost MAC地址
+     *
      * @return
      * @throws Exception
      */
@@ -39,6 +40,7 @@ public class PlatformUtils {
 
     /**
      * 获取当前JVM 的进程ID
+     *
      * @return
      */
     public static final int JVMPid() {
@@ -55,7 +57,6 @@ public class PlatformUtils {
             return -1;
         }
     }
-
 
 
     public static void main(String[] args) throws Exception {

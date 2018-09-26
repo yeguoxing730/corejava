@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
  */
 public class KafakConsumer implements Runnable {
     private ConsumerConfig consumerConfig;
-    private static String topic="blog";
+    private static String topic = "blog";
     Properties props;
     final int a_numThreads = 6;
 
@@ -36,6 +36,7 @@ public class KafakConsumer implements Runnable {
         props.put("auto.offset.reset", "smallest");
         consumerConfig = new ConsumerConfig(props);
     }
+
     @Override
     public void run() {
 

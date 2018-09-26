@@ -10,12 +10,14 @@ package com.redis.lock.intf;
 public interface ReadWriteLock {
     /**
      * 获取读锁
+     *
      * @return
      */
     ReleaseLock readLock();
 
     /**
      * 获取写锁
+     *
      * @return
      */
     ReleaseLock writeLock();

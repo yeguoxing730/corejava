@@ -12,7 +12,7 @@ public class FilterChainTest {
         request.setRequestStr(msg);
         Response response = new Response();
         response.setResponseStr("response");
-        fc.doFilter(request, response,fc);
+        fc.doFilter(request, response, fc);
         System.out.println(request.getRequestStr());
         System.out.println(response.getResponseStr());
     }

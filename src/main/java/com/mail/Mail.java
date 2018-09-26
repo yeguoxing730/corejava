@@ -45,9 +45,9 @@ public class Mail {
         props = new Properties();
         props.setProperty("mail.transport.protocol", PROTOCOL);
         props.setProperty("mail.smtp.host", HOST);
-       // props.setProperty("mail.smtp.port", PORT);
-       // props.setProperty("mail.smtp.auth", IS_AUTH);
-        props.setProperty("mail.debug",IS_ENABLED_DEBUG_MOD);
+        // props.setProperty("mail.smtp.port", PORT);
+        // props.setProperty("mail.smtp.auth", IS_AUTH);
+        props.setProperty("mail.debug", IS_ENABLED_DEBUG_MOD);
     }
 
     public static void main(String[] args) throws Exception {
@@ -61,41 +61,43 @@ public class Mail {
         //sendHtmlEmail();
 
         // 发送带内嵌图片的HTML邮件 
-       // sendHtmlWithInnerImageEmail();
+        // sendHtmlWithInnerImageEmail();
 
         // 发送混合组合邮件 
-       // sendMultipleEmail();
+        // sendMultipleEmail();
 
         // 发送已经生成的eml邮件 
         //sendMailForEml(); 
     }
-    //get Host Adress
-    public static InetAddress getInetAddress(){
 
-        try{
+    //get Host Adress
+    public static InetAddress getInetAddress() {
+
+        try {
             return InetAddress.getLocalHost();
-        }catch(UnknownHostException e){
+        } catch (UnknownHostException e) {
             System.out.println("unknown host!");
         }
         return null;
 
     }
 
-    public static String getHostIp(InetAddress netAddress){
-        if(null == netAddress){
+    public static String getHostIp(InetAddress netAddress) {
+        if (null == netAddress) {
             return null;
         }
         String ip = netAddress.getHostAddress(); //get the ip address
         return ip;
     }
 
-    public static String getHostName(InetAddress netAddress){
-        if(null == netAddress){
+    public static String getHostName(InetAddress netAddress) {
+        if (null == netAddress) {
             return null;
         }
         String name = netAddress.getHostName(); //get the host address
         return name;
     }
+
     /**
      * 发送简单的文本邮件
      */
@@ -123,7 +125,7 @@ public class Mail {
         Transport transport = session.getTransport();
         // 打开连接
         transport.connect();
-       // transport.connect("yeguoxing730", "yeguoxing730#");
+        // transport.connect("yeguoxing730", "yeguoxing730#");
         // 将message对象传递给transport对象，将邮件发送出去 
         transport.sendMessage(message, message.getAllRecipients());
         // 关闭连接 
@@ -148,7 +150,7 @@ public class Mail {
         // 设置收件人 
         message.setRecipients(RecipientType.TO, InternetAddress.parse(to));
         // 设置html内容为邮件正文，指定MIME类型为text/html类型，并指定字符编码为gbk 
-        message.setContent("<span style='color:red;'>html邮件测试...</span>","text/html;charset=gbk");
+        message.setContent("<span style='color:red;'>html邮件测试...</span>", "text/html;charset=gbk");
 
         // 保存并生成最终的邮件内容 
         message.saveChanges();
@@ -202,7 +204,7 @@ public class Mail {
         // 创建一个表示html正文的MimeBodyPart对象 
         MimeBodyPart htmlBodypart = new MimeBodyPart();
         // 其中cid=androidlogo.gif是引用邮件内部的图片，即imagePart.setContentID("androidlogo.gif");方法所保存的图片 
-        htmlBodypart.setContent("<span style='color:red;'>这是带内嵌图片的HTML邮件哦！！！<img src=\"cid:firefoxlogo.png\" /></span>","text/html;charset=utf-8");
+        htmlBodypart.setContent("<span style='color:red;'>这是带内嵌图片的HTML邮件哦！！！<img src=\"cid:firefoxlogo.png\" /></span>", "text/html;charset=utf-8");
         htmlMultipart.addBodyPart(htmlBodypart);
         htmlPart.setContent(htmlMultipart);
 
@@ -219,7 +221,7 @@ public class Mail {
     public static void sendMultipleEmail() throws Exception {
         String charset = "utf-8";   // 指定中文编码格式 
         // 创建Session实例对象 
-        Session session = Session.getInstance(props,new MyAuthenticator());
+        Session session = Session.getInstance(props, new MyAuthenticator());
 
         // 创建MimeMessage实例对象 
         MimeMessage message = new MimeMessage(session);
@@ -229,14 +231,14 @@ public class Mail {
         message.setFrom(new InternetAddress(from, "新浪测试邮箱", charset));
         // 设置收件人 
         message.setRecipients(RecipientType.TO,
-                new Address[] {
+                new Address[]{
                         // 参数1：邮箱地址，参数2：姓名（在客户端收件只显示姓名，而不显示邮件地址），参数3：姓名中文字符串编码
                         new InternetAddress("java_test@sohu.com", "张三_sohu", charset),
                         new InternetAddress("xyang0917@163.com", "李四_163", charset),
                 }
         );
         // 设置抄送 
-        message.setRecipient(RecipientType.CC, new InternetAddress("xyang0917@gmail.com","王五_gmail",charset));
+        message.setRecipient(RecipientType.CC, new InternetAddress("xyang0917@gmail.com", "王五_gmail", charset));
         // 设置密送 
         message.setRecipient(RecipientType.BCC, new InternetAddress("xyang0917@qq.com", "赵六_QQ", charset));
         // 设置发送时间 
@@ -310,10 +312,11 @@ public class Mail {
 
     /**
      * 将邮件内容生成eml文件
+     *
      * @param message 邮件内容
      */
     public static File buildEmlFile(Message message) throws MessagingException, FileNotFoundException, IOException {
-        File file = new File("c:\\" + MimeUtility.decodeText(message.getSubject())+".eml");
+        File file = new File("c:\\" + MimeUtility.decodeText(message.getSubject()) + ".eml");
         message.writeTo(new FileOutputStream(file));
         return file;
     }
@@ -323,10 +326,10 @@ public class Mail {
      */
     public static void sendMailForEml(File eml) throws Exception {
         // 获得邮件会话 
-        Session session = Session.getInstance(props,new MyAuthenticator());
+        Session session = Session.getInstance(props, new MyAuthenticator());
         // 获得邮件内容,即发生前生成的eml文件 
         InputStream is = new FileInputStream(eml);
-        MimeMessage message = new MimeMessage(session,is);
+        MimeMessage message = new MimeMessage(session, is);
         //发送邮件 
         Transport.send(message);
     }

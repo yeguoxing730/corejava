@@ -13,7 +13,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class Model {
-    private String  assetType;
+    private String assetType;
     private String name;
     private List<Parameter> parameterList = new ArrayList<Parameter>();
 

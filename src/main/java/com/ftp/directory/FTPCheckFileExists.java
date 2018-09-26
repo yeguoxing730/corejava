@@ -20,6 +20,7 @@ public class FTPCheckFileExists {
 
     /**
      * Determines whether a directory exists or not
+     *
      * @param dirPath
      * @return true if exists, false otherwise
      * @throws java.io.IOException thrown if any I/O error occurred.
@@ -35,6 +36,7 @@ public class FTPCheckFileExists {
 
     /**
      * Determines whether a file exists or not
+     *
      * @param filePath
      * @return true if exists, false otherwise
      * @throws java.io.IOException thrown if any I/O error occurred.

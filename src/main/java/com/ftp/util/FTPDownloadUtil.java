@@ -16,12 +16,13 @@ import java.io.*;
 public class FTPDownloadUtil {
     /**
      * Download structure of a directory from a FTP server.
-     * @param ftpClient an instance of org.apache.commons.net.ftp.FTPClient class.
-     * @param parentDir Path of the parent directory of the current directory being
-     * downloaded.
+     *
+     * @param ftpClient  an instance of org.apache.commons.net.ftp.FTPClient class.
+     * @param parentDir  Path of the parent directory of the current directory being
+     *                   downloaded.
      * @param currentDir Path of the current directory being downloaded.
-     * @param saveDir path of directory where the whole remote directory will be
-     * downloaded and saved.
+     * @param saveDir    path of directory where the whole remote directory will be
+     *                   downloaded and saved.
      * @throws java.io.IOException if any network or IO error occurred.
      */
     public static void downloadDirStructure(FTPClient ftpClient, String parentDir,
@@ -65,11 +66,13 @@ public class FTPDownloadUtil {
             }
         }
     }
+
     /**
      * Download a single file from the FTP server
-     * @param ftpClient an instance of org.apache.commons.net.ftp.FTPClient class.
+     *
+     * @param ftpClient      an instance of org.apache.commons.net.ftp.FTPClient class.
      * @param remoteFilePath path of the file on the server
-     * @param savePath path of directory where the file will be stored
+     * @param savePath       path of directory where the file will be stored
      * @return true if the file was downloaded successfully, false otherwise
      * @throws java.io.IOException if any network or IO error occurred.
      */
@@ -95,14 +98,16 @@ public class FTPDownloadUtil {
             }
         }
     }
+
     /**
      * Download a whole directory from a FTP server.
-     * @param ftpClient an instance of org.apache.commons.net.ftp.FTPClient class.
-     * @param parentDir Path of the parent directory of the current directory being
-     * downloaded.
+     *
+     * @param ftpClient  an instance of org.apache.commons.net.ftp.FTPClient class.
+     * @param parentDir  Path of the parent directory of the current directory being
+     *                   downloaded.
      * @param currentDir Path of the current directory being downloaded.
-     * @param saveDir path of directory where the whole remote directory will be
-     * downloaded and saved.
+     * @param saveDir    path of directory where the whole remote directory will be
+     *                   downloaded and saved.
      * @throws java.io.IOException if any network or IO error occurred.
      */
     public static void downloadDirectory(FTPClient ftpClient, String parentDir,

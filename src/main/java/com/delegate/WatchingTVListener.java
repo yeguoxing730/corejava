@@ -10,13 +10,11 @@ import java.util.Date;
  * To change this template use File | Settings | File Templates.
  */
 public class WatchingTVListener {
-    public WatchingTVListener()
-    {
+    public WatchingTVListener() {
         System.out.println("watching TV");
     }
 
-    public void stopWatchingTV(Date date)
-    {
+    public void stopWatchingTV(Date date) {
         System.out.println("stop watching" + date);
     }
 }

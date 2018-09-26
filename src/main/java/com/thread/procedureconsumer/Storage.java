@@ -9,6 +9,8 @@ package com.thread.procedureconsumer;
  */
 public interface Storage {
     public void produce(int num);
+
     public void consume(int num);
+
     public int getMAX_SIZE();
 }

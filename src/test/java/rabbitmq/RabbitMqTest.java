@@ -26,14 +26,17 @@ public class RabbitMqTest {
     private FanoutProducer fanoutProducer;
     @Autowired
     private TopicProcedurer topicProcedurer;
+
     @Test
     public void testDirectConsumer() throws IOException, SolrServerException {
         directProducer.sendMessage("direct message.....");
     }
+
     @Test
     public void testTopicConsumer() throws IOException, SolrServerException {
         topicProcedurer.sendMessage("topic message.....");
     }
+
     @Test
     public void testFanoutConsumer() throws IOException, SolrServerException {
         fanoutProducer.sendMessage("fanout message.....");

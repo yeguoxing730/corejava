@@ -1,10 +1,12 @@
 package com.redis.lock.generator;
+
 import com.redis.lock.intf.Releasable;
 import com.redis.lock.intf.ReleaseLock;
 import com.redis.lock.util.DBUtil;
 
 import java.math.BigInteger;
 import java.util.concurrent.TimeUnit;
+
 public class IDGenerator implements Releasable {
     private static BigInteger id = BigInteger.valueOf(0);
 
@@ -21,7 +23,7 @@ public class IDGenerator implements Releasable {
             try {
                 // TODO 这里获取到锁, 访问临界区资源
                 System.out.println(Thread.currentThread().getName() + " get lock");
-                String rs =     getAndIncrement0();
+                String rs = getAndIncrement0();
                 DBUtil.insert(Long.valueOf(rs), Thread.currentThread().getName(), 33, 22);
                 return rs;
             } catch (Exception e) {

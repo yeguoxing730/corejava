@@ -9,11 +9,15 @@ package com.designmodel.create.singlton;
  */
 public class PublicStaticObject {
     public static final PublicStaticObject instance = new PublicStaticObject();
-    private PublicStaticObject(){}
-    public static void main(String[] args){
-            PublicStaticObject.instance.sayHello();
+
+    private PublicStaticObject() {
     }
-    public void sayHello(){
-       System.out.println("say hello......");
+
+    public static void main(String[] args) {
+        PublicStaticObject.instance.sayHello();
+    }
+
+    public void sayHello() {
+        System.out.println("say hello......");
     }
 }

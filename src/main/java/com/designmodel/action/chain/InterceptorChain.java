@@ -13,9 +13,9 @@ public class InterceptorChain {
     }
 
     public void doInterceptor(Request request, Response response) {
-        if(index == fs.size()) return;
+        if (index == fs.size()) return;
         Interceptor f = fs.get(index);
-        index ++;
+        index++;
         f.doInterceptor(request, response, this);
     }
 }

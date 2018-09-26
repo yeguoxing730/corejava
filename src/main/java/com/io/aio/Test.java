@@ -10,7 +10,7 @@ import java.util.Scanner;
  * To change this template use File | Settings | File Templates.
  */
 public class Test {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         //运行服务器
         Server.start();
         //避免客户端先于服务器启动前执行代码
@@ -19,6 +19,6 @@ public class Test {
         Client.start();
         System.out.println("请输入请求消息：");
         Scanner scanner = new Scanner(System.in);
-        while(Client.sendMsg(scanner.nextLine()));
+        while (Client.sendMsg(scanner.nextLine())) ;
     }
 }

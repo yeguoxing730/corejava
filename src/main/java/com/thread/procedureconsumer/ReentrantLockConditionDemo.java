@@ -20,6 +20,7 @@ public class ReentrantLockConditionDemo {
     // 生产者用判断条件
     private Condition empty = theLock.newCondition();
     private static List<String> cache = new LinkedList<String>();
+
     // 生产者线程任务
     public void put(String str) throws InterruptedException {
         Thread.sleep(200);
@@ -41,6 +42,7 @@ public class ReentrantLockConditionDemo {
             theLock.unlock();
         }
     }
+
     // 消费者线程任务
     public void get() throws InterruptedException {
         try {

@@ -35,24 +35,19 @@ public class LockStorage implements Storage {
         lock.lock();
 
         // 如果仓库剩余容量不足
-        while (list.size() + num > MAX_SIZE)
-        {
+        while (list.size() + num > MAX_SIZE) {
             System.out.println("【要生产的产品数量】:" + num + "/t【库存量】:" + list.size()
                     + "/t暂时不能执行生产任务!");
-            try
-            {
+            try {
                 // 由于条件不满足，生产阻塞
                 full.await();
-            }
-            catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
         // 生产条件满足情况下，生产num个产品
-        for (int i = 1; i <= num; ++i)
-        {
+        for (int i = 1; i <= num; ++i) {
             list.add(new Object());
         }
 
@@ -65,6 +60,7 @@ public class LockStorage implements Storage {
         // 释放锁
         lock.unlock();
     }
+
     // 消费num个产品
     @Override
     public void consume(int num) {
@@ -72,24 +68,19 @@ public class LockStorage implements Storage {
         lock.lock();
 
         // 如果仓库存储量不足
-        while (list.size() < num)
-        {
+        while (list.size() < num) {
             System.out.println("【要消费的产品数量】:" + num + "/t【库存量】:" + list.size()
                     + "/t暂时不能执行生产任务!");
-            try
-            {
+            try {
                 // 由于条件不满足，消费阻塞
                 empty.await();
-            }
-            catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
         // 消费条件满足情况下，消费num个产品
-        for (int i = 1; i <= num; ++i)
-        {
+        for (int i = 1; i <= num; ++i) {
             list.remove();
         }
 

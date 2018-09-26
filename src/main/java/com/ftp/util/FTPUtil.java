@@ -37,6 +37,7 @@ public class FTPUtil {
         }
         return true;
     }
+
     public static void removeDirectory(FTPClient ftpClient, String parentDir,
                                        String currentDir) throws IOException {
         String dirToList = parentDir;
@@ -122,6 +123,7 @@ public class FTPUtil {
             }
         }
     }
+
     public static boolean uploadSingleFile(FTPClient ftpClient,
                                            String localFilePath, String remoteFilePath) throws IOException {
         File localFile = new File(localFilePath);
@@ -134,6 +136,7 @@ public class FTPUtil {
             inputStream.close();
         }
     }
+
     public static void uploadDirectory(FTPClient ftpClient,
                                        String remoteDirPath, String localParentDir, String remoteParentDir)
             throws IOException {

@@ -12,11 +12,11 @@ import java.lang.management.ThreadMXBean;
  * To change this template use File | Settings | File Templates.
  */
 public class MultiThread {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
-        ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false,false);
-        for(ThreadInfo threadInfo :threadInfos){
-              System.out.println("["+threadInfo.getThreadId()+"]"+threadInfo.getThreadName());
+        ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false, false);
+        for (ThreadInfo threadInfo : threadInfos) {
+            System.out.println("[" + threadInfo.getThreadId() + "]" + threadInfo.getThreadName());
         }
     }
 }

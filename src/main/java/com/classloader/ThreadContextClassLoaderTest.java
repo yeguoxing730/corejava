@@ -9,17 +9,17 @@ public class ThreadContextClassLoaderTest {
 
         //创建自定义classloader对象。
         DiskClassLoader diskLoader = new DiskClassLoader("D:\\IDEAWorkspace\\corejava\\target\\classes");
-        new Thread(()->{
-            System.out.println("Thread "+Thread.currentThread().getName()+" classloader: "+Thread.currentThread().getContextClassLoader().toString());
+        new Thread(() -> {
+            System.out.println("Thread " + Thread.currentThread().getName() + " classloader: " + Thread.currentThread().getContextClassLoader().toString());
             try {
                 //加载class文件
-                ClassLoader cl =  Thread.currentThread().getContextClassLoader();
-               Class c = cl.loadClass("com.classloader.Test");
+                ClassLoader cl = Thread.currentThread().getContextClassLoader();
+                Class c = cl.loadClass("com.classloader.Test");
 
-                if(c != null){
+                if (c != null) {
                     try {
                         Object obj = c.newInstance();
-                        Method method = c.getDeclaredMethod("say",null);
+                        Method method = c.getDeclaredMethod("say", null);
                         //通过反射调用Test类的say方法
                         method.invoke(obj, null);
                     } catch (InstantiationException | IllegalAccessException

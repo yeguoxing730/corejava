@@ -16,7 +16,7 @@ import java.io.File;
  * To change this template use File | Settings | File Templates.
  */
 public class SAXQueryDemo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         try {
             File inputFile = new File("input.xml");
@@ -30,6 +30,7 @@ public class SAXQueryDemo {
     }
 
 }
+
 class UserQueryHandler extends DefaultHandler {
 
     boolean bFirstName = false;
@@ -46,8 +47,8 @@ class UserQueryHandler extends DefaultHandler {
         if (qName.equalsIgnoreCase("student")) {
             rollNo = attributes.getValue("rollno");
         }
-        if(("393").equals(rollNo) &&
-                qName.equalsIgnoreCase("student")){
+        if (("393").equals(rollNo) &&
+                qName.equalsIgnoreCase("student")) {
             System.out.println("Start Element :" + qName);
         }
         if (qName.equalsIgnoreCase("firstname")) {
@@ -56,8 +57,7 @@ class UserQueryHandler extends DefaultHandler {
             bLastName = true;
         } else if (qName.equalsIgnoreCase("nickname")) {
             bNickName = true;
-        }
-        else if (qName.equalsIgnoreCase("marks")) {
+        } else if (qName.equalsIgnoreCase("marks")) {
             bMarks = true;
         }
     }
@@ -66,7 +66,7 @@ class UserQueryHandler extends DefaultHandler {
     public void endElement(String uri,
                            String localName, String qName) throws SAXException {
         if (qName.equalsIgnoreCase("student")) {
-            if(("393").equals(rollNo)
+            if (("393").equals(rollNo)
                     && qName.equalsIgnoreCase("student"))
                 System.out.println("End Element :" + qName);
         }

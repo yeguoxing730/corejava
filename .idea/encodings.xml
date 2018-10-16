@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../health-gits/v0.9/pricecenter/pricecenter/src/main/resources/i18n/messages.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../health-gits/v0.9/pricecenter/pricecenter/src/main/resources/i18n/messages_zh_cn.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/logback-test.xml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

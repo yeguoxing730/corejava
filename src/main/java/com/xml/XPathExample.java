@@ -26,10 +26,10 @@ public class XPathExample {
         XPathFactory factory = XPathFactory.newInstance();
         XPath xpath = factory.newXPath();
         //one way by compile
-  //      XPathExpression expr                = xpath.compile("//book[author='Neal Stephenson']/title/text()");
+        //      XPathExpression expr                = xpath.compile("//book[author='Neal Stephenson']/title/text()");
 //        Object result = expr.evaluate(doc, XPathConstants.NODESET);
         //the other way
-        Object result = xpath.evaluate("//book[author='Neal Stephenson']/title/text()",doc,XPathConstants.NODESET);
+        Object result = xpath.evaluate("//book[author='Neal Stephenson']/title/text()", doc, XPathConstants.NODESET);
         NodeList nodes = (NodeList) result;
         for (int i = 0; i < nodes.getLength(); i++) {
             System.out.println(nodes.item(i).getNodeValue());

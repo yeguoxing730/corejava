@@ -15,6 +15,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLockConditionDemo {
     private Lock theLock = new ReentrantLock();
+
     // 消费者用判断条件
     private Condition full = theLock.newCondition();
     // 生产者用判断条件

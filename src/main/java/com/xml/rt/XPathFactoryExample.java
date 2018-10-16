@@ -11,9 +11,9 @@ import javax.xml.xpath.*;
 import java.io.IOException;
 
 public class XPathFactoryExample {
-    public void xPathProcessor() throws SAXException, IOException, XPathExpressionException, ParserConfigurationException,Exception {
+    public void xPathProcessor() throws SAXException, IOException, XPathExpressionException, ParserConfigurationException, Exception {
         // Create DocumentBuilderFactory for reading xml file DocumentBuilderFactory factory =
-        DocumentBuilderFactory factory =  DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         String fileName = XPathFactoryExample.class.getClassLoader().getResource("smartphone.xml").getPath();
         Document doc = builder.parse(fileName);
@@ -26,7 +26,7 @@ public class XPathFactoryExample {
         XPathExpression xPathExpr = xpath.compile("/smartphones/smartphone/brand/text()");
 
         // XPath text example : executing xpath expression in java Object
-        Object  result = xPathExpr.evaluate(doc, XPathConstants.NODESET);
+        Object result = xPathExpr.evaluate(doc, XPathConstants.NODESET);
         System.out.println("Java Xpath text example: All brands of popular smartphones ");
         printXpathResult(result);
 
@@ -51,6 +51,7 @@ public class XPathFactoryExample {
 
     /**
      * Method to print result on console
+     *
      * @param result
      */
     public void printXpathResult(Object result) {

@@ -53,6 +53,77 @@
             <artifactId>kafka_2.12</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-common</artifactId>
+            <version>4.3.1</version>
+        </dependency>
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlbeans</groupId>-->
+            <!--<artifactId>xmlbeans</artifactId>-->
+            <!--<version>3.0.1</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.poi/poi &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi</artifactId>-->
+            <!--<version>3.15</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/openxml4j -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml-schemas</artifactId>-->
+            <!--<version>3.15</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-excelant -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-excelant</artifactId>-->
+            <!--<version>4.0.0</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-scratchpad</artifactId>-->
+            <!--<version>4.0.0</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/xmlbeans/xbean &ndash;&gt;-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlbeans</groupId>-->
+            <!--<artifactId>xmlbeans</artifactId>-->
+            <!--<version>2.6.0</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans-xpath &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.xmlbeans</groupId>-->
+            <!--<artifactId>xmlbeans-xpath</artifactId>-->
+            <!--<version>2.6.0</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.poi</groupId>-->
+            <!--<artifactId>poi-ooxml</artifactId>-->
+            <!--<version>3.15</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/xerces/xercesImpl -->
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.12.0</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
         <dependency>
             <groupId>io.netty</groupId>
@@ -262,6 +333,16 @@
             <groupId>com.squareup.okhttp</groupId>
             <artifactId>okhttp</artifactId>
             <version>2.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
         </dependency>
 
     </dependencies>

@@ -22,6 +22,7 @@ public class ClientHandle implements Runnable {
     private int port;
     private Selector selector;
     private SocketChannel socketChannel;
+    private SocketChannel socketChannel2;
     private volatile boolean started;
 
     public ClientHandle(String ip, int port) {
@@ -34,6 +35,10 @@ public class ClientHandle implements Runnable {
             socketChannel = SocketChannel.open();
             //如果为 true，则此通道将被置于阻塞模式；如果为 false，则此通道将被置于非阻塞模式
             socketChannel.configureBlocking(false);//开启非阻塞模式
+
+
+            socketChannel2 = SocketChannel.open();
+            socketChannel2.configureBlocking(false);
             started = true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -49,6 +54,7 @@ public class ClientHandle implements Runnable {
     public void run() {
         try {
             doConnect();
+            doConnect1();
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(1);
@@ -146,8 +152,15 @@ public class ClientHandle implements Runnable {
         else socketChannel.register(selector, SelectionKey.OP_CONNECT);
     }
 
+    private void doConnect1() throws IOException {
+        if (socketChannel2.connect(new InetSocketAddress(host, port+1))) ;
+        else socketChannel2.register(selector, SelectionKey.OP_CONNECT);
+    }
+
     public void sendMsg(String msg) throws Exception {
         socketChannel.register(selector, SelectionKey.OP_READ);
+        socketChannel2.register(selector, SelectionKey.OP_READ);
         doWrite(socketChannel, msg);
+        doWrite(socketChannel2, msg);
     }
 }

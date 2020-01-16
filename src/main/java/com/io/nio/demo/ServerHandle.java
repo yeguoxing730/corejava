@@ -22,7 +22,9 @@ import java.util.Set;
 
 public class ServerHandle implements Runnable {
     private Selector selector;
+
     private ServerSocketChannel serverChannel;
+    private ServerSocketChannel serverChannel2;
     private volatile boolean started;
 
     /**
@@ -44,6 +46,15 @@ public class ServerHandle implements Runnable {
             serverChannel.register(selector, SelectionKey.OP_ACCEPT);
             //标记服务器已开启
             started = true;
+
+            serverChannel2 = ServerSocketChannel.open();
+            //如果为 true，则此通道将被置于阻塞模式；如果为 false，则此通道将被置于非阻塞模式
+            serverChannel2.configureBlocking(false);//开启非阻塞模式
+            //绑定端口 backlog设为1024
+            serverChannel2.socket().bind(new InetSocketAddress(port+1), 1024);
+            //监听客户端连接请求
+            serverChannel2.register(selector, SelectionKey.OP_ACCEPT);
+
             System.out.println("服务器已启动，端口号：" + port);
         } catch (IOException e) {
             e.printStackTrace();

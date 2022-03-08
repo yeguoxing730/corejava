@@ -94,7 +94,7 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-scratchpad</artifactId>
-            <version>4.0.0</version>
+            <version>5.2.1</version>
         </dependency>
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/xmlbeans/xbean &ndash;&gt;-->
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans &ndash;&gt;-->
